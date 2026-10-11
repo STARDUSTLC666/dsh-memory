@@ -1,0 +1,39 @@
+{
+  "fixture_date": "2026-10-12",
+  "package_build_source_commit": "9ba178acaa7d07c9e6179ee412b318cd22342c4b",
+  "integration_commit_before_evidence": "5ffb79ed6bbdeac8f1e4c1252e4ee1c2be941812",
+  "package_sha256": "27cf41a0dc1d71b3895b5638136cada505411d079b1438600a1e98f160011a8e",
+  "production_sha256": {
+    "mdcg.py": "891735932ac122aa7b8b3deda094aee1c7a192fbeacb3f1fc957f01bb8263039",
+    "mdcos.py": "e5a0d58d3c40fbb1819676ac5e8bf764adef3b60012cd5486540e1c87e71653d",
+    "readcache.py": "a18749474c890517f7fe06906bf1ca52156c962e00ea0f938405d6f3c9ad1864"
+  },
+  "python": "3.12.10",
+  "typescript": "5.9.3",
+  "harness": {
+    "checkout_head": "407e65c8864fe1888435347656387d892a5621f9",
+    "tracked_diff_empty": true,
+    "runtime_version": "0.2.0-rc.1",
+    "entries": {
+      "@deepseek-ai/dsh-tools": {
+        "path": "packages/core/tools/lib/index.js",
+        "sha256": "4b05e79a8e62146203674e10ab402bd06c09efb1879823af07a463359c34b53e"
+      },
+      "@deepseek-ai/cordis": {
+        "path": "vendor/cordis/lib/index.js",
+        "sha256": "6a9394c0877ff45218818c6e815edd038f8057e1a1deb390a8d43ec81c57691e"
+      },
+      "dsh-cli": {
+        "path": "apps/cli/lib/bin.js",
+        "sha256": "935e95d05f4dc70a8a013eea59da80028946b5c139e45c6351dcaf2810ca00a1"
+      }
+    },
+    "note": "Checkout HEAD is context, not a claim of a reproducible DSH build; compiled entry hashes identify the runtime used."
+  },
+  "pr_heads": {
+    "116": "ca4eef568f654edaddbe93dbfd92ec7ccadb38f8",
+    "117": "9482a105e59348670e3be0d81f3f4991e7f286b4"
+  },
+  "all_recorded_production_files_match_installed_package": true,
+  "production_unchanged_since_package_build_commit": true
+}

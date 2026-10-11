@@ -1,0 +1,122 @@
+{
+  "prs": [
+    {
+      "headRefOid": "ca4eef568f654edaddbe93dbfd92ec7ccadb38f8",
+      "mergeable": "MERGEABLE",
+      "number": 116,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:34:22Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38156014589/job/114519032759",
+          "name": "check",
+          "startedAt": "2026-10-11T16:34:16Z",
+          "status": "COMPLETED",
+          "workflowName": "cogmap-check"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:34:37Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38156014586/job/114519032867",
+          "name": "check",
+          "startedAt": "2026-10-11T16:34:15Z",
+          "status": "COMPLETED",
+          "workflowName": "publish-artifact-check"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:50:45Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38156014591/job/114519032657",
+          "name": "run-tests",
+          "startedAt": "2026-10-11T16:34:15Z",
+          "status": "COMPLETED",
+          "workflowName": "python-tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:34:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38156014595/job/114519032799",
+          "name": "check",
+          "startedAt": "2026-10-11T16:34:15Z",
+          "status": "COMPLETED",
+          "workflowName": "workspace-index-check"
+        }
+      ],
+      "title": "perf(md_cg): 复用检索文本投影并精确失效",
+      "url": "https://github.com/FuRongJun-1999/dsh-memory/pull/116",
+      "python_suite_summary": "2026-10-11T16:50:42.7717446Z ===== SUMMARY 420/420 通过，6 跳过（依赖缺失/平台不符） =====",
+      "python_suite_skips": [
+        "2026-10-11T16:34:43.8113507Z SKIP  md_cg.test_csre_index_import_guard  （依赖 numpy（csre 模块级硬依赖）——按 issue #84 口径 SKIP（等价于该守卫自身的 rc=2『有跳过』语义））",
+        "2026-10-11T16:34:43.8114649Z SKIP  md_cg.test_imgskill  （依赖 Pillow（PIL）——按 issue #84 口径 SKIP（等价于该守卫自身的 rc=2『有跳过』语义））",
+        "2026-10-11T16:34:43.8115868Z SKIP  md_cg.test_md_access_parity  （依赖白箱库 whitebox_kb/wisdom/wisdom-book-cloud.db（.gitignore 忽略，需本地生成））",
+        "2026-10-11T16:34:43.8116635Z SKIP  md_cg.test_p44_md_whitebox  （依赖白箱库 whitebox_kb/wisdom/wisdom-book-cloud.db（.gitignore 忽略，需本地生成））",
+        "2026-10-11T16:34:43.8117271Z SKIP  md_cg.test_wisdom_md_store  （依赖 md 语料真源 _md_cg_wisdom_graph/（.gitignore 忽略，组 D 需本地真源））",
+        "2026-10-11T16:34:43.8117842Z SKIP  swarm.tests.test_swarm_fault  （Windows 专用（powershell/taskkill））"
+      ]
+    },
+    {
+      "headRefOid": "9482a105e59348670e3be0d81f3f4991e7f286b4",
+      "mergeable": "MERGEABLE",
+      "number": 117,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:27:34Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38155535584/job/114517629327",
+          "name": "check",
+          "startedAt": "2026-10-11T16:27:28Z",
+          "status": "COMPLETED",
+          "workflowName": "cogmap-check"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:27:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38155535596/job/114517629330",
+          "name": "check",
+          "startedAt": "2026-10-11T16:27:28Z",
+          "status": "COMPLETED",
+          "workflowName": "publish-artifact-check"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:40:46Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38155535679/job/114517630194",
+          "name": "run-tests",
+          "startedAt": "2026-10-11T16:27:28Z",
+          "status": "COMPLETED",
+          "workflowName": "python-tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:27:35Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38155535556/job/114517629378",
+          "name": "check",
+          "startedAt": "2026-10-11T16:27:28Z",
+          "status": "COMPLETED",
+          "workflowName": "workspace-index-check"
+        }
+      ],
+      "title": "fix(recall): 按完整估算预算保留最长正文前缀",
+      "url": "https://github.com/FuRongJun-1999/dsh-memory/pull/117",
+      "python_suite_summary": "2026-10-11T16:40:44.6641197Z ===== SUMMARY 419/419 通过，6 跳过（依赖缺失/平台不符） =====",
+      "python_suite_skips": [
+        "2026-10-11T16:27:49.2237779Z SKIP  md_cg.test_csre_index_import_guard  （依赖 numpy（csre 模块级硬依赖）——按 issue #84 口径 SKIP（等价于该守卫自身的 rc=2『有跳过』语义））",
+        "2026-10-11T16:27:49.2238511Z SKIP  md_cg.test_imgskill  （依赖 Pillow（PIL）——按 issue #84 口径 SKIP（等价于该守卫自身的 rc=2『有跳过』语义））",
+        "2026-10-11T16:27:49.2239280Z SKIP  md_cg.test_md_access_parity  （依赖白箱库 whitebox_kb/wisdom/wisdom-book-cloud.db（.gitignore 忽略，需本地生成））",
+        "2026-10-11T16:27:49.2239894Z SKIP  md_cg.test_p44_md_whitebox  （依赖白箱库 whitebox_kb/wisdom/wisdom-book-cloud.db（.gitignore 忽略，需本地生成））",
+        "2026-10-11T16:27:49.2240296Z SKIP  md_cg.test_wisdom_md_store  （依赖 md 语料真源 _md_cg_wisdom_graph/（.gitignore 忽略，组 D 需本地真源））",
+        "2026-10-11T16:27:49.2240623Z SKIP  swarm.tests.test_swarm_fault  （Windows 专用（powershell/taskkill））"
+      ]
+    }
+  ]
+}
