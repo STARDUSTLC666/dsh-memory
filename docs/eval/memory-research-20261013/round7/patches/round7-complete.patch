@@ -1,0 +1,1036 @@
+diff --git a/README.md b/README.md
+index 47e8bb9..7bd969f 100644
+--- a/README.md
++++ b/README.md
+@@ -401,27 +401,27 @@ python test/locomo_jaccard_probe.py      # 主路线 Jaccard 口径拆解（J2_f
+ 
+ | 基元 | op 数 | op 清单（点击直达实现分支） |
+ |---|---|---|
+-| **[`cg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L632)** 认知图统一入口 | 38 | [`help`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2191) [`state_event`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2539) [`status`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2200) [`edges`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2203) [`theory`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2206) [`link`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2223) [`info`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2339) [`route`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2380) [`read`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2401) [`audit`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2461) [`write`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2481) [`goal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2489) [`task`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2524) [`recent`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2527) [`verify`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2559) [`review`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2564) [`forget`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2585) [`protect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2594) [`identity`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2597) [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2600) [`metacognition`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2603) [`self_state`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2606) [`evolution`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2609) [`sustain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2612) [`scrub`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2615) [`predict`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2618) [`causal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2621) [`whitebox`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2624) [`index_code`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2627) [`index_doc`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2671) [`ref`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2714) [`session`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2717) [`ingest`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2720) [`export`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2723) [`maintain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2726) [`consolidate`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2729) [`insight`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2732) [`ccg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2735) |
+-| **[`stg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1106)** 语义时空图入口 | 5 | [`relation`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3339) [`timeline`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3341) [`anchors`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3348) [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3352) [`state_chain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3355) |
++| **[`cg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L637)** 认知图统一入口 | 38 | [`help`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2196) [`state_event`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2544) [`status`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2205) [`edges`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2208) [`theory`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2211) [`link`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2228) [`info`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2344) [`route`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2385) [`read`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2406) [`audit`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2466) [`write`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2486) [`goal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2494) [`task`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2529) [`recent`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2532) [`verify`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2564) [`review`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2569) [`forget`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2590) [`protect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2599) [`identity`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2602) [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2605) [`metacognition`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2608) [`self_state`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2611) [`evolution`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2614) [`sustain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2617) [`scrub`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2620) [`predict`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2623) [`causal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2626) [`whitebox`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2629) [`index_code`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2632) [`index_doc`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2676) [`ref`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2719) [`session`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2722) [`ingest`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2725) [`export`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2728) [`maintain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2731) [`consolidate`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2734) [`insight`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2737) [`ccg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2740) |
++| **[`stg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1111)** 语义时空图入口 | 5 | [`relation`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3344) [`timeline`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3346) [`anchors`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3353) [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3357) [`state_chain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3360) |
+ 
+ **op → 实现模块**（认知图投影：功能在哪段代码，一眼可达）：
+ 
+ | op（点击直达实现分支） | 实现模块（点击直达源码） |
+ |---|---|
+-| [`help`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2191) [`state_event`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2539) [`status`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2200) [`edges`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2203) [`route`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2380) [`task`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2524) [`recent`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2527) [`verify`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2559) [`review`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2564) [`forget`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2585) [`protect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2594) [`identity`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2597) [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2600) [`metacognition`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2603) [`self_state`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2606) [`evolution`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2609) [`sustain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2612) [`scrub`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2615) [`predict`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2618) [`causal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2621) [`whitebox`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2624) [`ref`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2714) [`session`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2717) [`ingest`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2720) [`export`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2723) [`maintain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2726) [`consolidate`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2729) [`insight`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2732) [`ccg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2735) | [`_cg_dispatch` 内联](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2188) |
+-| [`index_code`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2627) [`index_doc`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2671) | [`refindex`](md_cg/refindex.py), [`security`](md_cg/security.py) |
+-| [`info`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2339) | [`audit`](md_cg/audit.py), [`generation`](md_cg/generation.py), [`links`](md_cg/links.py), [`nodefile`](md_cg/nodefile.py), [`theory`](md_cg/theory.py) |
+-| [`audit`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2461) | [`auditview`](md_cg/auditview.py) |
+-| [`link`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2223) | [`evidence`](md_cg/evidence.py), [`links`](md_cg/links.py), [`provenance`](md_cg/provenance.py), [`security`](md_cg/security.py), [`signer`](md_cg/signer.py) |
+-| [`goal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2489) | [`goal_gen`](md_cg/goal_gen.py) |
+-| [`read`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2401) | [`refindex`](md_cg/refindex.py) |
+-| [`theory`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2206) | [`theory`](md_cg/theory.py) |
+-| [`write`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2481) | [`writepipe`](md_cg/writepipe.py) |
+-| [`relation`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3339) [`timeline`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3341) [`anchors`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3348) [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3352) [`state_chain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3355) | [`_stg_call` 内联](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3320) |
+-
+-**细粒度面**（`MDCG_MCP_SURFACE=full`，插件运行时使用）：[`cg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L632) + [`stg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1106) + **31 个 `mdcg_*`** = **33 个工具**：
+-
+-[`mdcg_remember`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L165) [`mdcg_recall`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L199) [`mdcg_search`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L250) [`mdcg_get`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L262) [`mdcg_reflect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L270) [`mdcg_verify`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L276) [`mdcg_flywheel`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L287) [`mdcg_mine_fix_pairs`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L292) [`mdcg_rejected`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L297) [`mdcg_unresolved`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L303) [`mdcg_propose`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L309) [`mdcg_review_list`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L317) [`mdcg_review_decide`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L322) [`mdcg_review_records`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L339) [`mdcg_forget`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L347) [`mdcg_protect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L355) [`mdcg_forgetting_history`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L365) [`mdcg_identity`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L371) [`mdcg_consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L414) [`mdcg_metacognition`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L434) [`mdcg_self_state`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L456) [`mdcg_predict`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L494) [`mdcg_causal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L522) [`mdcg_evolution`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L539) [`mdcg_restore`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L562) [`mdcg_health`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L567) [`mdcg_whoami`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L572) [`mdcg_ingest`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L577) [`mdcg_watermarks`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L589) [`mdcg_whitebox`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L594) [`mdcg_service_info`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L615)
++| [`help`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2196) [`state_event`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2544) [`status`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2205) [`edges`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2208) [`route`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2385) [`task`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2529) [`recent`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2532) [`verify`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2564) [`review`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2569) [`forget`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2590) [`protect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2599) [`identity`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2602) [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2605) [`metacognition`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2608) [`self_state`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2611) [`evolution`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2614) [`sustain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2617) [`scrub`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2620) [`predict`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2623) [`causal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2626) [`whitebox`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2629) [`ref`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2719) [`session`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2722) [`ingest`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2725) [`export`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2728) [`maintain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2731) [`consolidate`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2734) [`insight`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2737) [`ccg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2740) | [`_cg_dispatch` 内联](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2193) |
++| [`index_code`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2632) [`index_doc`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2676) | [`refindex`](md_cg/refindex.py), [`security`](md_cg/security.py) |
++| [`info`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2344) | [`audit`](md_cg/audit.py), [`generation`](md_cg/generation.py), [`links`](md_cg/links.py), [`nodefile`](md_cg/nodefile.py), [`theory`](md_cg/theory.py) |
++| [`audit`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2466) | [`auditview`](md_cg/auditview.py) |
++| [`link`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2228) | [`evidence`](md_cg/evidence.py), [`links`](md_cg/links.py), [`provenance`](md_cg/provenance.py), [`security`](md_cg/security.py), [`signer`](md_cg/signer.py) |
++| [`goal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2494) | [`goal_gen`](md_cg/goal_gen.py) |
++| [`read`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2406) | [`refindex`](md_cg/refindex.py) |
++| [`theory`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2211) | [`theory`](md_cg/theory.py) |
++| [`write`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2486) | [`writepipe`](md_cg/writepipe.py) |
++| [`relation`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3344) [`timeline`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3346) [`anchors`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3353) [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3357) [`state_chain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3360) | [`_stg_call` 内联](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3325) |
++
++**细粒度面**（`MDCG_MCP_SURFACE=full`，插件运行时使用）：[`cg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L637) + [`stg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1111) + **31 个 `mdcg_*`** = **33 个工具**：
++
++[`mdcg_remember`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L165) [`mdcg_recall`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L199) [`mdcg_search`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L255) [`mdcg_get`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L267) [`mdcg_reflect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L275) [`mdcg_verify`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L281) [`mdcg_flywheel`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L292) [`mdcg_mine_fix_pairs`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L297) [`mdcg_rejected`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L302) [`mdcg_unresolved`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L308) [`mdcg_propose`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L314) [`mdcg_review_list`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L322) [`mdcg_review_decide`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L327) [`mdcg_review_records`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L344) [`mdcg_forget`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L352) [`mdcg_protect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L360) [`mdcg_forgetting_history`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L370) [`mdcg_identity`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L376) [`mdcg_consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L419) [`mdcg_metacognition`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L439) [`mdcg_self_state`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L461) [`mdcg_predict`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L499) [`mdcg_causal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L527) [`mdcg_evolution`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L544) [`mdcg_restore`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L567) [`mdcg_health`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L572) [`mdcg_whoami`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L577) [`mdcg_ingest`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L582) [`mdcg_watermarks`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L594) [`mdcg_whitebox`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L599) [`mdcg_service_info`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L620)
+ 
+ 逐个 op 的「功能 → 代码 → op」行号级映射另见[功能调用映射表](docs/mdcg/功能调用映射表_v0.1.md)。
+ 
+diff --git "a/docs/mdcg/\345\212\237\350\203\275\350\260\203\347\224\250\346\230\240\345\260\204\350\241\250_v0.1.md" "b/docs/mdcg/\345\212\237\350\203\275\350\260\203\347\224\250\346\230\240\345\260\204\350\241\250_v0.1.md"
+index d594c9c..9a704d7 100644
+--- "a/docs/mdcg/\345\212\237\350\203\275\350\260\203\347\224\250\346\230\240\345\260\204\350\241\250_v0.1.md"
++++ "b/docs/mdcg/\345\212\237\350\203\275\350\260\203\347\224\250\346\230\240\345\260\204\350\241\250_v0.1.md"
+@@ -41,44 +41,44 @@ MCP stdio：md_cg/mcp_server.py
+ 
+ | 功能 | 显式调用 | 代码位置（点击直达源码行） |
+ |---|---|---|
+-| 按需披露（投影后完整工具 / 参数文档即时取回） | `cg(op=help)` | [`help`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2191) → [`_help_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2109) |
+-| 状态事件记账（追加五元事件；查询走 stg(state_chain)） | `cg(op=state_event)` | [`state_event`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2539) |
+-| 验证态 / 双时间轴 / 履历（含冷路径队列；只读） | `cg(op=status)` | [`status`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2200) → [`_status_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2024) |
+-| 三元组反查（派生边任意端 / 谓词 / 时间反查；只读） | `cg(op=edges)` | [`edges`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2203) → [`_edges_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2080) |
+-| 理论检索（领域理论 / 方法论文） | `cg(op=theory)` | [`theory`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2206) → [`theory`](../../md_cg/theory.py) |
+-| 记忆互链（节点间链接管理） | `cg(op=link)` | [`link`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2223) → [`evidence`](../../md_cg/evidence.py) → [`links`](../../md_cg/links.py) → [`provenance`](../../md_cg/provenance.py) → [`security`](../../md_cg/security.py) → [`signer`](../../md_cg/signer.py) |
+-| 服务信息 / 健康 | `cg(op=info)` | [`info`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2339) → [`audit`](../../md_cg/audit.py) → [`generation`](../../md_cg/generation.py) → [`links`](../../md_cg/links.py) → [`nodefile`](../../md_cg/nodefile.py) → [`theory`](../../md_cg/theory.py) |
+-| 路由：意图→知识+建议能力 | `cg(op=route)` | [`route`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2380) |
+-| 读取（按 id / 召回 / 预算） | `cg(op=read)` | [`read`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2401) → [`refindex`](../../md_cg/refindex.py) |
+-| 证据审计视图（现值/出处链/两存备择/盲区/退役史；只读） | `cg(op=audit)` | [`audit`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2461) → [`auditview`](../../md_cg/auditview.py) |
+-| 写入（含冲突检测 / 闸门 / 审核） | `cg(op=write)` | [`write`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2481) → [`writepipe`](../../md_cg/writepipe.py) |
+-| 目标（写入 / 状态 / 清单） | `cg(op=goal)` | [`goal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2489) → [`goal_gen`](../../md_cg/goal_gen.py) |
+-| 任务实体（登记 / 计划 / 状态 / 结果；done 无结果拒收） | `cg(op=task)` | [`task`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2524) → [`_task_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2122) |
+-| 最近记忆（事件窗口） | `cg(op=recent)` | [`recent`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2527) |
+-| 外部裁决回填（节点证据验证） | `cg(op=verify)` | [`verify`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2559) |
+-| 审核队列（DEFER / 提案裁决） | `cg(op=review)` | [`review`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2564) |
+-| 主动遗忘 / 恢复 | `cg(op=forget)` | [`forget`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2585) |
+-| 保护（不可遗忘） | `cg(op=protect)` | [`protect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2594) → [`_protect_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1289) |
+-| 身份维度 | `cg(op=identity)` | [`identity`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2597) → [`_identity_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1317) |
+-| 一致性检测 | `cg(op=consistency)` | [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2600) → [`_consistency_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1389) |
+-| 元认知（盲区聚合） | `cg(op=metacognition)` | [`metacognition`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2603) → [`_metacognition_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1418) |
+-| 自我状态 | `cg(op=self_state)` | [`self_state`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2606) → [`_self_state_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1453) |
+-| 演化（记忆结构演化） | `cg(op=evolution)` | [`evolution`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2609) → [`_evolution_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1588) |
+-| 飞轮 / 自愈 | `cg(op=sustain)` | [`sustain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2612) → [`_sustain_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1689) |
+-| 洗脑 / 去污染 | `cg(op=scrub)` | [`scrub`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2615) → [`_scrub_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1810) |
+-| 预测 / 因果门 | `cg(op=predict)` | [`predict`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2618) → [`_predict_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1515) |
+-| 因果链 | `cg(op=causal)` | [`causal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2621) → [`_causal_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1549) |
+-| 白箱能力库（AEIS 能力显式调用） | `cg(op=whitebox)` | [`whitebox`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2624) → [`_whitebox_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3309) |
+-| 代码索引 | `cg(op=index_code)` | [`index_code`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2627) → [`refindex`](../../md_cg/refindex.py) → [`security`](../../md_cg/security.py) |
+-| 文档索引 | `cg(op=index_doc)` | [`index_doc`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2671) → [`refindex`](../../md_cg/refindex.py) → [`security`](../../md_cg/security.py) |
+-| 引用 / 反向引用 | `cg(op=ref)` | [`ref`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2714) → [`_ref_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3207) |
+-| 会话管理（多会话归属与过滤） | `cg(op=session)` | [`session`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2717) → [`_session_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2918) |
+-| 导入落图 | `cg(op=ingest)` | [`ingest`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2720) → [`_ingest_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2997) |
+-| 导出 | `cg(op=export)` | [`export`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2723) → [`_export_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3022) |
+-| 维护 | `cg(op=maintain)` | [`maintain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2726) → [`_maintain_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3053) |
+-| 记忆固化 / 整理 | `cg(op=consolidate)` | [`consolidate`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2729) → [`_consolidate_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3131) |
+-| 洞察 / 自主探索（信息差驱动） | `cg(op=insight)` | [`insight`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2732) → [`_insight_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3156) |
+-| CCG 六要素编译（对话→候选→编外复核→落库） | `cg(op=ccg)` | [`ccg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2735) → [`_ccg_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2742) |
++| 按需披露（投影后完整工具 / 参数文档即时取回） | `cg(op=help)` | [`help`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2196) → [`_help_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2114) |
++| 状态事件记账（追加五元事件；查询走 stg(state_chain)） | `cg(op=state_event)` | [`state_event`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2544) |
++| 验证态 / 双时间轴 / 履历（含冷路径队列；只读） | `cg(op=status)` | [`status`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2205) → [`_status_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2029) |
++| 三元组反查（派生边任意端 / 谓词 / 时间反查；只读） | `cg(op=edges)` | [`edges`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2208) → [`_edges_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2085) |
++| 理论检索（领域理论 / 方法论文） | `cg(op=theory)` | [`theory`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2211) → [`theory`](../../md_cg/theory.py) |
++| 记忆互链（节点间链接管理） | `cg(op=link)` | [`link`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2228) → [`evidence`](../../md_cg/evidence.py) → [`links`](../../md_cg/links.py) → [`provenance`](../../md_cg/provenance.py) → [`security`](../../md_cg/security.py) → [`signer`](../../md_cg/signer.py) |
++| 服务信息 / 健康 | `cg(op=info)` | [`info`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2344) → [`audit`](../../md_cg/audit.py) → [`generation`](../../md_cg/generation.py) → [`links`](../../md_cg/links.py) → [`nodefile`](../../md_cg/nodefile.py) → [`theory`](../../md_cg/theory.py) |
++| 路由：意图→知识+建议能力 | `cg(op=route)` | [`route`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2385) |
++| 读取（按 id / 召回 / 预算） | `cg(op=read)` | [`read`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2406) → [`refindex`](../../md_cg/refindex.py) |
++| 证据审计视图（现值/出处链/两存备择/盲区/退役史；只读） | `cg(op=audit)` | [`audit`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2466) → [`auditview`](../../md_cg/auditview.py) |
++| 写入（含冲突检测 / 闸门 / 审核） | `cg(op=write)` | [`write`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2486) → [`writepipe`](../../md_cg/writepipe.py) |
++| 目标（写入 / 状态 / 清单） | `cg(op=goal)` | [`goal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2494) → [`goal_gen`](../../md_cg/goal_gen.py) |
++| 任务实体（登记 / 计划 / 状态 / 结果；done 无结果拒收） | `cg(op=task)` | [`task`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2529) → [`_task_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2127) |
++| 最近记忆（事件窗口） | `cg(op=recent)` | [`recent`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2532) |
++| 外部裁决回填（节点证据验证） | `cg(op=verify)` | [`verify`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2564) |
++| 审核队列（DEFER / 提案裁决） | `cg(op=review)` | [`review`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2569) |
++| 主动遗忘 / 恢复 | `cg(op=forget)` | [`forget`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2590) |
++| 保护（不可遗忘） | `cg(op=protect)` | [`protect`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2599) → [`_protect_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1294) |
++| 身份维度 | `cg(op=identity)` | [`identity`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2602) → [`_identity_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1322) |
++| 一致性检测 | `cg(op=consistency)` | [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2605) → [`_consistency_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1394) |
++| 元认知（盲区聚合） | `cg(op=metacognition)` | [`metacognition`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2608) → [`_metacognition_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1423) |
++| 自我状态 | `cg(op=self_state)` | [`self_state`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2611) → [`_self_state_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1458) |
++| 演化（记忆结构演化） | `cg(op=evolution)` | [`evolution`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2614) → [`_evolution_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1593) |
++| 飞轮 / 自愈 | `cg(op=sustain)` | [`sustain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2617) → [`_sustain_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1694) |
++| 洗脑 / 去污染 | `cg(op=scrub)` | [`scrub`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2620) → [`_scrub_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1815) |
++| 预测 / 因果门 | `cg(op=predict)` | [`predict`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2623) → [`_predict_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1520) |
++| 因果链 | `cg(op=causal)` | [`causal`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2626) → [`_causal_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L1554) |
++| 白箱能力库（AEIS 能力显式调用） | `cg(op=whitebox)` | [`whitebox`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2629) → [`_whitebox_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3314) |
++| 代码索引 | `cg(op=index_code)` | [`index_code`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2632) → [`refindex`](../../md_cg/refindex.py) → [`security`](../../md_cg/security.py) |
++| 文档索引 | `cg(op=index_doc)` | [`index_doc`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2676) → [`refindex`](../../md_cg/refindex.py) → [`security`](../../md_cg/security.py) |
++| 引用 / 反向引用 | `cg(op=ref)` | [`ref`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2719) → [`_ref_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3212) |
++| 会话管理（多会话归属与过滤） | `cg(op=session)` | [`session`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2722) → [`_session_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2923) |
++| 导入落图 | `cg(op=ingest)` | [`ingest`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2725) → [`_ingest_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3002) |
++| 导出 | `cg(op=export)` | [`export`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2728) → [`_export_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3027) |
++| 维护 | `cg(op=maintain)` | [`maintain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2731) → [`_maintain_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3058) |
++| 记忆固化 / 整理 | `cg(op=consolidate)` | [`consolidate`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2734) → [`_consolidate_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3136) |
++| 洞察 / 自主探索（信息差驱动） | `cg(op=insight)` | [`insight`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2737) → [`_insight_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3161) |
++| CCG 六要素编译（对话→候选→编外复核→落库） | `cg(op=ccg)` | [`ccg`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2740) → [`_ccg_call`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L2747) |
+ 
+ <!-- FUNCMAP:END -->
+ 
+@@ -97,11 +97,11 @@ MCP stdio：md_cg/mcp_server.py
+ 
+ | 功能 | 显式调用 | 代码位置（点击直达源码行） |
+ |---|---|---|
+-| 两节点关系 | `stg(op=relation)` | [`relation`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3339) |
+-| 时间线 | `stg(op=timeline)` | [`timeline`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3341) |
+-| 锚点检索（时空窗口） | `stg(op=anchors)` | [`anchors`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3348) |
+-| 时空一致性 | `stg(op=consistency)` | [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3352) |
+-| 状态槽位投影（现值 / 区间 / 变迁史） | `stg(op=state_chain)` | [`state_chain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3355) |
++| 两节点关系 | `stg(op=relation)` | [`relation`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3344) |
++| 时间线 | `stg(op=timeline)` | [`timeline`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3346) |
++| 锚点检索（时空窗口） | `stg(op=anchors)` | [`anchors`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3353) |
++| 时空一致性 | `stg(op=consistency)` | [`consistency`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3357) |
++| 状态槽位投影（现值 / 区间 / 变迁史） | `stg(op=state_chain)` | [`state_chain`](https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/mcp_server.py#L3360) |
+ 
+ <!-- FUNCMAP:END -->
+ 
+diff --git a/md_cg/evidence_budget.py b/md_cg/evidence_budget.py
+new file mode 100644
+index 0000000..0696cc1
+--- /dev/null
++++ b/md_cg/evidence_budget.py
+@@ -0,0 +1,219 @@
++"""Opt-in atomic evidence delivery; pure functions, no production hooks.
++
++Callers MUST supply nodes already authorized by MdCGSecure / the MCP server.
++This module does not read a graph, grant permissions, alter source content,
++rank candidates, or certify truth. Default-off delegates to the legacy helper.
++Enabled mode factors equal metadata, retains whole selected source documents,
++and reports INCOMPLETE instead of silently clipping facts or counterevidence.
++"""
++from __future__ import annotations
++
++import hashlib
++import json
++
++from md_cg.evidence_delivery import deliver
++from md_cg.experience_consolidation import context_verdict
++
++MAX_RECORDS = 128
++MAX_SOURCE_CHARS = 1_000_000
++_SECRET_KEYS = frozenset(('api_key', 'apikey', 'access_token', 'refresh_token',
++                         'password', 'private_key', 'secret_key', 'credential',
++                         'credentials', 'authorization', 'bearer_token'))
++
++
++def _json(value):
++    return json.dumps(value, ensure_ascii=False, sort_keys=True,
++                      separators=(',', ':'), allow_nan=False)
++
++
++def _hash(text):
++    return hashlib.sha256(text.encode('utf8')).hexdigest()
++
++
++def _has_credential_key(value):
++    if isinstance(value, dict):
++        return any(str(k).lower().replace('-', '_') in _SECRET_KEYS or
++                   _has_credential_key(v) for k, v in value.items())
++    if isinstance(value, (list, tuple)):
++        return any(_has_credential_key(v) for v in value)
++    return False
++
++
++def _project(node):
++    """Project the existing RSI source schema, or keep an ordinary node whole."""
++    body = node.get('content')
++    if not isinstance(body, str) or not isinstance(node.get('id'), str):
++        raise ValueError('invalid_authorized_node')
++    fm = node.get('frontmatter') or {}
++    trace = None
++    try:
++        candidate = json.loads(body)
++        if isinstance(candidate, dict) and 'source_document' in candidate:
++            if not isinstance(candidate['source_document'], str):
++                raise ValueError('invalid_source_document')
++            trace = candidate
++    except json.JSONDecodeError:
++        pass
++    source = trace['source_document'] if trace else body
++    cs = fm.get('condition_space') or {}
++    if not isinstance(cs, dict):
++        raise ValueError('invalid_condition_space')
++    # Native mdcg.add documents time_window as observation time, not expiry.
++    conditions = {k: v for k, v in cs.items() if k != 'time_window'}
++    metadata = {'applicability_conditions': conditions,
++                'non_applicable_conditions': fm.get('non_applicable_conditions') or [],
++                'verification_state': fm.get('verification_state', 'unverified')}
++    if cs.get('time_window') is not None:
++        metadata['observation_time_window'] = cs['time_window']
++    if fm.get('created_at') is not None:
++        metadata['memory_created_at'] = fm['created_at']
++    for key in ('effective_from', 'effective_until', 'believed_at', 'version',
++                'source_version', 'verification_basis'):
++        if fm.get(key) is not None:
++            metadata[key] = fm[key]
++    comment = (fm.get('state_attributes') or {}).get('comment')
++    if comment:
++        metadata['condition_comment'] = comment
++    if trace:
++        metadata.update(recorded_scope=trace.get('context'),
++                        source_recorded_at=trace.get('timestamp'),
++                        source_reference=trace.get('source'),
++                        source_origin=trace.get('task_id'),
++                        source_receipt_sha256=trace.get('raw_result_sha256'))
++    elif fm.get('source') is not None:
++        metadata['source'] = fm['source']
++    # Credentials never become diagnostic text. A credential-bearing necessary
++    # condition cannot be silently removed: refuse the entire fact bundle.
++    if _has_credential_key(metadata):
++        raise ValueError('credential_metadata_disallowed')
++    _json(metadata)
++    return {'id': node['id'], 'source': source, 'metadata': metadata,
++            'source_sha256': _hash(source), 'trace_sha256': _hash(body)}
++
++
++def _legacy(nodes, query, facts):
++    rows = []
++    for node in nodes:
++        fm = dict(node.get('frontmatter') or {})
++        content = node.get('content') or ''
++        try:
++            trace = json.loads(content)
++        except (json.JSONDecodeError, TypeError):
++            trace = None
++        qual = {'state': 'DEFER'}
++        if isinstance(trace, dict) and isinstance(trace.get('source_document'), str):
++            content = trace['source_document']
++            fm.update(created_at=trace.get('timestamp'),
++                      source={'origin': 'A-session:'+trace['task_id'],
++                              'receipt_sha256': trace['raw_result_sha256'],
++                              'reference': trace['source']},
++                      condition_space=trace.get('context'),
++                      verification_state='unverified')
++            qual = context_verdict(trace.get('context'), facts)
++        rows.append(({'id': node['id'], 'content': content, 'frontmatter': fm},
++                     0, {'state': qual.get('state')}, []))
++    rendered = deliver(rows, query, budget_tokens=750, max_item_tokens=450,
++                       mode='query_metadata_compact')
++    value = {'text': rendered['text'],
++             'delivered_ids': [r['id'] for r in rendered['records']],
++             'rejected_ids': [], 'evidence_status': 'unverified-source-data'}
++    return value, {'enabled': False, 'mode': 'legacy', 'records': rendered['records']}
++
++
++def deliver_evidence(nodes, query, *, facts=None, budget_tokens=750,
++                     token_counter=None, enabled=False):
++    """Return (tool value, body-free diagnostics), preserving candidate order.
++
++Enabled budgets count the COMPLETE serialized tool value via an injected model
++tokenizer. A zero/tiny budget that cannot encode the control envelope is an
++explicit error. COMPLETE_SOURCE_BUNDLE describes delivery, not truth or scope.
++No selected source or native condition is clipped to fit the budget.
++"""
++    nodes = list(nodes)
++    if not enabled:
++        return _legacy(nodes, query, facts)
++    if type(budget_tokens) is not int or budget_tokens < 0:
++        raise ValueError('invalid_evidence_budget')
++    if not callable(token_counter):
++        raise ValueError('enabled_delivery_requires_model_token_counter')
++
++    def count(value):
++        # Match the actual tool renderer's insertion-order JSON serialization.
++        n = token_counter(json.dumps(value, ensure_ascii=False,
++                                     separators=(',', ':'), allow_nan=False))
++        if type(n) is not int or n < 0:
++            raise ValueError('invalid_token_counter_result')
++        return n
++
++    empty = {'text': '', 'delivered_ids': [], 'rejected_ids': [],
++             'evidence_status': 'INCOMPLETE'}
++    if count(empty) > budget_tokens:
++        raise ValueError('budget_below_control_envelope_minimum')
++    diagnostics = {'enabled': True, 'mode': 'atomic-shared-metadata',
++                   'budget_tokens': budget_tokens,
++                   'token_measure': 'injected_complete_response_tokenizer',
++                   'records': [], 'duplicate_occurrences': 0,
++                   'ordinary_diagnostic_contains_body': False}
++
++    def incomplete(reason, required_tokens=None):
++        value = dict(empty)
++        value['text'] = 'DEFER: '+reason
++        if count(value) > budget_tokens:
++            value['text'] = ''
++        diagnostics.update(overflow=True, overflow_reason=reason,
++                           required_response_tokens=required_tokens,
++                           response_tokens=count(value), delivered_ids=[])
++        return value, diagnostics
++
++    if len(nodes) > MAX_RECORDS:
++        return incomplete('selected_record_resource_limit')
++    projected, seen = [], {}
++    try:
++        for node in nodes:
++            record = _project(node)
++            fingerprint = _hash(_json(record))
++            if record['id'] in seen:
++                if seen[record['id']] != fingerprint:
++                    return incomplete('same_id_source_version_conflict')
++                diagnostics['duplicate_occurrences'] += 1
++                continue
++            seen[record['id']] = fingerprint
++            projected.append(record)
++    except (ValueError, TypeError, AttributeError):
++        # Never include exception text: it could contain source/metadata values.
++        return incomplete('invalid_or_disallowed_source_metadata')
++    if sum(len(r['source']) for r in projected) > MAX_SOURCE_CHARS:
++        return incomplete('source_character_resource_limit')
++    common = {}
++    if len(projected) > 1:
++        first = projected[0]['metadata']
++        for key, value in first.items():
++            if all(key in r['metadata'] and _json(r['metadata'][key]) == _json(value)
++                   for r in projected[1:]):
++                common[key] = value
++    blocks = []
++    if projected:
++        blocks.append('Selected source records. observation_time_window records observation, not automatic expiry. Apply explicit effective dates and all conditions.')
++    if common:
++        blocks.append('Shared metadata: '+_json(common))
++    for record in projected:
++        remaining = {k: v for k, v in record['metadata'].items() if k not in common}
++        header = 'Evidence ID: '+record['id']
++        if remaining:
++            header += '\nMetadata: '+_json(remaining)
++        blocks.append(header+'\nSource document (complete):\n'+record['source'])
++    value = {'text': '\n\n'.join(blocks),
++             'delivered_ids': [r['id'] for r in projected],
++             'rejected_ids': [], 'evidence_status': 'COMPLETE_SOURCE_BUNDLE'}
++    required = count(value)
++    diagnostics['required_response_tokens'] = required
++    diagnostics['records'] = [{'id': r['id'], 'source_sha256': r['source_sha256'],
++                               'trace_sha256': r['trace_sha256'],
++                               'metadata_sha256': _hash(_json(r['metadata'])),
++                               'spans': [{'start': 0, 'end': len(r['source'])}],
++                               'truncated': False} for r in projected]
++    if required > budget_tokens:
++        return incomplete('complete_evidence_bundle_over_budget', required)
++    diagnostics.update(overflow=False, response_tokens=required,
++                       delivered_ids=value['delivered_ids'], shared_metadata_fields=list(common))
++    return value, diagnostics
+diff --git a/md_cg/evidence_preserving.py b/md_cg/evidence_preserving.py
+new file mode 100644
+index 0000000..fe4398e
+--- /dev/null
++++ b/md_cg/evidence_preserving.py
+@@ -0,0 +1,155 @@
++"""Opt-in source-atomic MCP delivery, after existing authorization/selection.
++
++No retrieval, ranking, writes, permission decisions or truth certification.
++Do not call assemble with unauthorized nodes. from_recall rechecks Secure.get
++for every selected ID. A partial bundle is withheld, never silently clipped.
++"""
++from __future__ import annotations
++
++import hashlib
++import json
++
++from .mdcos import est_tokens
++
++_CREDENTIAL_KEYS = frozenset(('api_key', 'apikey', 'access_token', 'refresh_token',
++    'password', 'private_key', 'secret_key', 'credential', 'credentials',
++    'authorization', 'bearer_token'))
++_TRACE_REQUIRED = frozenset(('source_document', 'context', 'timestamp',
++                             'task_id', 'source', 'raw_result_sha256'))
++_TRACE_ALLOWED = _TRACE_REQUIRED | frozenset(('candidate_note', 'events', 'observations'))
++
++
++def _json(value):
++    return json.dumps(value, ensure_ascii=False, separators=(',', ':'), allow_nan=False)
++
++
++def _sha(text):
++    return hashlib.sha256(text.encode('utf8')).hexdigest()
++
++
++def _unsafe_metadata(value):
++    if isinstance(value, dict):
++        return any(str(k).lower().replace('-', '_') in _CREDENTIAL_KEYS or
++                   _unsafe_metadata(v) for k, v in value.items())
++    if isinstance(value, (tuple, list)):
++        return any(_unsafe_metadata(v) for v in value)
++    return False
++
++
++def _project(node):
++    body = node.get('content')
++    if not isinstance(body, str) or not isinstance(node.get('id'), str):
++        raise ValueError('invalid_source')
++    fm = node.get('frontmatter') or {}
++    cs = fm.get('condition_space') or {}
++    if not isinstance(cs, dict):
++        raise ValueError('invalid_conditions')
++    metadata = {'applicability_conditions': {k: v for k, v in cs.items() if k != 'time_window'},
++                'non_applicable_conditions': fm.get('non_applicable_conditions') or [],
++                'verification_state': fm.get('verification_state', 'unverified')}
++    if 'time_window' in cs:
++        metadata['observation_time_window'] = cs['time_window']
++    # Whitelist evidence fields; identity/token/crypto internals are never copied.
++    for key in ('created_at', 'source', 'effective_from', 'effective_until',
++                'believed_at', 'version', 'source_version', 'verification_basis'):
++        if fm.get(key) is not None:
++            metadata[key] = fm[key]
++    comment = (fm.get('state_attributes') or {}).get('comment')
++    if comment:
++        metadata['condition_comment'] = comment
++    try:
++        trace = json.loads(body)
++    except json.JSONDecodeError:
++        trace = None
++    # source_document is also a legitimate arbitrary JSON key. Only project the
++    # known complete trace schema; unknown fields may be decisive counterevidence.
++    # Older/ordinary JSON remains a whole source, rather than silently dropping it.
++    known_trace = (isinstance(trace, dict) and _TRACE_REQUIRED <= trace.keys()
++                   and trace.keys() <= _TRACE_ALLOWED)
++    if known_trace:
++        if not isinstance(trace['source_document'], str):
++            raise ValueError('invalid_trace_source')
++        body = trace['source_document']
++        for old, new in (('context', 'recorded_scope'), ('timestamp', 'source_recorded_at'),
++                         ('task_id', 'source_origin'), ('source', 'source_reference'),
++                         ('raw_result_sha256', 'source_receipt_sha256')):
++            if trace.get(old) is not None:
++                metadata[new] = trace[old]
++    if _unsafe_metadata(metadata):
++        raise ValueError('disallowed_metadata')
++    return {'id': node['id'], 'content': body, 'metadata': metadata,
++            'source_sha256': _sha(body), 'truncated': False}
++
++
++def assemble(nodes, *, budget_tokens=1200, token_counter=None):
++    """Return (visible tool response, body-free experiment diagnostics).
++
++Default counter is explicitly the project ESTIMATOR. Callers may inject a
++model tokenizer. Both count the entire serialized tool response. The API's
++billed usage remains authoritative. Completeness covers selected sources only.
++"""
++    if type(budget_tokens) is not int or budget_tokens < 0:
++        raise ValueError('invalid_evidence_budget')
++    counter = token_counter or est_tokens
++    measure = 'injected_complete_response_tokenizer' if token_counter else 'project_estimator'
++
++    def count(value):
++        n = counter(_json(value))
++        if type(n) is not int or n < 0:
++            raise ValueError('invalid_token_counter')
++        return n
++
++    empty = {'pack': [], 'evidence_status': 'INCOMPLETE'}
++    if count(empty) > budget_tokens:
++        raise ValueError('budget_below_control_envelope_minimum')
++    audit = {'mode': 'source-atomic-v1', 'budget': budget_tokens,
++             'token_measure': measure, 'records': [], 'selected_ids': []}
++
++    def defer(reason):
++        audit.update(reason=reason, delivered_ids=[], tokens_used=count(empty))
++        return dict(empty), audit
++
++    records, seen, chars = [], {}, 0
++    try:
++        for node in nodes:
++            if len(records) >= 128:
++                return defer('selected_record_resource_limit')
++            record = _project(node)
++            digest = _sha(_json(record))
++            if record['id'] in seen:
++                if seen[record['id']] != digest:
++                    return defer('same_id_source_version_conflict')
++                continue
++            seen[record['id']] = digest
++            chars += len(record['content'])
++            if chars > 1_000_000:
++                return defer('source_character_resource_limit')
++            records.append(record)
++    except (ValueError, TypeError, AttributeError, RecursionError):
++        return defer('invalid_or_disallowed_source_metadata')
++    audit['selected_ids'] = [r['id'] for r in records]
++    audit['records'] = [{'id': r['id'], 'source_sha256': r['source_sha256'],
++                         'metadata_sha256': _sha(_json(r['metadata'])),
++                         'spans': [{'start': 0, 'end': len(r['content'])}],
++                         'truncated': False} for r in records]
++    value = {'pack': records, 'evidence_status': 'COMPLETE_SOURCE_BUNDLE' if records else 'INSUFFICIENT'}
++    required = count(value)
++    audit['required_tokens'] = required
++    if required > budget_tokens:
++        return defer('complete_bundle_over_budget')
++    audit.update(reason=None, delivered_ids=[r['id'] for r in records], tokens_used=required)
++    return value, audit
++
++
++def from_recall(cg, recalled, budget_tokens, token_counter=None):
++    """Use the authoritative graph; never reuse cached/plaintext clipped bodies."""
++    nodes = []
++    for item in recalled.get('pack', []):
++        node = cg.get(item['id'])
++        if node is None:
++            value, audit = assemble([], budget_tokens=budget_tokens, token_counter=token_counter)
++            value['evidence_status'] = 'INCOMPLETE'
++            audit['reason'] = 'visibility_changed_before_delivery'
++            return value, audit
++        nodes.append(node)
++    return assemble(nodes, budget_tokens=budget_tokens, token_counter=token_counter)
+diff --git a/md_cg/mcp_server.py b/md_cg/mcp_server.py
+index 24424d0..4c4b741 100644
+--- a/md_cg/mcp_server.py
++++ b/md_cg/mcp_server.py
+@@ -209,6 +209,11 @@ TOOLS = [
+                        "可用 causal=false / temporal=false 单独关。",
+         "inputSchema": _s("", query=_p("string", "描述当前任务的查询", True),
+                           budget_tokens=_p("integer", "token 预算（默认 1200）"),
++                          preserve_evidence=_p("boolean", "实验性原文保真交付，默认关闭。"
++                                              "对已授权选中来源保留原文、条件和来源；整包超过预算"
++                                              "返回 INCOMPLETE 空包。预算计量为项目估算器，非 API 计费值"),
++                          evidence_budget_tokens=_p("integer", "仅 preserve_evidence=true 时生效："
++                                                  "独立交付预算，未指定时沿用 budget_tokens；不改变候选检索预算"),
+                           max_item_tokens=_p("integer", "单条上限（默认 250）；超限条目截断纳入。"
+                                                         "传 0 关闭截断、回到「超大一律跳过」的旧行为"),
+                           k=_p("integer", "候选上限"), context=_p("object", "当前情境条件空间"),
+@@ -3761,6 +3766,9 @@ def _dispatch(cg, name, args):
+         return out
+ 
+     if name == "mdcg_recall":
++        preserve_evidence = a.get("preserve_evidence", False)
++        if type(preserve_evidence) is not bool:
++            raise ValueError("preserve_evidence must be a boolean")
+         use_bm25 = bool(a.get("bm25"))
+         use_fuzzy = bool(a.get("fuzzy"))
+         use_semantic = bool(a.get("semantic"))
+@@ -3801,7 +3809,7 @@ def _dispatch(cg, name, args):
+         # 默认单条上限从 mdcos 取（该模块只在 main() 里惰性导入，模块级没有名字，
+         # 直接引用 mdcos.DEFAULT_MAX_ITEM_TOKENS 会 NameError —— 故此处按需导入）。
+         from .mdcos import DEFAULT_MAX_ITEM_TOKENS as _DEFAULT_MAX_ITEM
+-        return cg.recall(a.get("query", ""),
++        recalled = cg.recall(a.get("query", ""),
+                          # `is not None`：显式 0 不再被吞成默认 1200（2026-09-24 修复）
+                          budget_tokens=int(a["budget_tokens"])
+                          if a.get("budget_tokens") is not None else 1200,
+@@ -3817,6 +3825,17 @@ def _dispatch(cg, name, args):
+                          query_expand=_make_query_expand(a.get("expand")),
+                          session=a.get("session"),
+                          validity=a.get("validity"))
++        if not preserve_evidence:
++            return recalled
++        from .evidence_preserving import from_recall
++        evidence_budget = a.get("evidence_budget_tokens")
++        if evidence_budget is None:
++            evidence_budget = a["budget_tokens"] if a.get("budget_tokens") is not None else 1200
++        if type(evidence_budget) is not int:
++            raise ValueError("evidence_budget_tokens must be an integer")
++        delivery, _audit = from_recall(
++            cg, recalled, evidence_budget)
++        return delivery
+ 
+     if name == "mdcg_search":
+         from . import refindex
+diff --git a/md_cg/test_evidence_delivery_compact.py b/md_cg/test_evidence_delivery_compact.py
+index 3555c19..7d2f8a1 100644
+--- a/md_cg/test_evidence_delivery_compact.py
++++ b/md_cg/test_evidence_delivery_compact.py
+@@ -5,6 +5,7 @@ import unittest
+ 
+ from .evidence_delivery import COMPACT_FIELDS, deliver
+ from .mdcos import est_tokens
++from .evidence_budget import deliver_evidence
+ 
+ 
+ class CompactTests(unittest.TestCase):
+@@ -50,5 +51,100 @@ class CompactTests(unittest.TestCase):
+             self.assertEqual(result['tokens_used'], 0)
+ 
+ 
++class AtomicBudgetTests(unittest.TestCase):
++    def node(self, nid='one', text='Label Q. Never use when emergency=true.'):
++        return {'id': nid, 'content': text, 'frontmatter': {
++            'source': 'fixture-source', 'created_at': 100,
++            'condition_space': {'department': 'ops', 'time_window': [100, 200]},
++            'non_applicable_conditions': ['emergency=true'],
++            'effective_until': '2027-01-01', 'verification_state': 'unverified'}}
++
++    def render(self, nodes, budget=20000, **kw):
++        # Character count is intentionally a strict injected stand-in here;
++        # experiment validation additionally uses the pinned model tokenizer.
++        return deliver_evidence(nodes, 'Label', enabled=True,
++                                budget_tokens=budget, token_counter=len, **kw)
++
++    def test_default_off_uses_existing_legacy_projection(self):
++        node=self.node();v,d=deliver_evidence([node], 'Label')
++        old=deliver([(node,0,{'state':'DEFER'},[])], 'Label',budget_tokens=750,
++                    max_item_tokens=450,mode='query_metadata_compact')
++        self.assertEqual(v['text'],old['text']);self.assertFalse(d['enabled'])
++
++    def test_full_fact_negative_and_distinct_time_semantics(self):
++        n=self.node();v,d=self.render([n])
++        self.assertIn(n['content'],v['text'])
++        for part in ('emergency=true','observation_time_window','applicability_conditions','effective_until','fixture-source'):
++            self.assertIn(part,v['text'])
++        self.assertEqual(d['records'][0]['spans'],[{'start':0,'end':len(n['content'])}])
++        self.assertEqual(d['records'][0]['source_sha256'],hashlib.sha256(n['content'].encode()).hexdigest())
++        self.assertFalse(d['overflow'])
++
++    def test_overflow_exposes_no_partial_fact_or_counterevidence(self):
++        first=self.node('one','The allowed label is Q.')
++        second=self.node('two','Contradiction: the label is R. '+'background '*300)
++        v,d=self.render([first,second],budget=250)
++        self.assertEqual(v['evidence_status'],'INCOMPLETE');self.assertEqual(v['delivered_ids'],[])
++        self.assertNotIn('label is Q',v['text']);self.assertNotIn('label is R',v['text'])
++        self.assertTrue(d['overflow']);self.assertLessEqual(d['response_tokens'],250)
++
++    def test_exact_budget_boundary_counts_full_response(self):
++        v,d=self.render([self.node()]);needed=d['required_response_tokens']
++        exact,ed=self.render([self.node()],budget=needed)
++        short,sd=self.render([self.node()],budget=needed-1)
++        self.assertEqual(exact,v);self.assertFalse(ed['overflow'])
++        self.assertEqual(short['evidence_status'],'INCOMPLETE');self.assertTrue(sd['overflow'])
++
++    def test_equal_metadata_factored_without_merging_different_evidence(self):
++        nodes=[self.node('one','Q is proposed.'),self.node('two','R is confirmed.')]
++        v,d=self.render(nodes)
++        self.assertEqual(v['delivered_ids'],['one','two'])
++        self.assertEqual(v['text'].count('fixture-source'),1)
++        self.assertIn('Q is proposed.',v['text']);self.assertIn('R is confirmed.',v['text'])
++        self.assertIn('source',d['shared_metadata_fields'])
++
++    def test_duplicate_id_requires_same_source_and_metadata(self):
++        n=self.node();v,d=self.render([n,n])
++        self.assertEqual(v['delivered_ids'],['one']);self.assertEqual(d['duplicate_occurrences'],1)
++        v,d=self.render([n,self.node('one','A changed source version.')])
++        self.assertEqual(v['evidence_status'],'INCOMPLETE')
++        self.assertEqual(d['overflow_reason'],'same_id_source_version_conflict')
++
++    def test_non_decision_credentials_not_serialized_and_necessary_credential_fails_closed(self):
++        n=self.node();n['frontmatter']['access_token']='synthetic-hidden-value'
++        v,d=self.render([n]);self.assertNotIn('synthetic-hidden-value',json.dumps([v,d]))
++        n['frontmatter']['condition_space']['access_token']='synthetic-hidden-value'
++        v,d=self.render([n]);self.assertEqual(v['evidence_status'],'INCOMPLETE')
++        self.assertNotIn('synthetic-hidden-value',json.dumps([v,d]))
++
++    def test_diagnostics_contain_hashes_but_no_body_or_condition_values(self):
++        n=self.node(text='SYNTHETIC-SENSITIVE-BODY');v,d=self.render([n])
++        self.assertIn(n['content'],v['text'])
++        raw=json.dumps(d);self.assertNotIn(n['content'],raw);self.assertNotIn('department',raw)
++        self.assertFalse(d['ordinary_diagnostic_contains_body'])
++
++    def test_rsi_trace_projects_source_and_retains_native_negatives(self):
++        n=self.node();trace={'source_document':'Exact source fact.','context':{'project':'Q'},'task_id':'A','source':'A-record','timestamp':'2026-01-01','raw_result_sha256':'a'*64,'observations':['large discarded diagnostic '*100]}
++        n['content']=json.dumps(trace)
++        v,d=self.render([n]);self.assertIn('Exact source fact.',v['text'])
++        self.assertIn('emergency=true',v['text']);self.assertIn('a'*64,v['text'])
++        self.assertNotIn('large discarded diagnostic',v['text'])
++
++    def test_malformed_sources_and_counter_arguments_fail_explicitly(self):
++        n=self.node();n['content']=json.dumps({'source_document':['not text']})
++        v,d=self.render([n]);self.assertEqual(v['evidence_status'],'INCOMPLETE')
++        for budget in (-1,0,True,1.5):
++            with self.assertRaises(ValueError):self.render([self.node()],budget=budget)
++        with self.assertRaises(ValueError):deliver_evidence([self.node()],'x',enabled=True)
++        with self.assertRaises(ValueError):deliver_evidence([self.node()],'x',enabled=True,token_counter=lambda _: True)
++
++    def test_concurrent_calls_do_not_mutate_inputs_or_share_identity(self):
++        from concurrent.futures import ThreadPoolExecutor
++        n=self.node();before=json.dumps(n,sort_keys=True)
++        with ThreadPoolExecutor(max_workers=4) as pool:outputs=list(pool.map(lambda _:self.render([n])[0],range(16)))
++        self.assertTrue(all(o==outputs[0] for o in outputs))
++        self.assertEqual(json.dumps(n,sort_keys=True),before)
++
++
+ if __name__ == '__main__':
+     unittest.main(verbosity=2)
+diff --git a/md_cg/test_evidence_preserving.py b/md_cg/test_evidence_preserving.py
+new file mode 100644
+index 0000000..c409788
+--- /dev/null
++++ b/md_cg/test_evidence_preserving.py
+@@ -0,0 +1,129 @@
++"""Executable source/conditions/budget counterexamples for opt-in delivery."""
++import copy
++import hashlib
++import json
++import unittest
++
++from . import mcp_server
++from .mdcos import est_tokens
++
++
++class AuthorizedGraph:
++    def __init__(self, nodes):
++        self.nodes = nodes
++        self.calls = []
++
++    def get(self, nid):
++        self.calls.append(nid)
++        return copy.deepcopy(self.nodes.get(nid))
++
++
++class PreservingDeliveryTests(unittest.TestCase):
++    def node(self, nid='record', content='The recorded value is 7.'):
++        return {'id': nid, 'content': content, 'frontmatter': {
++            'created_at': 100, 'source': {'reference': 'public-source', 'version': 'v1'},
++            'condition_space': {'platform': 'Windows', 'time_window': [100, 200]},
++            'non_applicable_conditions': ['maintenance=true'],
++            'verification_state': 'unverified', 'verification_basis': 'source receipt',
++            'effective_until': '2027-01-01'}}
++
++    def render(self, nodes, budget=10000, counter=len):
++        from .evidence_preserving import assemble
++        return assemble(nodes, budget_tokens=budget, token_counter=counter)
++
++    def test_source_and_all_decisive_metadata_are_not_windowed(self):
++        n = self.node(content='Intro.\n' * 100 + 'Only when mode=legacy; never on Linux.')
++        before = copy.deepcopy(n)
++        value, audit = self.render([n])
++        self.assertEqual(value['evidence_status'], 'COMPLETE_SOURCE_BUNDLE')
++        self.assertEqual(value['pack'][0]['content'], n['content'])
++        m = value['pack'][0]['metadata']
++        self.assertEqual(m['non_applicable_conditions'], ['maintenance=true'])
++        self.assertEqual(m['applicability_conditions'], {'platform': 'Windows'})
++        self.assertEqual(m['observation_time_window'], [100, 200])
++        self.assertEqual(m['effective_until'], '2027-01-01')
++        self.assertEqual(n, before)
++        self.assertNotIn('legacy', json.dumps(audit))
++
++    def test_trace_context_never_overwrites_native_conditions(self):
++        n = self.node(content=json.dumps({'source_document': 'Receipt value 8.',
++            'context': {'release': 'v3'}, 'timestamp': 101, 'task_id': 'session-A',
++            'source': 'source-ref', 'raw_result_sha256': 'a' * 64}))
++        value, _ = self.render([n])
++        m = value['pack'][0]['metadata']
++        self.assertEqual(m['recorded_scope'], {'release': 'v3'})
++        self.assertEqual(m['applicability_conditions'], {'platform': 'Windows'})
++        self.assertEqual(value['pack'][0]['content'], 'Receipt value 8.')
++
++    def test_budget_is_whole_response_not_only_body(self):
++        nodes = [self.node(content='A' * 1200), self.node('counter', 'Counterevidence: value 9.')]
++        value, audit = self.render(nodes, 600)
++        self.assertEqual(value['evidence_status'], 'INCOMPLETE')
++        self.assertEqual(value['pack'], [])
++        self.assertLessEqual(len(json.dumps(value, ensure_ascii=False, separators=(',', ':'))), 600)
++        self.assertEqual(audit['reason'], 'complete_bundle_over_budget')
++        self.assertNotIn('Counterevidence', json.dumps(audit))
++
++    def test_same_id_conflicting_version_refuses_without_picking_one(self):
++        value, _ = self.render([self.node(), self.node(content='value 9')])
++        self.assertEqual(value['evidence_status'], 'INCOMPLETE')
++        self.assertEqual(value['pack'], [])
++
++    def test_same_id_identical_source_dedup_keeps_order(self):
++        n = self.node(); n2 = self.node('two')
++        value, _ = self.render([n, copy.deepcopy(n), n2])
++        self.assertEqual([r['id'] for r in value['pack']], ['record', 'two'])
++
++    def test_credentials_in_necessary_conditions_are_not_silently_removed(self):
++        n = self.node();n['frontmatter']['condition_space']['api_key'] = 'test-secret'
++        value, audit = self.render([n])
++        self.assertEqual(value['evidence_status'], 'INCOMPLETE')
++        self.assertNotIn('test-secret', json.dumps(value)+json.dumps(audit))
++
++    def test_authorized_get_is_required_after_selection_and_visibility_race_fails_closed(self):
++        from .evidence_preserving import from_recall
++        g = AuthorizedGraph({'record': None})
++        value, _ = from_recall(g, {'pack': [{'id': 'record', 'content': 'old visible text'}]}, 300, len)
++        self.assertEqual(g.calls, ['record'])
++        self.assertEqual(value['pack'], [])
++        self.assertEqual(value['evidence_status'], 'INCOMPLETE')
++
++    def test_native_mcp_switch_is_default_off_and_strict_boolean(self):
++        schema = next(t for t in mcp_server.TOOLS if t['name'] == 'mdcg_recall')['inputSchema']
++        self.assertEqual(schema['properties']['preserve_evidence']['type'], 'boolean')
++        self.assertNotIn('preserve_evidence', schema.get('required', []))
++
++    def test_empty_selection_is_insufficient_and_tiny_budget_is_explicit_error(self):
++        value, _ = self.render([])
++        self.assertEqual(value['evidence_status'], 'INSUFFICIENT')
++        with self.assertRaises(ValueError):self.render([self.node()], 0)
++
++    def test_missing_or_invalid_node_is_not_reported_complete(self):
++        for n in ({'id': 'bad', 'content': None}, {'id': 'bad', 'content': 'x', 'frontmatter': {'condition_space': 'bad'}}):
++            value, _ = self.render([n])
++            self.assertEqual(value['evidence_status'], 'INCOMPLETE')
++
++    def test_default_counter_and_unicode_hashes(self):
++        from .evidence_preserving import assemble
++        n = self.node(content='中文证据：👩🏽‍💻\n不要丢弃条件。')
++        value, audit = assemble([n], budget_tokens=1000)
++        self.assertEqual(audit['tokens_used'], est_tokens(json.dumps(value, ensure_ascii=False, separators=(',', ':'))))
++        self.assertEqual(audit['records'][0]['source_sha256'], hashlib.sha256(n['content'].encode('utf8')).hexdigest())
++
++    def test_ordinary_json_source_document_key_does_not_discard_outer_exceptions(self):
++        body = json.dumps({'source_document': 'API result 7',
++                           'exceptions': ['Only valid on offline snapshots.']})
++        value, _ = self.render([self.node(content=body)])
++        self.assertEqual(value['pack'][0]['content'], body)
++
++    def test_unrecognized_trace_fields_preserve_the_entire_original(self):
++        body = json.dumps({'source_document': 'API result 7', 'context': {},
++            'timestamp': 100, 'task_id': 'task-A', 'source': 'source-ref',
++            'raw_result_sha256': 'a' * 64,
++            'important_counterevidence': 'The receipt was retracted.'})
++        value, _ = self.render([self.node(content=body)])
++        self.assertEqual(value['pack'][0]['content'], body)
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/md_cg/test_issue91_verifier_timeout.py b/md_cg/test_issue91_verifier_timeout.py
+index 0eae313..111a6df 100644
+--- a/md_cg/test_issue91_verifier_timeout.py
++++ b/md_cg/test_issue91_verifier_timeout.py
+@@ -16,7 +16,7 @@ r"""守卫 · #91（根因③）whitebox verifier 的被校验代码必须在**
+   T1a 模块级死循环载荷 ⇒ `verify()` 在给定时限内返回**失败**（不挂死）
+   T1b 函数级死循环载荷（样例调用）⇒ 同上
+   T2  **正对照**：合法载荷照常通过（L2 报「N 组样例全部通过」）
+-  T3  连续超时载荷 ⇒ 子进程个个被**回收**（reaped）、存活 python 进程数不增长；
++  T3  连续超时载荷 ⇒ 子进程个个被**回收**（reaped）、受控执行器存活数为零；
+       其后的全链路调用仍正常（不泄漏、不卡住后续调用）
+   T4  防回退：`_SAFE_BUILTIN_NAMES` 不含 `__import__`/`open`/`eval`；
+       `_STDLIB_OK` 不含 `os`/`sys`/`socket`/`threading`
+@@ -166,39 +166,88 @@ out["t2"] = {"sec": dt, "err": err, "ok": (r.ok if r else None),
+ 
+ 
+ # ---------- T3：连续超时后不泄漏、后续调用仍正常 ----------
+-def live_python():
+-    """存活 python 进程数（探针不可用返回 None＝该子项跳过，如实标注）。"""
+-    try:
+-        if os.name == "nt":
+-            p = subprocess.run(["tasklist", "/FI", "IMAGENAME eq python.exe",
+-                                "/FO", "CSV", "/NH"],
+-                               stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+-                               check=False)
+-            txt = p.stdout.decode("utf-8", "replace")
+-            return sum(1 for ln in txt.splitlines() if "python.exe" in ln.lower())
+-        n = 0
+-        for d in os.listdir("/proc"):
+-            if not d.isdigit():
+-                continue
+-            try:
+-                with open("/proc/%s/cmdline" % d, "rb") as f:
+-                    if b"python" in f.read():
+-                        n += 1
+-            except Exception:
+-                pass
+-        return n
+-    except Exception:
+-        return None
+-
++# Observe the actual Popen handles, independently of verifier's reported
++# `reaped` boolean. Global tasklist/proc counts include concurrent tests and
++# cannot distinguish an executor leak from an unrelated process starting.
++owned = []
++native_popen = V.subprocess.Popen
++native_runner = V._EXEC_RUNNER_SRC
++executor_handles = []
++if os.name == "nt":
++    import ctypes
++    from ctypes import wintypes
++    kernel = ctypes.WinDLL("kernel32", use_last_error=True)
++    kernel.OpenProcess.argtypes = [wintypes.DWORD, wintypes.BOOL, wintypes.DWORD]
++    kernel.OpenProcess.restype = wintypes.HANDLE
++    kernel.WaitForSingleObject.argtypes = [wintypes.HANDLE, wintypes.DWORD]
++    kernel.WaitForSingleObject.restype = wintypes.DWORD
++    kernel.TerminateProcess.argtypes = [wintypes.HANDLE, wintypes.UINT]
++    kernel.CloseHandle.argtypes = [wintypes.HANDLE]
++
++def observe_executor(pid, launcher):
++    if os.name == "nt":
++        # A stable process handle, opened before timeout, cannot target a reused
++        # PID. Includes the real interpreter behind the Windows venv launcher.
++        handle = kernel.OpenProcess(0x100001, False, pid)  # synchronize + terminate
++        if not handle:
++            raise OSError("Cannot observe owned executor")
++        return (pid, handle, launcher)
++    if pid != launcher.pid:
++        raise RuntimeError("Unexpected interpreter redirector on POSIX")
++    return (pid, None, launcher)
++
++def tracked_popen(*args, **kwargs):
++    p = native_popen(*args, **kwargs)
++    owned.append(p)
++    deadline = time.monotonic() + TO
++    while time.monotonic() < deadline:
++        try:
++            with open(marker, encoding="utf-8") as f:
++                executor_pid = int(f.read())
++            break
++        except (FileNotFoundError, ValueError):
++            time.sleep(0.005)
++    else:
++        raise RuntimeError("Owned executor PID handshake timed out")
++    executor_handles.append(observe_executor(executor_pid, p))
++    return p
+ 
+-before = live_python()
++before = 0  # no owned verifier executors started yet
+ reaped, kinds, secs = [], [], []
+-for i in range(3):
+-    res = V._run_guarded(LOOP_FN, [(1, 1)], "f", "samples", TO)
+-    kinds.append(res.get("exec"))
+-    reaped.append(res.get("reaped"))
+-    secs.append(res.get("timeout"))
+-after = live_python()
++V.subprocess.Popen = tracked_popen
++try:
++    for i in range(3):
++        marker = os.path.join(tempfile.mkdtemp(prefix="p91_executor_"), "pid")
++        handshake = ("import os\nwith open(%r, 'w', encoding='utf-8') as _marker:\n"
++                     "    _marker.write(str(os.getpid()))\n" % marker)
++        V._EXEC_RUNNER_SRC = handshake + native_runner
++        res = V._run_guarded(LOOP_FN, [(1, 1)], "f", "samples", TO)
++        kinds.append(res.get("exec"))
++        reaped.append(res.get("reaped"))
++        secs.append(res.get("timeout"))
++finally:
++    V.subprocess.Popen = native_popen
++    V._EXEC_RUNNER_SRC = native_runner
++after = sum(p.poll() is None for p in owned)
++owned_snapshot = [{'pid': p.pid, 'returncode': p.poll()} for p in owned]
++executor_snapshot = []
++for pid, handle, launcher in executor_handles:
++    state = kernel.WaitForSingleObject(handle, 1000) if os.name == "nt" else None
++    if os.name == "nt" and state not in (0, 258):
++        raise OSError("Owned executor wait failed")
++    exited = state == 0 if os.name == "nt" else launcher.poll() is not None
++    executor_snapshot.append({'pid': pid, 'launcher_pid': launcher.pid, 'exited': exited})
++    if os.name == "nt":
++        if not exited:
++            kernel.TerminateProcess(handle, 1)  # only the pre-opened test executor
++            kernel.WaitForSingleObject(handle, 5000)
++        kernel.CloseHandle(handle)
++# Collect the failure BEFORE cleanup: a leaked child must still make T3b red.
++# Kill only children created by this test; never enumerate/terminate outsiders.
++for p in owned:
++    if p.poll() is None:
++        p.kill()
++    p.wait(timeout=5)
+ v, _c = verifier()
+ r, err, dt = timed(lambda: v.verify(V.VerifyRequest(
+     task="unit", code=LOOP_FN, unit_id="t3_full", cases=[(1, 1)])))
+@@ -208,7 +257,9 @@ v, _c = verifier()
+ r, err, dt = timed(lambda: v.verify(V.VerifyRequest(
+     task="unit", code=GOOD, unit_id="t3_ok", cases=[(1, 2)])))
+ out["t3"] = {"kinds": kinds, "reaped": reaped, "timeout": secs[0],
+-             "before": before, "after": after, "full_ok": full_ok,
++             "before": before, "after": after, "owned": owned_snapshot,
++             "executors": executor_snapshot,
++             "full_ok": full_ok,
+              "full_l2_ok": full_l2, "full_sec": full_dt,
+              "ok_after": (r.ok if r else None), "err": err}
+ 
+@@ -293,14 +344,17 @@ def _run_child(src_path: str):
+     if not m:
+         return {"hang": False, "sec": time.time() - t0, "out": txt,
+                 "stderr": err[-500:]}
+-    return {"hang": False, "sec": time.time() - t0, "data": json.loads(m.group(1))}
++    return {"hang": False, "sec": time.time() - t0, "data": json.loads(m.group(1)),
++            "out": txt, "stderr": err, "outer_pid": p.pid,
++            "returncode": p.returncode}
+ 
+ 
+ def _proc_ok(t3):
+-    if t3["before"] is None or t3["after"] is None:
+-        print("       （进程计数探针不可用 ⇒ T3b 跳过，如实标注）")
+-        return True
+-    return (t3["after"] - t3["before"]) <= 1      # 允许 1 台外部抖动
++    owned = t3.get("owned", [])
++    return (len(owned) == 3 and t3.get("before") == 0 and t3.get("after") == 0
++            and all(p.get("returncode") is not None for p in owned)
++            and len(t3.get("executors", [])) == 3
++            and all(p.get("exited") is True for p in t3["executors"]))
+ 
+ 
+ def _hang_reds():
+@@ -338,7 +392,8 @@ def judge(data, sec):
+           all(k == "timeout" for k in t3["kinds"]),
+           "kinds=%r reaped=%r" % (t3["kinds"], t3["reaped"]))
+     check("T3b 连续超时后存活进程数不增长", _proc_ok(t3),
+-          "before=%r after=%r" % (t3["before"], t3["after"]))
++          "owned=%r executors=%r before=%r after=%r" % (
++              t3.get("owned"), t3.get("executors"), t3["before"], t3["after"]))
+     check("T3c 连续超时后后续调用仍正常（全链路 L2 有界判负 + 正常载荷通过）",
+           t3["err"] == "" and t3["full_l2_ok"] is False
+           and t3["ok_after"] is True and t3["full_sec"] < budget,
+diff --git a/md_cg/test_mode_parity.py b/md_cg/test_mode_parity.py
+index ae76991..232b7fc 100644
+--- a/md_cg/test_mode_parity.py
++++ b/md_cg/test_mode_parity.py
+@@ -413,6 +413,15 @@ VOL = ("t", "created_at", "last_access", "time_window", "last_merge_at",
+ AGG = re.compile(r"【聚合 [^】]*】")
+ PID = re.compile(r"prop_[0-9a-f]{8,}")   # pid 含时钟+随机熵（身份面，掩码）
+ TS0 = 1700000000.0          # 固定观测时刻（E 分数类确定性的锚）
++# The full_B merge label enters the content-addressed tombstone of full_D.
++# Masking the displayed aggregation date in strip() does not stabilize that
++# digest. Inject the same observation stamp for all three source-tree probes;
++# retain the exact tombstone equality and the exact two-item mutation assertion.
++_aggregate_line = forgetting.aggregate_line
++def aggregate_at_observation(body, content, stamp=None):
++    return _aggregate_line(body, content, stamp=stamp or
++                           time.strftime("%m-%d %H:%M", time.localtime(TS0)))
++forgetting.aggregate_line = aggregate_at_observation
+ BODY = ("# 功能名：部署面端口约定\n"
+         "# 生效条件：载体/位置：prod 集群；时间：2026-09-30 起；方法：部署清单核对；约束：无\n"
+         "# 子功能：登记各服务监听端口\n"

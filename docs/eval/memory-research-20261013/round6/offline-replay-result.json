@@ -1,0 +1,18 @@
+{
+  "sessions_replayed": 673,
+  "by_mode": {
+    "development": 36,
+    "G-smoke": 3,
+    "generalization": 376,
+    "holdout": 144,
+    "identity-aux": 10,
+    "oracle-v2": 96,
+    "smoke": 4,
+    "smoke-v2": 4
+  },
+  "failures": [],
+  "passed": true,
+  "API_calls": 0,
+  "credential_reads": 0,
+  "does_not_generate_new_independent_model_trials": true
+}

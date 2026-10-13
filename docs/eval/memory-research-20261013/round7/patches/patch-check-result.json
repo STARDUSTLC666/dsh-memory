@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "base": "e683a4259d9264cb7438c34920fe1efa79e5105c",
+  "four_independent_patch_checks_passed_before_combined_application": true,
+  "combined_applied_files": [
+    {
+      "file": "README.md",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    },
+    {
+      "file": "docs/mdcg/功能调用映射表_v0.1.md",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    },
+    {
+      "file": "md_cg/evidence_budget.py",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    },
+    {
+      "file": "md_cg/evidence_preserving.py",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    },
+    {
+      "file": "md_cg/mcp_server.py",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    },
+    {
+      "file": "md_cg/test_evidence_delivery_compact.py",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    },
+    {
+      "file": "md_cg/test_evidence_preserving.py",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    },
+    {
+      "file": "md_cg/test_issue91_verifier_timeout.py",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    },
+    {
+      "file": "md_cg/test_mode_parity.py",
+      "exact_byte_match": false,
+      "only_platform_newlines_differ": true
+    }
+  ],
+  "reverse_check": true,
+  "scope": "Fresh E-drive extracted exact Git baseline; platform CRLF/LF differences explicitly canonicalized only for this comparison. No original repository/production mutation."
+}

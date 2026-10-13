@@ -1,0 +1,31 @@
+{
+  "gates": [
+    {
+      "script": "scripts/check_publish_artifact.py",
+      "args": [],
+      "returncode": 0,
+      "seconds": 14.764309599995613,
+      "log_sha256": "fdc5fe0d85adf822ecab88d30f05d653bc97c86e300aa0990ca75f3531b0d74c"
+    },
+    {
+      "script": "scripts/workspace_index.py",
+      "args": [
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.23166140000103042,
+      "log_sha256": "2a6e6510fd6e51cbf6195b4c0ffffca90bbbae5bb5cda979aa353373720c0271"
+    },
+    {
+      "script": "scripts/cogmap_sync.py",
+      "args": [
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 0.3447935000003781,
+      "log_sha256": "23db8c20b144372d6791966c6942f6ba00dd3d570d87ee5f73e4eba8506ca10b"
+    }
+  ],
+  "not_remote_CI": true,
+  "untracked_candidate_files_may_not_be_in_all_git_based_scans": true
+}

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "repeat": 1,
+      "returncode": 0,
+      "seconds": 7.263652699999511,
+      "sha256": "de82fb1e5e4e7ad281cb1b11d3df18188ebe114e936b64547d0b02ba8b89d071"
+    },
+    {
+      "repeat": 2,
+      "returncode": 0,
+      "seconds": 6.998276199999964,
+      "sha256": "deae9d8da0a3f5937a1260d8a0f6345e6da2b40f55b018f18a6cec25110238fb"
+    },
+    {
+      "repeat": 3,
+      "returncode": 0,
+      "seconds": 6.994282499974361,
+      "sha256": "4b15d3dac93d793d98cf79ff744cbed083df3d0d343b6ab6afcb8644ced4c4fc"
+    }
+  ],
+  "original_parallel_failure": "T3b uses tasklist to count ALL python.exe processes; other tests/model bridges can change the count. T3a owned child reap check passed in original run. No source or assertion changed.",
+  "original_full_suite_result_retained": "327/328 pass,3 private-corpus skips; do not relabel that cohort all-green."
+}

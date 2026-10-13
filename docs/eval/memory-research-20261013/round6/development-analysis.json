@@ -1,0 +1,1995 @@
+{
+  "mode": "development",
+  "complete": true,
+  "sessions_completed": 36,
+  "sessions_expected": 36,
+  "unique_tasks": 12,
+  "families": 12,
+  "repetitions": 1,
+  "unit_warning": "Repeated samples and within-family variants are clustered, not fully independent tasks.",
+  "groups": {
+    "B": {
+      "success": 9,
+      "trials": 12,
+      "rate": 0.75,
+      "by_family": {
+        "authorization": {
+          "success": 0,
+          "trials": 1
+        },
+        "conjunction": {
+          "success": 1,
+          "trials": 1
+        },
+        "contradiction": {
+          "success": 1,
+          "trials": 1
+        },
+        "exclusion": {
+          "success": 1,
+          "trials": 1
+        },
+        "expiry": {
+          "success": 1,
+          "trials": 1
+        },
+        "insufficient": {
+          "success": 1,
+          "trials": 1
+        },
+        "long_history": {
+          "success": 1,
+          "trials": 1
+        },
+        "multihop": {
+          "success": 0,
+          "trials": 1
+        },
+        "provenance": {
+          "success": 1,
+          "trials": 1
+        },
+        "revision": {
+          "success": 0,
+          "trials": 1
+        },
+        "timeline": {
+          "success": 1,
+          "trials": 1
+        },
+        "transfer": {
+          "success": 1,
+          "trials": 1
+        }
+      },
+      "usage": {
+        "inputTokens": 17684,
+        "outputTokens": 5505,
+        "cacheReadTokens": 12416,
+        "cacheWriteTokens": 0,
+        "totalTokens": 35605
+      },
+      "uncached_input_plus_output": 23189,
+      "p50_ms": 6791.5,
+      "p95_ms": 9421.65,
+      "model_requests": 26,
+      "tool_calls": 26,
+      "always_success_tasks": 9,
+      "mixed_repeat_tasks": 0,
+      "false_refusals": 3,
+      "answer_opportunities": 8,
+      "unsupported_answers": 0,
+      "defer_opportunities": 4,
+      "infrastructure_errors": 0,
+      "reflection_triggers": 0,
+      "api_currency_cost": null
+    },
+    "D": {
+      "success": 10,
+      "trials": 12,
+      "rate": 0.8333333333333334,
+      "by_family": {
+        "authorization": {
+          "success": 0,
+          "trials": 1
+        },
+        "conjunction": {
+          "success": 1,
+          "trials": 1
+        },
+        "contradiction": {
+          "success": 1,
+          "trials": 1
+        },
+        "exclusion": {
+          "success": 1,
+          "trials": 1
+        },
+        "expiry": {
+          "success": 1,
+          "trials": 1
+        },
+        "insufficient": {
+          "success": 1,
+          "trials": 1
+        },
+        "long_history": {
+          "success": 0,
+          "trials": 1
+        },
+        "multihop": {
+          "success": 1,
+          "trials": 1
+        },
+        "provenance": {
+          "success": 1,
+          "trials": 1
+        },
+        "revision": {
+          "success": 1,
+          "trials": 1
+        },
+        "timeline": {
+          "success": 1,
+          "trials": 1
+        },
+        "transfer": {
+          "success": 1,
+          "trials": 1
+        }
+      },
+      "usage": {
+        "inputTokens": 15598,
+        "outputTokens": 4051,
+        "cacheReadTokens": 9728,
+        "cacheWriteTokens": 0,
+        "totalTokens": 29377
+      },
+      "uncached_input_plus_output": 19649,
+      "p50_ms": 6113.0,
+      "p95_ms": 6764.5,
+      "model_requests": 24,
+      "tool_calls": 24,
+      "always_success_tasks": 10,
+      "mixed_repeat_tasks": 0,
+      "false_refusals": 2,
+      "answer_opportunities": 8,
+      "unsupported_answers": 0,
+      "defer_opportunities": 4,
+      "infrastructure_errors": 0,
+      "reflection_triggers": 0,
+      "api_currency_cost": null
+    },
+    "G": {
+      "success": 11,
+      "trials": 12,
+      "rate": 0.9166666666666666,
+      "by_family": {
+        "authorization": {
+          "success": 0,
+          "trials": 1
+        },
+        "conjunction": {
+          "success": 1,
+          "trials": 1
+        },
+        "contradiction": {
+          "success": 1,
+          "trials": 1
+        },
+        "exclusion": {
+          "success": 1,
+          "trials": 1
+        },
+        "expiry": {
+          "success": 1,
+          "trials": 1
+        },
+        "insufficient": {
+          "success": 1,
+          "trials": 1
+        },
+        "long_history": {
+          "success": 1,
+          "trials": 1
+        },
+        "multihop": {
+          "success": 1,
+          "trials": 1
+        },
+        "provenance": {
+          "success": 1,
+          "trials": 1
+        },
+        "revision": {
+          "success": 1,
+          "trials": 1
+        },
+        "timeline": {
+          "success": 1,
+          "trials": 1
+        },
+        "transfer": {
+          "success": 1,
+          "trials": 1
+        }
+      },
+      "usage": {
+        "inputTokens": 16310,
+        "outputTokens": 4372,
+        "cacheReadTokens": 9984,
+        "cacheWriteTokens": 0,
+        "totalTokens": 30666
+      },
+      "uncached_input_plus_output": 20682,
+      "p50_ms": 6147.0,
+      "p95_ms": 6928.95,
+      "model_requests": 24,
+      "tool_calls": 24,
+      "always_success_tasks": 11,
+      "mixed_repeat_tasks": 0,
+      "false_refusals": 1,
+      "answer_opportunities": 8,
+      "unsupported_answers": 0,
+      "defer_opportunities": 4,
+      "infrastructure_errors": 0,
+      "reflection_triggers": 0,
+      "api_currency_cost": null
+    }
+  },
+  "paired": {
+    "B_to_D": {
+      "wins": 2,
+      "losses": 1,
+      "ties": 9,
+      "paired_sessions": 12,
+      "rate_difference": 0.08333333333333333,
+      "family_cluster_interval": {
+        "method": "descriptive family-cluster bootstrap, 10000 resamples, seed 610153",
+        "families": 12,
+        "lower95": -0.16666666666666666,
+        "upper95": 0.3333333333333333,
+        "not_a_noninferiority_or_significance_test": true
+      },
+      "task_rows": [
+        {
+          "task": "r6-development-timeline-1",
+          "family": "timeline",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-conjunction-1",
+          "family": "conjunction",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-exclusion-1",
+          "family": "exclusion",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-revision-1",
+          "family": "revision",
+          "left_success": 0,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-multihop-1",
+          "family": "multihop",
+          "left_success": 0,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-expiry-1",
+          "family": "expiry",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-transfer-1",
+          "family": "transfer",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-contradiction-1",
+          "family": "contradiction",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-insufficient-1",
+          "family": "insufficient",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-long_history-1",
+          "family": "long_history",
+          "left_success": 1,
+          "right_success": 0,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-provenance-1",
+          "family": "provenance",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-authorization-1",
+          "family": "authorization",
+          "left_success": 0,
+          "right_success": 0,
+          "repeats": 1
+        }
+      ]
+    },
+    "D_to_G": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 11,
+      "paired_sessions": 12,
+      "rate_difference": 0.08333333333333333,
+      "family_cluster_interval": {
+        "method": "descriptive family-cluster bootstrap, 10000 resamples, seed 610153",
+        "families": 12,
+        "lower95": 0.0,
+        "upper95": 0.25,
+        "not_a_noninferiority_or_significance_test": true
+      },
+      "task_rows": [
+        {
+          "task": "r6-development-timeline-1",
+          "family": "timeline",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-conjunction-1",
+          "family": "conjunction",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-exclusion-1",
+          "family": "exclusion",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-revision-1",
+          "family": "revision",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-multihop-1",
+          "family": "multihop",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-expiry-1",
+          "family": "expiry",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-transfer-1",
+          "family": "transfer",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-contradiction-1",
+          "family": "contradiction",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-insufficient-1",
+          "family": "insufficient",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-long_history-1",
+          "family": "long_history",
+          "left_success": 0,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-provenance-1",
+          "family": "provenance",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-authorization-1",
+          "family": "authorization",
+          "left_success": 0,
+          "right_success": 0,
+          "repeats": 1
+        }
+      ]
+    },
+    "B_to_G": {
+      "wins": 2,
+      "losses": 0,
+      "ties": 10,
+      "paired_sessions": 12,
+      "rate_difference": 0.16666666666666666,
+      "family_cluster_interval": {
+        "method": "descriptive family-cluster bootstrap, 10000 resamples, seed 610153",
+        "families": 12,
+        "lower95": 0.0,
+        "upper95": 0.4166666666666667,
+        "not_a_noninferiority_or_significance_test": true
+      },
+      "task_rows": [
+        {
+          "task": "r6-development-timeline-1",
+          "family": "timeline",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-conjunction-1",
+          "family": "conjunction",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-exclusion-1",
+          "family": "exclusion",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-revision-1",
+          "family": "revision",
+          "left_success": 0,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-multihop-1",
+          "family": "multihop",
+          "left_success": 0,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-expiry-1",
+          "family": "expiry",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-transfer-1",
+          "family": "transfer",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-contradiction-1",
+          "family": "contradiction",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-insufficient-1",
+          "family": "insufficient",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-long_history-1",
+          "family": "long_history",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-provenance-1",
+          "family": "provenance",
+          "left_success": 1,
+          "right_success": 1,
+          "repeats": 1
+        },
+        {
+          "task": "r6-development-authorization-1",
+          "family": "authorization",
+          "left_success": 0,
+          "right_success": 0,
+          "repeats": 1
+        }
+      ]
+    }
+  },
+  "stage_quality": {
+    "B": {
+      "all_exact_A_core_clauses_preserved": 8,
+      "core_clause_cases": 12,
+      "negative_fields_verbatim_preserved": 0,
+      "negative_field_cases": 3,
+      "response_tokens_p50": 556.0,
+      "response_tokens_p95": 764.6999999999999,
+      "response_tokens_total": 6272,
+      "authorized_denied_identity_cases": 0,
+      "unauthorized_delivered_body_cases": 0,
+      "unauthorized_answer_cases": 0,
+      "failure_risk_labels": {
+        "retrieval_candidate_missing": 1,
+        "delivery_exact_core_clause_loss": 2
+      }
+    },
+    "D": {
+      "all_exact_A_core_clauses_preserved": 10,
+      "core_clause_cases": 12,
+      "negative_fields_verbatim_preserved": 0,
+      "negative_field_cases": 3,
+      "response_tokens_p50": 331.0,
+      "response_tokens_p95": 657.4499999999999,
+      "response_tokens_total": 4474,
+      "authorized_denied_identity_cases": 0,
+      "unauthorized_delivered_body_cases": 0,
+      "unauthorized_answer_cases": 0,
+      "failure_risk_labels": {
+        "retrieval_candidate_missing": 1,
+        "delivery_exact_core_clause_loss": 1,
+        "native_negative_field_not_serialized_verbatim": 1
+      }
+    },
+    "G": {
+      "all_exact_A_core_clauses_preserved": 11,
+      "core_clause_cases": 12,
+      "negative_fields_verbatim_preserved": 3,
+      "negative_field_cases": 3,
+      "response_tokens_p50": 449.0,
+      "response_tokens_p95": 682.0,
+      "response_tokens_total": 5459,
+      "authorized_denied_identity_cases": 0,
+      "unauthorized_delivered_body_cases": 0,
+      "unauthorized_answer_cases": 0,
+      "failure_risk_labels": {
+        "retrieval_candidate_missing": 1
+      }
+    }
+  },
+  "case_rows": [
+    {
+      "task": "r6-development-authorization-1",
+      "family": "authorization",
+      "rep": 1,
+      "arm": "B",
+      "success": false,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_561a8bcf980addab4ea8"
+      ],
+      "candidate_ids": [],
+      "selected_ids": [],
+      "delivered_ids": [],
+      "required_candidate_coverage": false,
+      "required_selected_coverage": false,
+      "required_delivered_coverage": false,
+      "exact_core_clauses_preserved": 0,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": false,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 25,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [
+        "retrieval_candidate_missing"
+      ],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-authorization-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-authorization-1",
+      "family": "authorization",
+      "rep": 1,
+      "arm": "D",
+      "success": false,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_561a8bcf980addab4ea8"
+      ],
+      "candidate_ids": [],
+      "selected_ids": [],
+      "delivered_ids": [],
+      "required_candidate_coverage": false,
+      "required_selected_coverage": false,
+      "required_delivered_coverage": false,
+      "exact_core_clauses_preserved": 0,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": false,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 24,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [
+        "retrieval_candidate_missing"
+      ],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-authorization-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-authorization-1",
+      "family": "authorization",
+      "rep": 1,
+      "arm": "G",
+      "success": false,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_561a8bcf980addab4ea8"
+      ],
+      "candidate_ids": [],
+      "selected_ids": [],
+      "delivered_ids": [],
+      "required_candidate_coverage": false,
+      "required_selected_coverage": false,
+      "required_delivered_coverage": false,
+      "exact_core_clauses_preserved": 0,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": false,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 28,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [
+        "retrieval_candidate_missing"
+      ],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-authorization-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-conjunction-1",
+      "family": "conjunction",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "candidate_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "selected_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "delivered_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 801,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-conjunction-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-conjunction-1",
+      "family": "conjunction",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "candidate_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "selected_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "delivered_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 486,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-conjunction-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-conjunction-1",
+      "family": "conjunction",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "candidate_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "selected_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "delivered_ids": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_e22bc64bc4a630a4b9f2"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 564,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-conjunction-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-contradiction-1",
+      "family": "contradiction",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "candidate_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "selected_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "delivered_ids": [
+        "r6_14106ce150fe65fa119c"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": false,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 2,
+      "all_exact_core_clauses_preserved": false,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_14106ce150fe65fa119c"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 447,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-contradiction-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-contradiction-1",
+      "family": "contradiction",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "candidate_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "selected_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "delivered_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 2,
+      "exact_core_clauses_total": 2,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 485,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-contradiction-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-contradiction-1",
+      "family": "contradiction",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "candidate_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "selected_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "delivered_ids": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 2,
+      "exact_core_clauses_total": 2,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_14106ce150fe65fa119c",
+        "r6_8ca1124f42ffe57ed646"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 521,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-contradiction-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-exclusion-1",
+      "family": "exclusion",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "candidate_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "selected_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "delivered_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 2,
+      "source_ids_cited": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 647,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-exclusion-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-exclusion-1",
+      "family": "exclusion",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "candidate_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "selected_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "delivered_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 2,
+      "source_ids_cited": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 352,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-exclusion-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-exclusion-1",
+      "family": "exclusion",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "candidate_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "selected_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "delivered_ids": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 2,
+      "native_negative_total": 2,
+      "source_ids_cited": [
+        "r6_1d6e3539bdf673f28110"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 436,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-exclusion-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-expiry-1",
+      "family": "expiry",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "candidate_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "selected_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "delivered_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 590,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-expiry-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-expiry-1",
+      "family": "expiry",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "candidate_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "selected_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "delivered_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 310,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-expiry-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-expiry-1",
+      "family": "expiry",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "candidate_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "selected_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "delivered_ids": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_da84999f4279f4d13d01"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 381,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-expiry-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-insufficient-1",
+      "family": "insufficient",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "candidate_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "selected_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "delivered_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 572,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-insufficient-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-insufficient-1",
+      "family": "insufficient",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "candidate_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "selected_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "delivered_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 286,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-insufficient-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-insufficient-1",
+      "family": "insufficient",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "candidate_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "selected_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "delivered_ids": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_bb4ec6b17c28d0ff2699"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 346,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-insufficient-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-long_history-1",
+      "family": "long_history",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "candidate_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "selected_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "delivered_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 1,
+      "source_ids_cited": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 430,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-long_history-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-long_history-1",
+      "family": "long_history",
+      "rep": 1,
+      "arm": "D",
+      "success": false,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "candidate_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "selected_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "delivered_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 0,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": false,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 1,
+      "source_ids_cited": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 251,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [
+        "delivery_exact_core_clause_loss",
+        "native_negative_field_not_serialized_verbatim"
+      ],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-long_history-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-long_history-1",
+      "family": "long_history",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "candidate_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "selected_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "delivered_ids": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 1,
+      "native_negative_total": 1,
+      "source_ids_cited": [
+        "r6_e5ed689d63e6a78e5ac6"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 661,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-long_history-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-multihop-1",
+      "family": "multihop",
+      "rep": 1,
+      "arm": "B",
+      "success": false,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_b4bab47e7c33e1ddf54e",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_58cb8b68b88fd9a26b7b"
+      ],
+      "candidate_ids": [
+        "r6_58cb8b68b88fd9a26b7b",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_b4bab47e7c33e1ddf54e"
+      ],
+      "selected_ids": [
+        "r6_58cb8b68b88fd9a26b7b",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_b4bab47e7c33e1ddf54e"
+      ],
+      "delivered_ids": [
+        "r6_58cb8b68b88fd9a26b7b"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": false,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 3,
+      "all_exact_core_clauses_preserved": false,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_58cb8b68b88fd9a26b7b"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 475,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [
+        "delivery_exact_core_clause_loss"
+      ],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-multihop-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-multihop-1",
+      "family": "multihop",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_b4bab47e7c33e1ddf54e",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_58cb8b68b88fd9a26b7b"
+      ],
+      "candidate_ids": [
+        "r6_58cb8b68b88fd9a26b7b",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_b4bab47e7c33e1ddf54e"
+      ],
+      "selected_ids": [
+        "r6_58cb8b68b88fd9a26b7b",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_b4bab47e7c33e1ddf54e"
+      ],
+      "delivered_ids": [
+        "r6_58cb8b68b88fd9a26b7b",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_b4bab47e7c33e1ddf54e"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 3,
+      "exact_core_clauses_total": 3,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_b4bab47e7c33e1ddf54e",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_58cb8b68b88fd9a26b7b"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 702,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-multihop-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-multihop-1",
+      "family": "multihop",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_b4bab47e7c33e1ddf54e",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_58cb8b68b88fd9a26b7b"
+      ],
+      "candidate_ids": [
+        "r6_58cb8b68b88fd9a26b7b",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_b4bab47e7c33e1ddf54e"
+      ],
+      "selected_ids": [
+        "r6_58cb8b68b88fd9a26b7b",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_b4bab47e7c33e1ddf54e"
+      ],
+      "delivered_ids": [
+        "r6_58cb8b68b88fd9a26b7b",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_b4bab47e7c33e1ddf54e"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 3,
+      "exact_core_clauses_total": 3,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_b4bab47e7c33e1ddf54e",
+        "r6_abdeab93e2d76e2f234b",
+        "r6_58cb8b68b88fd9a26b7b"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 693,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-multihop-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-provenance-1",
+      "family": "provenance",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "candidate_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "selected_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "delivered_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 540,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-provenance-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-provenance-1",
+      "family": "provenance",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "candidate_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "selected_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "delivered_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 268,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-provenance-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-provenance-1",
+      "family": "provenance",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "DEFER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "candidate_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "selected_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "delivered_ids": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_bc96154130491eee47d9"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 328,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-provenance-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-revision-1",
+      "family": "revision",
+      "rep": 1,
+      "arm": "B",
+      "success": false,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "DEFER",
+      "authorized_required_ids": [
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "candidate_ids": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "selected_ids": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "delivered_ids": [
+        "r6_68661448e7dd206eb3cf"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": false,
+      "exact_core_clauses_preserved": 0,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": false,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 424,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [
+        "delivery_exact_core_clause_loss"
+      ],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-revision-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-revision-1",
+      "family": "revision",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "candidate_ids": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "selected_ids": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "delivered_ids": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 621,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-revision-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-revision-1",
+      "family": "revision",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "candidate_ids": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "selected_ids": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "delivered_ids": [
+        "r6_68661448e7dd206eb3cf",
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_fe3c3ad409c854a1d8de"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 673,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-revision-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-timeline-1",
+      "family": "timeline",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "candidate_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "selected_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "delivered_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 3,
+      "exact_core_clauses_total": 3,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 735,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-timeline-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-timeline-1",
+      "family": "timeline",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "candidate_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "selected_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "delivered_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 3,
+      "exact_core_clauses_total": 3,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 402,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-timeline-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-timeline-1",
+      "family": "timeline",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "candidate_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "selected_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "delivered_ids": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 3,
+      "exact_core_clauses_total": 3,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 0,
+      "source_ids_cited": [
+        "r6_f8562fcf2a39aa6c5fb9"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 462,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-timeline-1\\rep-1\\G"
+    },
+    {
+      "task": "r6-development-transfer-1",
+      "family": "transfer",
+      "rep": 1,
+      "arm": "B",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "candidate_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "selected_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "delivered_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 1,
+      "source_ids_cited": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 586,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-transfer-1\\rep-1\\B"
+    },
+    {
+      "task": "r6-development-transfer-1",
+      "family": "transfer",
+      "rep": 1,
+      "arm": "D",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "candidate_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "selected_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "delivered_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 0,
+      "native_negative_total": 1,
+      "source_ids_cited": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 287,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-transfer-1\\rep-1\\D"
+    },
+    {
+      "task": "r6-development-transfer-1",
+      "family": "transfer",
+      "rep": 1,
+      "arm": "G",
+      "success": true,
+      "expected_disposition": "ANSWER",
+      "actual_disposition": "ANSWER",
+      "authorized_required_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "candidate_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "selected_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "delivered_ids": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "required_candidate_coverage": true,
+      "required_selected_coverage": true,
+      "required_delivered_coverage": true,
+      "exact_core_clauses_preserved": 1,
+      "exact_core_clauses_total": 1,
+      "all_exact_core_clauses_preserved": true,
+      "native_negative_verbatim_preserved": 1,
+      "native_negative_total": 1,
+      "source_ids_cited": [
+        "r6_2285e598744be1e805d7"
+      ],
+      "declared_adoption_is_not_causal_proof": true,
+      "response_tokens": 366,
+      "inner_truncated_ids": [],
+      "overflow": false,
+      "labels": [],
+      "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\development\\r6-development-transfer-1\\rep-1\\G"
+    }
+  ]
+}

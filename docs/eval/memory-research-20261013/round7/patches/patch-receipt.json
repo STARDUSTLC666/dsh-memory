@@ -1,0 +1,26 @@
+{
+  "base": "e683a4259d9264cb7438c34920fe1efa79e5105c",
+  "files": {
+    "repository-e683-base.zip": {
+      "sha256": "77913079a3af585ebe4ce6cfe285aad43368e83865b4bb0c4c63bf9fd4421ced",
+      "bytes": 32409993
+    },
+    "round6-frozen-G.patch": {
+      "sha256": "79b7978ebd8e4ee98362433963e6a06a3a093f450678db687bbc5f834024ce2c",
+      "bytes": 17506
+    },
+    "round7-complete.patch": {
+      "sha256": "a2f3752acc553072db816df4a9e2e29db896f85820089b4fe77c7d2c7ae76538",
+      "bytes": 91010
+    },
+    "source-atomic-S2.patch": {
+      "sha256": "eb09703c1a140a38d6bd75f982896431f90cbd6fb25d1d9aac28280ad5b26940",
+      "bytes": 63693
+    },
+    "test-stability.patch": {
+      "sha256": "c61fe3062b8b6ad70a21d1ef06fc264ba7d314a7d6274b560803321664713431",
+      "bytes": 9811
+    }
+  },
+  "published": false
+}

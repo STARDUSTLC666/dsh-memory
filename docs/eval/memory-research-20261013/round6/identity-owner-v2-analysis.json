@@ -1,0 +1,41 @@
+{
+  "new_version_not_in_primary_or_independent_estimate": true,
+  "groups": {
+    "A": {
+      "success": 0,
+      "trials": 2,
+      "authorized_source_selected": 0,
+      "source_body_delivered": 0,
+      "uncached_input_plus_output": 2454
+    },
+    "B": {
+      "success": 2,
+      "trials": 2,
+      "authorized_source_selected": 2,
+      "source_body_delivered": 2,
+      "uncached_input_plus_output": 4255
+    },
+    "D": {
+      "success": 2,
+      "trials": 2,
+      "authorized_source_selected": 2,
+      "source_body_delivered": 2,
+      "uncached_input_plus_output": 3231
+    },
+    "E": {
+      "success": 0,
+      "trials": 2,
+      "authorized_source_selected": 2,
+      "source_body_delivered": 2,
+      "uncached_input_plus_output": 3663
+    },
+    "G": {
+      "success": 2,
+      "trials": 2,
+      "authorized_source_selected": 2,
+      "source_body_delivered": 2,
+      "uncached_input_plus_output": 3313
+    }
+  },
+  "original_E_projection_gap": "A trace.context project scope/header omitted; native observation time_window labeled as conditions. Actual authorized badge body was delivered; E refusal was not an authentication rejection. No field-level causal isolation performed."
+}

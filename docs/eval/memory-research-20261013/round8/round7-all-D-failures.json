@@ -1,0 +1,390 @@
+[
+  {
+    "task": "r7-public-concurrent-futures",
+    "rep": 1,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "affects_process_pool": true,
+        "affects_thread_pool": false,
+        "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7"
+      },
+      "source_release": "v3.13.0",
+      "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7",
+      "source_unit": "concurrent.futures",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_eb8e190918210bf4c892",
+        "r7_8ee1be68e62b6e7a35b5"
+      ]
+    },
+    "answer": {
+      "disposition": "DEFER",
+      "answer": "",
+      "evidence_ids": [
+        "r7_eb8e190918210bf4c892",
+        "r7_8ee1be68e62b6e7a35b5"
+      ],
+      "reason": "Retrieved records are unverified, partial snippets of Doc/library/concurrent.futures.rst pinned to commit 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7 (receipt b7badfc7...). They show the Executor.map signature with chunksize=1 and general module text, but contain no statement about whether chunksize affects ProcessPoolExecutor or ThreadPoolExecutor, and no explicit TextIOWrapper/version notes covering the distinction. The task asks whether chunksize affects each pool type with keys affects_process_pool and affects_thread_pool, plus a source_commit; the decisive authorized evidence for the boolean behavior is missing (documented statement truncated). Hence DEFER with empty answer."
+    },
+    "A_units": [
+      {
+        "id": "r7_8ee1be68e62b6e7a35b5",
+        "body": "The :mod:`concurrent.futures` module provides a high-level interface for\nasynchronously executing callables.\n\nThe asynchronous execution can be performed with threads, using\n:class:`ThreadPoolExecutor`, or separate processes, using\n:class:`ProcessPoolExecutor`.  Both implement the same interface, which is\ndefined by the abstract :class:`Executor` class.\n\n.. include:: ../includes/wasm-notavail.rst\n\nExecutor Objects\n----------------",
+        "fully_visible": true
+      },
+      {
+        "id": "r7_eb8e190918210bf4c892",
+        "body": "         with ThreadPoolExecutor(max_workers=1) as executor:\n             future = executor.submit(pow, 323, 1235)\n             print(future.result())\n\n   .. method:: map(fn, *iterables, timeout=None, chunksize=1)\n\n      Similar to :func:`map(fn, *iterables) <map>` except:\n\n      * the *iterables* are collected immediately rather than lazily;",
+        "fully_visible": true
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_eb8e190918210bf4c892\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-concurrent-futures-A\",\"receipt_sha256\":\"b7badfc7248121ef632865bcecec4ce344fdd79818adeb94a65f5859376512f8\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/concurrent.futures.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\n         with ThreadPoolExecutor(max_workers=1) as executor:\n             future = executor.submit(pow, 323, 1235)\n             print(future.result())\n\n   .. method:: map(fn, *iterables, timeout=None, chunksize=1)\n\n      Similar to :func:`map(fn, *iterables) <map>` except:\n\n      * the *iterables* are collected immediately rather than lazily;\n\n[\"r7_8ee1be68e62b6e7a35b5\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-concurrent-futures-A\",\"receipt_sha256\":\"b7badfc7248121ef632865bcecec4ce344fdd79818adeb94a65f5859376512f8\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/concurrent.futures.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\nThe :mod:`concurrent.futures` module provides a high-level interface for\nasynchronously executing callables.\n\nThe asynchronous execution can be performed with threads, using\n:class:`ThreadPoolExecutor`, or separate processes, using\n:class:`ProcessPoolExecutor`.  Both implement the same interface, which is\ndefined by the abstract :class:`Executor` class.\n\n.. include:: ../includes/wasm-notavail.rst\n\nExecutor Objects\n----------------"
+  },
+  {
+    "task": "r7-public-concurrent-futures",
+    "rep": 2,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "affects_process_pool": true,
+        "affects_thread_pool": false,
+        "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7"
+      },
+      "source_release": "v3.13.0",
+      "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7",
+      "source_unit": "concurrent.futures",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_eb8e190918210bf4c892",
+        "r7_8ee1be68e62b6e7a35b5"
+      ]
+    },
+    "answer": {
+      "disposition": "DEFER",
+      "answer": "",
+      "evidence_ids": [
+        "r7_eb8e190918210bf4c892",
+        "r7_8ee1be68e62b6e7a35b5"
+      ],
+      "reason": "Retrieved evidence is limited to the Executor.map signature and general module context from Doc/library/concurrent.futures.rst at commit 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7 (release v3.13.0). It confirms chunksize is an Executor.map parameter but does not include the decisive documentation text distinguishing chunksize semantics for ProcessPoolExecutor.map versus ThreadPoolExecutor.map. With the retrieval budget exhausted, the requested affects_process_pool/affects_thread_pool values cannot be grounded in authorized evidence, so DEFER with empty answer."
+    },
+    "A_units": [
+      {
+        "id": "r7_8ee1be68e62b6e7a35b5",
+        "body": "The :mod:`concurrent.futures` module provides a high-level interface for\nasynchronously executing callables.\n\nThe asynchronous execution can be performed with threads, using\n:class:`ThreadPoolExecutor`, or separate processes, using\n:class:`ProcessPoolExecutor`.  Both implement the same interface, which is\ndefined by the abstract :class:`Executor` class.\n\n.. include:: ../includes/wasm-notavail.rst\n\nExecutor Objects\n----------------",
+        "fully_visible": true
+      },
+      {
+        "id": "r7_eb8e190918210bf4c892",
+        "body": "         with ThreadPoolExecutor(max_workers=1) as executor:\n             future = executor.submit(pow, 323, 1235)\n             print(future.result())\n\n   .. method:: map(fn, *iterables, timeout=None, chunksize=1)\n\n      Similar to :func:`map(fn, *iterables) <map>` except:\n\n      * the *iterables* are collected immediately rather than lazily;",
+        "fully_visible": true
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_eb8e190918210bf4c892\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-concurrent-futures-A\",\"receipt_sha256\":\"b7badfc7248121ef632865bcecec4ce344fdd79818adeb94a65f5859376512f8\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/concurrent.futures.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\n         with ThreadPoolExecutor(max_workers=1) as executor:\n             future = executor.submit(pow, 323, 1235)\n             print(future.result())\n\n   .. method:: map(fn, *iterables, timeout=None, chunksize=1)\n\n      Similar to :func:`map(fn, *iterables) <map>` except:\n\n      * the *iterables* are collected immediately rather than lazily;\n\n[\"r7_8ee1be68e62b6e7a35b5\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-concurrent-futures-A\",\"receipt_sha256\":\"b7badfc7248121ef632865bcecec4ce344fdd79818adeb94a65f5859376512f8\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/concurrent.futures.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\nThe :mod:`concurrent.futures` module provides a high-level interface for\nasynchronously executing callables.\n\nThe asynchronous execution can be performed with threads, using\n:class:`ThreadPoolExecutor`, or separate processes, using\n:class:`ProcessPoolExecutor`.  Both implement the same interface, which is\ndefined by the abstract :class:`Executor` class.\n\n.. include:: ../includes/wasm-notavail.rst\n\nExecutor Objects\n----------------"
+  },
+  {
+    "task": "r7-public-configparser",
+    "rep": 1,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "strict_default": true,
+        "option_transform": "lowercase"
+      },
+      "source_release": "v3.13.0",
+      "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7",
+      "source_unit": "configparser",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_f8ef015c82e876a89423",
+        "r7_4fcb29cc5eee0772f3ee"
+      ]
+    },
+    "answer": {
+      "disposition": "ANSWER",
+      "answer": "{\"strict_default\": true, \"option_transform\": \"optionxform オプション名は小文字に変換されます。\"}",
+      "evidence_ids": [
+        "r7_4fcb29cc5eee0772f3ee",
+        "r7_f8ef015c82e876a89423"
+      ],
+      "reason": "Pinned CPython v3.13.0 docs show ConfigParser(strict=True) as default (duplicate sections/options rejected by default), and the mapping interface yields optionxform'ed keys, lowercased by default (optionxform=str.lower). Scope matches v3.13.0."
+    },
+    "A_units": [
+      {
+        "id": "r7_4fcb29cc5eee0772f3ee",
+        "body": ":mod:`configparser` objects behave as close to actual dictionaries as possible.\nThe mapping interface is complete and adheres to the\n:class:`~collections.abc.MutableMapping` ABC.\nHowever, there are a few differences that should be taken into account:\n\n* By default, all keys in sections are accessible in a case-insensitive manner\n  [1]_.  E.g. ``for option in parser[\"section\"]`` yields only ``optionxform``'ed\n  option key names.  This means lowercased keys by default.  At the same time,\n  for a section that holds the key ``'a'``, both expressions return ``True``::\n\n     \"a\" in parser[\"section\"]\n     \"A\" in parser[\"section\"]\n\n* All sections include ``DEFAULTSECT`` values as well which means that\n  ``.clear()`` on a section may not leave the section visibly empty.  This is\n  because default values cannot be deleted from the section (because technically\n  they are not there).  If they are overridden in the section, deleting causes\n  the default value to be visible again.  Trying to delete a default value\n  causes a :exc:`KeyError`.",
+        "fully_visible": true
+      },
+      {
+        "id": "r7_f8ef015c82e876a89423",
+        "body": "ConfigParser Objects\n--------------------\n\n.. class:: ConfigParser(defaults=None, dict_type=dict, allow_no_value=False, delimiters=('=', ':'), comment_prefixes=('#', ';'), inline_comment_prefixes=None, strict=True, empty_lines_in_values=True, default_section=configparser.DEFAULTSECT, interpolation=BasicInterpolation(), converters={})\n\n   The main configuration parser.  When *defaults* is given, it is initialized\n   into the dictionary of intrinsic defaults.  When *dict_type* is given, it\n   will be used to create the dictionary objects for the list of sections, for\n   the options within a section, and for the default values.\n\n   When *delimiters* is given, it is used as the set of substrings that\n   divide keys from values.  When *comment_prefixes* is given, it will be used\n   as the set of substrings that prefix comments in otherwise empty lines.\n   Comments can be indented.  When *inline_comment_prefixes* is given, it will\n   be used as the set of substrings that prefix comments in non-empty lines.",
+        "fully_visible": false
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_4fcb29cc5eee0772f3ee\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-configparser-A\",\"receipt_sha256\":\"e69ad4c9e00a8c975181498b441fb897e13d61b25f2424d9436e695467d8be4f\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/configparser.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\n:mod:`configparser` objects behave as close to actual dictionaries as possible.\nThe mapping interface is complete and adheres to the\n:class:`~collections.abc.MutableMapping` ABC.\nHowever, there are a few differences that should be taken into account:\n\n* By default, all keys in sections are accessible in a case-insensitive manner\n  [1]_.  E.g. ``for option in parser[\"section\"]`` yields only ``optionxform``'ed\n  option key names.  This means lowercased keys by default.  At the same time,\n  for a section that holds the key ``'a'``, both expressions return ``True``::\n\n     \"a\" in parser[\"section\"]\n     \"A\" in parser[\"section\"]\n\n* All sections include ``DEFAULTSECT`` values as well which means that\n  ``.clear()`` on a section may not leave the section visibly empty.  This is\n  because default values cannot be deleted from the section (because technically\n  they are not there).  If they are overridden in the section, deleting causes\n  the default value to be visible again.  Trying to delete a default value\n  causes a :exc:`KeyError`.\n\n[\"r7_f8ef015c82e876a89423\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-configparser-A\",\"receipt_sha256\":\"e69ad4c9e00a8c975181498b441fb897e13d61b25f2424d9436e695467d8be4f\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/configparser.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\nConfigParser Objects\n\n[…]\n.. class:: ConfigParser(defaults=None, dict_type=dict, allow_no_value=False, delimiters=('=', ':'), comment_prefixes=('#', ';'), inline_comment_prefixes=None, strict=True, empty_lines_in_values=True, default_section=configparser.DEFAULTSECT"
+  },
+  {
+    "task": "r7-public-git-reset",
+    "rep": 2,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "unchanged_index_mode": "--soft",
+        "default_mode": "--mixed"
+      },
+      "source_release": "v2.51.0",
+      "source_commit": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0",
+      "source_unit": "git-reset",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_063421618498a13631e0"
+      ]
+    },
+    "answer": {
+      "disposition": "ANSWER",
+      "answer": "{\"unchanged_index_mode\": \"--mixed\", \"default_mode\": \"--mixed\"}",
+      "evidence_ids": [
+        "r7_063421618498a13631e0"
+      ],
+      "reason": "The authenticated git-reset.adoc table for v2.51.0 shows --mixed leaves the working tree unchanged (X) while resetting the index; the git reset documentation specifies --mixed as the default mode. Evidence is pinned first-party upstream documentation with a matching release scope."
+    },
+    "A_units": [
+      {
+        "id": "r7_063421618498a13631e0",
+        "body": "....\nworking index HEAD target         working index HEAD\n----------------------------------------------------\n X       U     A    B     --soft  (disallowed)\n\t\t\t  --mixed  X       B     B\n\t\t\t  --hard   B       B     B\n\t\t\t  --merge  B       B     B\n\t\t\t  --keep  (disallowed)\n....\n\n....\nworking index HEAD target         working index HEAD\n----------------------------------------------------\n X       U     A    A     --soft  (disallowed)\n\t\t\t  --mixed  X       A     A\n\t\t\t  --hard   A       A     A\n\t\t\t  --merge  A       A     A\n\t\t\t  --keep  (disallowed)\n....\n\n`X` means any state and `U` means an unmerged index.",
+        "fully_visible": true
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_063421618498a13631e0\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-git-reset-A\",\"receipt_sha256\":\"b0a9ab38b72b5ada40a0163257c7a25028c573ef05d6da4ca1ffc88015dc3cb2\",\"reference\":\"https://raw.githubusercontent.com/git/git/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-reset.adoc\"},{\"release\":\"v2.51.0\",\"repository\":\"git/git\"},\"unverified\",\"ACCEPT\",null,null,null]\n....\nworking index HEAD target         working index HEAD\n----------------------------------------------------\n X       U     A    B     --soft  (disallowed)\n\t\t\t  --mixed  X       B     B\n\t\t\t  --hard   B       B     B\n\t\t\t  --merge  B       B     B\n\t\t\t  --keep  (disallowed)\n....\n\n....\nworking index HEAD target         working index HEAD\n----------------------------------------------------\n X       U     A    A     --soft  (disallowed)\n\t\t\t  --mixed  X       A     A\n\t\t\t  --hard   A       A     A\n\t\t\t  --merge  A       A     A\n\t\t\t  --keep  (disallowed)\n....\n\n`X` means any state and `U` means an unmerged index."
+  },
+  {
+    "task": "r7-public-git-update-index",
+    "rep": 1,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "sparse_bit": "skip-worktree",
+        "stat_optimization_bit": "assume-unchanged",
+        "source_commit": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0"
+      },
+      "source_release": "v2.51.0",
+      "source_commit": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0",
+      "source_unit": "git-update-index",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_e1d1a8e9d96b006f70db",
+        "r7_3985389b1288863ca22e"
+      ]
+    },
+    "answer": {
+      "disposition": "DEFER",
+      "answer": "",
+      "evidence_ids": [],
+      "reason": "The single permitted retrieval returned the git-update-index.adoc document at commit c44beea485f0f2feaf460e2ac87fdd5608d63cf0 (v2.51.0), but only the SYNOPSIS/NAME/DESCRIPTION and the --really-refresh, --[no-]skip-worktree, --[no-]ignore-skip-worktree-entries, and --[no-]fsmonitor-valid option entries. The retrieved text for --[no-]skip-worktree merely says it sets/unsets the \"skip-worktree\" bit and cross-references the \"Skip-worktree bit\" section; it does not state a sparse-checkout purpose. Critically, no content for the assume-unchanged/stat-optimization bit is present, and no text states which bit is a performance promise that files have not changed. Because the answer is bound to a specific recorded source_commit and the decisive defining sections were not delivered, the requested sparse_bit and stat_optimization_bit assignments are not supported by the retrieved evidence. With the retrieval budget exhausted, I cannot obtain the missing sections, so I submit DEFER with an empty answer."
+    },
+    "A_units": [
+      {
+        "id": "r7_3985389b1288863ca22e",
+        "body": "NAME\n----\ngit-update-index - Register file contents in the working tree to the index\n\n\nSYNOPSIS\n--------\n[verse]\n'git update-index'\n\t     [--add] [--remove | --force-remove] [--replace]\n\t     [--refresh] [-q] [--unmerged] [--ignore-missing]\n\t     [(--cacheinfo <mode>,<object>,<file>)...]\n\t     [--chmod=(+|-)x]\n\t     [--[no-]assume-unchanged]\n\t     [--[no-]skip-worktree]\n\t     [--[no-]ignore-skip-worktree-entries]\n\t     [--[no-]fsmonitor-valid]\n\t     [--ignore-submodules]\n\t     [--[no-]split-index]\n\t     [--[no-|test-|force-]untracked-cache]\n\t     [--[no-]fsmonitor]\n\t     [--really-refresh] [--unresolve] [--again | -g]\n\t     [--info-only] [--index-info]\n\t     [-z] [--stdin] [--index-version <n>]\n\t     [--show-index-version]\n\t     [--verbose]\n\t     [--] [<file>...]\n\nDESCRIPTION\n-----------\nModifies the index. Each file mentioned is updated into the index and\nany 'unmerged' or 'needs updating' state is cleared.\n\nSee also linkgit:git-add[1] for a more user-friendly way to do some of\nthe most common operations on the index.",
+        "fully_visible": true
+      },
+      {
+        "id": "r7_e1d1a8e9d96b006f70db",
+        "body": "--really-refresh::\n\tLike `--refresh`, but checks stat information unconditionally,\n\twithout regard to the \"assume unchanged\" setting.\n\n--[no-]skip-worktree::\n\tWhen one of these flags is specified, the object names recorded\n\tfor the paths are not updated. Instead, these options\n\tset and unset the \"skip-worktree\" bit for the paths. See\n\tsection \"Skip-worktree bit\" below for more information.\n\n\n--[no-]ignore-skip-worktree-entries::\n\tDo not remove skip-worktree (AKA \"index-only\") entries even when\n\tthe `--remove` option was specified.\n\n--[no-]fsmonitor-valid::\n\tWhen one of these flags is specified, the object names recorded\n\tfor the paths are not updated. Instead, these options\n\tset and unset the \"fsmonitor valid\" bit for the paths. See\n\tsection \"File System Monitor\" below for more information.",
+        "fully_visible": true
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_e1d1a8e9d96b006f70db\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-git-update-index-A\",\"receipt_sha256\":\"d04b7ecd40e3052b3c310fae5ecef86f5b5db06030cafa534ef804e0208e7c92\",\"reference\":\"https://raw.githubusercontent.com/git/git/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-update-index.adoc\"},{\"release\":\"v2.51.0\",\"repository\":\"git/git\"},\"unverified\",\"ACCEPT\",null,null,null]\n--really-refresh::\n\tLike `--refresh`, but checks stat information unconditionally,\n\twithout regard to the \"assume unchanged\" setting.\n\n--[no-]skip-worktree::\n\tWhen one of these flags is specified, the object names recorded\n\tfor the paths are not updated. Instead, these options\n\tset and unset the \"skip-worktree\" bit for the paths. See\n\tsection \"Skip-worktree bit\" below for more information.\n\n\n--[no-]ignore-skip-worktree-entries::\n\tDo not remove skip-worktree (AKA \"index-only\") entries even when\n\tthe `--remove` option was specified.\n\n--[no-]fsmonitor-valid::\n\tWhen one of these flags is specified, the object names recorded\n\tfor the paths are not updated. Instead, these options\n\tset and unset the \"fsmonitor valid\" bit for the paths. See\n\tsection \"File System Monitor\" below for more information.\n\n[\"r7_3985389b1288863ca22e\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-git-update-index-A\",\"receipt_sha256\":\"d04b7ecd40e3052b3c310fae5ecef86f5b5db06030cafa534ef804e0208e7c92\",\"reference\":\"https://raw.githubusercontent.com/git/git/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-update-index.adoc\"},{\"release\":\"v2.51.0\",\"repository\":\"git/git\"},\"unverified\",\"ACCEPT\",null,null,null]\nNAME\n----\ngit-update-index - Register file contents in the working tree to the index\n\n\nSYNOPSIS\n--------\n[verse]\n'git update-index'\n\t     [--add] [--remove | --force-remove] [--replace]\n\t     [--refresh] [-q] [--unmerged] [--ignore-missing]\n\t     [(--cacheinfo <mode>,<object>,<file>)...]\n\t     [--chmod=(+|-)x]\n\t     [--[no-]assume-unchanged]\n\t     [--[no-]skip-worktree]\n\t     [--[no-]ignore-skip-worktree-entries]\n\t     [--[no-]fsmonitor-valid]\n\t     [--ignore-submodules]\n\t     [--[no-]split-index]\n\t     [--[no-|test-|force-]untracked-cache]\n\t     [--[no-]fsmonitor]\n\t     [--really-refresh] [--unresolve] [--again | -g]\n\t     [--info-only] [--index-info]\n\t     [-z] [--stdin] [--index-version <n>]\n\t     [--show-index-version]\n\t     [--verbose]\n\t     [--] [<file>...]\n\nDESCRIPTION\n-----------\nModifies the index. Each file mentioned is updated into the index and\nany 'unmerged' or 'needs updating' state is cleared.\n\nSee also linkgit:git-add[1] for a more user-friendly way to do some of\nthe most common operations on the index."
+  },
+  {
+    "task": "r7-public-git-update-index",
+    "rep": 2,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "sparse_bit": "skip-worktree",
+        "stat_optimization_bit": "assume-unchanged",
+        "source_commit": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0"
+      },
+      "source_release": "v2.51.0",
+      "source_commit": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0",
+      "source_unit": "git-update-index",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_e1d1a8e9d96b006f70db",
+        "r7_3985389b1288863ca22e"
+      ]
+    },
+    "answer": {},
+    "A_units": [
+      {
+        "id": "r7_3985389b1288863ca22e",
+        "body": "NAME\n----\ngit-update-index - Register file contents in the working tree to the index\n\n\nSYNOPSIS\n--------\n[verse]\n'git update-index'\n\t     [--add] [--remove | --force-remove] [--replace]\n\t     [--refresh] [-q] [--unmerged] [--ignore-missing]\n\t     [(--cacheinfo <mode>,<object>,<file>)...]\n\t     [--chmod=(+|-)x]\n\t     [--[no-]assume-unchanged]\n\t     [--[no-]skip-worktree]\n\t     [--[no-]ignore-skip-worktree-entries]\n\t     [--[no-]fsmonitor-valid]\n\t     [--ignore-submodules]\n\t     [--[no-]split-index]\n\t     [--[no-|test-|force-]untracked-cache]\n\t     [--[no-]fsmonitor]\n\t     [--really-refresh] [--unresolve] [--again | -g]\n\t     [--info-only] [--index-info]\n\t     [-z] [--stdin] [--index-version <n>]\n\t     [--show-index-version]\n\t     [--verbose]\n\t     [--] [<file>...]\n\nDESCRIPTION\n-----------\nModifies the index. Each file mentioned is updated into the index and\nany 'unmerged' or 'needs updating' state is cleared.\n\nSee also linkgit:git-add[1] for a more user-friendly way to do some of\nthe most common operations on the index.",
+        "fully_visible": true
+      },
+      {
+        "id": "r7_e1d1a8e9d96b006f70db",
+        "body": "--really-refresh::\n\tLike `--refresh`, but checks stat information unconditionally,\n\twithout regard to the \"assume unchanged\" setting.\n\n--[no-]skip-worktree::\n\tWhen one of these flags is specified, the object names recorded\n\tfor the paths are not updated. Instead, these options\n\tset and unset the \"skip-worktree\" bit for the paths. See\n\tsection \"Skip-worktree bit\" below for more information.\n\n\n--[no-]ignore-skip-worktree-entries::\n\tDo not remove skip-worktree (AKA \"index-only\") entries even when\n\tthe `--remove` option was specified.\n\n--[no-]fsmonitor-valid::\n\tWhen one of these flags is specified, the object names recorded\n\tfor the paths are not updated. Instead, these options\n\tset and unset the \"fsmonitor valid\" bit for the paths. See\n\tsection \"File System Monitor\" below for more information.",
+        "fully_visible": true
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_e1d1a8e9d96b006f70db\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-git-update-index-A\",\"receipt_sha256\":\"d04b7ecd40e3052b3c310fae5ecef86f5b5db06030cafa534ef804e0208e7c92\",\"reference\":\"https://raw.githubusercontent.com/git/git/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-update-index.adoc\"},{\"release\":\"v2.51.0\",\"repository\":\"git/git\"},\"unverified\",\"ACCEPT\",null,null,null]\n--really-refresh::\n\tLike `--refresh`, but checks stat information unconditionally,\n\twithout regard to the \"assume unchanged\" setting.\n\n--[no-]skip-worktree::\n\tWhen one of these flags is specified, the object names recorded\n\tfor the paths are not updated. Instead, these options\n\tset and unset the \"skip-worktree\" bit for the paths. See\n\tsection \"Skip-worktree bit\" below for more information.\n\n\n--[no-]ignore-skip-worktree-entries::\n\tDo not remove skip-worktree (AKA \"index-only\") entries even when\n\tthe `--remove` option was specified.\n\n--[no-]fsmonitor-valid::\n\tWhen one of these flags is specified, the object names recorded\n\tfor the paths are not updated. Instead, these options\n\tset and unset the \"fsmonitor valid\" bit for the paths. See\n\tsection \"File System Monitor\" below for more information.\n\n[\"r7_3985389b1288863ca22e\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-git-update-index-A\",\"receipt_sha256\":\"d04b7ecd40e3052b3c310fae5ecef86f5b5db06030cafa534ef804e0208e7c92\",\"reference\":\"https://raw.githubusercontent.com/git/git/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-update-index.adoc\"},{\"release\":\"v2.51.0\",\"repository\":\"git/git\"},\"unverified\",\"ACCEPT\",null,null,null]\nNAME\n----\ngit-update-index - Register file contents in the working tree to the index\n\n\nSYNOPSIS\n--------\n[verse]\n'git update-index'\n\t     [--add] [--remove | --force-remove] [--replace]\n\t     [--refresh] [-q] [--unmerged] [--ignore-missing]\n\t     [(--cacheinfo <mode>,<object>,<file>)...]\n\t     [--chmod=(+|-)x]\n\t     [--[no-]assume-unchanged]\n\t     [--[no-]skip-worktree]\n\t     [--[no-]ignore-skip-worktree-entries]\n\t     [--[no-]fsmonitor-valid]\n\t     [--ignore-submodules]\n\t     [--[no-]split-index]\n\t     [--[no-|test-|force-]untracked-cache]\n\t     [--[no-]fsmonitor]\n\t     [--really-refresh] [--unresolve] [--again | -g]\n\t     [--info-only] [--index-info]\n\t     [-z] [--stdin] [--index-version <n>]\n\t     [--show-index-version]\n\t     [--verbose]\n\t     [--] [<file>...]\n\nDESCRIPTION\n-----------\nModifies the index. Each file mentioned is updated into the index and\nany 'unmerged' or 'needs updating' state is cleared.\n\nSee also linkgit:git-add[1] for a more user-friendly way to do some of\nthe most common operations on the index."
+  },
+  {
+    "task": "r7-public-multiprocessing",
+    "rep": 1,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "windows_default": "spawn",
+        "macos_default": "spawn",
+        "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7"
+      },
+      "source_release": "v3.13.0",
+      "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7",
+      "source_unit": "multiprocessing",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_dc4236f6e110e891795d",
+        "r7_abebb63e833ac9792b53"
+      ]
+    },
+    "answer": {
+      "disposition": "DEFER",
+      "answer": "",
+      "evidence_ids": [
+        "r7_abebb63e833ac9792b53"
+      ],
+      "reason": "The only retrieved record (r7_abebb63e833ac9792b53) is the introduction section of Doc/library/multiprocessing.rst. It contains no statement of the default multiprocessing start method on Windows or macOS, so the requested windows_default/macos_default values cannot be confirmed from authorized evidence. The full commit ID appears only inside a raw reference URL rather than as a verified recorded document commit for this release scope, and the record is marked unverified. Decisive authorized evidence for both the start-method defaults and the exact source_commit is missing/incomplete, so DEFER is required."
+    },
+    "A_units": [
+      {
+        "id": "r7_abebb63e833ac9792b53",
+        "body": "Introduction\n------------\n\n:mod:`multiprocessing` is a package that supports spawning processes using an\nAPI similar to the :mod:`threading` module.  The :mod:`multiprocessing` package\noffers both local and remote concurrency, effectively side-stepping the\n:term:`Global Interpreter Lock <global interpreter lock>` by using\nsubprocesses instead of threads.  Due\nto this, the :mod:`multiprocessing` module allows the programmer to fully\nleverage multiple processors on a given machine.  It runs on both POSIX and\nWindows.\n\nThe :mod:`multiprocessing` module also introduces APIs which do not have\nanalogs in the :mod:`threading` module.  A prime example of this is the\n:class:`~multiprocessing.pool.Pool` object which offers a convenient means of\nparallelizing the execution of a function across multiple input values,\ndistributing the input data across processes (data parallelism).  The following\nexample demonstrates the common practice of defining such functions in a module\nso that child processes can successfully import that module.  This basic example\nof data parallelism using :class:`~multiprocessing.pool.Pool`, ::\n\n   from multiprocessing import Pool",
+        "fully_visible": true
+      },
+      {
+        "id": "r7_dc4236f6e110e891795d",
+        "body": "  *spawn*\n    The parent process starts a fresh Python interpreter process.  The\n    child process will only inherit those resources necessary to run\n    the process object's :meth:`~Process.run` method.  In particular,\n    unnecessary file descriptors and handles from the parent process\n    will not be inherited.  Starting a process using this method is\n    rather slow compared to using *fork* or *forkserver*.\n\n    Available on POSIX and Windows platforms.  The default on Windows and macOS.\n\n  *fork*\n    The parent process uses :func:`os.fork` to fork the Python\n    interpreter.  The child process, when it begins, is effectively\n    identical to the parent process.  All resources of the parent are\n    inherited by the child process.  Note that safely forking a\n    multithreaded process is problematic.\n\n    Available on POSIX systems.  Currently the default on POSIX except macOS.",
+        "fully_visible": false
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_abebb63e833ac9792b53\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-multiprocessing-A\",\"receipt_sha256\":\"8b1499ffc14c92c3c76730a40d330e4deb1508c5235a18e5dff5118695ccf6ee\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/multiprocessing.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\nIntroduction\n------------\n\n:mod:`multiprocessing` is a package that supports spawning processes using an\nAPI similar to the :mod:`threading` module.  The :mod:`multiprocessing` package\noffers both local and remote concurrency, effectively side-stepping the\n:term:`Global Interpreter Lock <global interpreter lock>` by using\nsubprocesses instead of threads.  Due\nto this, the :mod:`multiprocessing` module allows the programmer to fully\nleverage multiple processors on a given machine.  It runs on both POSIX and\nWindows.\n\nThe :mod:`multiprocessing` module also introduces APIs which do not have\nanalogs in the :mod:`threading` module.  A prime example of this is the\n:class:`~multiprocessing.pool.Pool` object which offers a convenient means of\nparallelizing the execution of a function across multiple input values,\ndistributing the input data across processes (data parallelism).  The following\nexample demonstrates the common practice of defining such functions in a module\nso that child processes can successfully import that module.  This basic example\nof data parallelism using :class:`~multiprocessing.pool.Pool`, ::\n\n   from multiprocessing import Pool"
+  },
+  {
+    "task": "r7-public-multiprocessing",
+    "rep": 2,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "windows_default": "spawn",
+        "macos_default": "spawn",
+        "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7"
+      },
+      "source_release": "v3.13.0",
+      "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7",
+      "source_unit": "multiprocessing",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_dc4236f6e110e891795d",
+        "r7_abebb63e833ac9792b53"
+      ]
+    },
+    "answer": {
+      "disposition": "DEFER",
+      "answer": "",
+      "evidence_ids": [
+        "r7_abebb63e833ac9792b53"
+      ],
+      "reason": "The only retrieved record (r7_abebb63e833ac9792b53) contains just the introduction section of the multiprocessing documentation. It does not include the \"Contexts and start methods\" content that specifies the default start method on Windows and macOS, so windows_default and macos_default cannot be grounded in the supplied snippet. The record is also marked unverified, and while it references a commit hash (60403a5409ff2c3f3b07dd2ca91a7a3e096839c7) in its URL, the snippet does not carry the requested start-method facts. Decisive authorized evidence for the requested values is therefore incomplete/missing, so DEFER with an empty answer."
+    },
+    "A_units": [
+      {
+        "id": "r7_abebb63e833ac9792b53",
+        "body": "Introduction\n------------\n\n:mod:`multiprocessing` is a package that supports spawning processes using an\nAPI similar to the :mod:`threading` module.  The :mod:`multiprocessing` package\noffers both local and remote concurrency, effectively side-stepping the\n:term:`Global Interpreter Lock <global interpreter lock>` by using\nsubprocesses instead of threads.  Due\nto this, the :mod:`multiprocessing` module allows the programmer to fully\nleverage multiple processors on a given machine.  It runs on both POSIX and\nWindows.\n\nThe :mod:`multiprocessing` module also introduces APIs which do not have\nanalogs in the :mod:`threading` module.  A prime example of this is the\n:class:`~multiprocessing.pool.Pool` object which offers a convenient means of\nparallelizing the execution of a function across multiple input values,\ndistributing the input data across processes (data parallelism).  The following\nexample demonstrates the common practice of defining such functions in a module\nso that child processes can successfully import that module.  This basic example\nof data parallelism using :class:`~multiprocessing.pool.Pool`, ::\n\n   from multiprocessing import Pool",
+        "fully_visible": true
+      },
+      {
+        "id": "r7_dc4236f6e110e891795d",
+        "body": "  *spawn*\n    The parent process starts a fresh Python interpreter process.  The\n    child process will only inherit those resources necessary to run\n    the process object's :meth:`~Process.run` method.  In particular,\n    unnecessary file descriptors and handles from the parent process\n    will not be inherited.  Starting a process using this method is\n    rather slow compared to using *fork* or *forkserver*.\n\n    Available on POSIX and Windows platforms.  The default on Windows and macOS.\n\n  *fork*\n    The parent process uses :func:`os.fork` to fork the Python\n    interpreter.  The child process, when it begins, is effectively\n    identical to the parent process.  All resources of the parent are\n    inherited by the child process.  Note that safely forking a\n    multithreaded process is problematic.\n\n    Available on POSIX systems.  Currently the default on POSIX except macOS.",
+        "fully_visible": false
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_abebb63e833ac9792b53\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-multiprocessing-A\",\"receipt_sha256\":\"8b1499ffc14c92c3c76730a40d330e4deb1508c5235a18e5dff5118695ccf6ee\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/multiprocessing.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\nIntroduction\n------------\n\n:mod:`multiprocessing` is a package that supports spawning processes using an\nAPI similar to the :mod:`threading` module.  The :mod:`multiprocessing` package\noffers both local and remote concurrency, effectively side-stepping the\n:term:`Global Interpreter Lock <global interpreter lock>` by using\nsubprocesses instead of threads.  Due\nto this, the :mod:`multiprocessing` module allows the programmer to fully\nleverage multiple processors on a given machine.  It runs on both POSIX and\nWindows.\n\nThe :mod:`multiprocessing` module also introduces APIs which do not have\nanalogs in the :mod:`threading` module.  A prime example of this is the\n:class:`~multiprocessing.pool.Pool` object which offers a convenient means of\nparallelizing the execution of a function across multiple input values,\ndistributing the input data across processes (data parallelism).  The following\nexample demonstrates the common practice of defining such functions in a module\nso that child processes can successfully import that module.  This basic example\nof data parallelism using :class:`~multiprocessing.pool.Pool`, ::\n\n   from multiprocessing import Pool"
+  },
+  {
+    "task": "r7-public-sqlite3",
+    "rep": 1,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "default_autocommit": "LEGACY_TRANSACTION_CONTROL",
+        "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7"
+      },
+      "source_release": "v3.13.0",
+      "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7",
+      "source_unit": "sqlite3",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_a4aca426902630b76078"
+      ]
+    },
+    "answer": {
+      "disposition": "ANSWER",
+      "answer": "{\"default_autocommit\": \"sqlite3.LEGACY_TRANSACTION_CONTROL\", \"source_commit\": \"60403a5409ff2c3f3b07dd2ca91a7a3e096839c7\"}",
+      "evidence_ids": [
+        "r7_a4aca426902630b76078"
+      ],
+      "reason": "Record r7_a4aca426902630b76078 is a pinned first-party upstream cpython sqlite3.rst document scoped to repository=python/cpython, release=v3.13.0, with hash-bound provenance (receipt_sha256). Its sqlite3.connect() signature shows the autocommit parameter defaulting to sqlite3.LEGACY_TRANSACTION_CONTROL, which is the default assigned to Connection.autocommit. The exact full commit ID of the recorded document is embedded in the pinned raw reference URL: 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7. Release scope matches the requested v3.13.0. The unverified state denotes no promotion to a runtime-verified rule but does not invalidate the authenticated source observation."
+    },
+    "A_units": [
+      {
+        "id": "r7_a4aca426902630b76078",
+        "body": "Module functions\n^^^^^^^^^^^^^^^^\n\n.. function:: connect(database, timeout=5.0, detect_types=0, \\\n                      isolation_level=\"DEFERRED\", check_same_thread=True, \\\n                      factory=sqlite3.Connection, cached_statements=128, \\\n                      uri=False, *, \\\n                      autocommit=sqlite3.LEGACY_TRANSACTION_CONTROL)\n\n   Open a connection to an SQLite database.\n\n   :param database:\n       The path to the database file to be opened.\n       You can pass ``\":memory:\"`` to create an `SQLite database existing only\n       in memory <https://sqlite.org/inmemorydb.html>`_, and open a connection\n       to it.\n   :type database: :term:`path-like object`",
+        "fully_visible": true
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_a4aca426902630b76078\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-sqlite3-A\",\"receipt_sha256\":\"47ad881a6484d4eb0dd1cc8231f68675edbfe4d31c65596221113c3bc1060520\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/sqlite3.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\nModule functions\n^^^^^^^^^^^^^^^^\n\n.. function:: connect(database, timeout=5.0, detect_types=0, \\\n                      isolation_level=\"DEFERRED\", check_same_thread=True, \\\n                      factory=sqlite3.Connection, cached_statements=128, \\\n                      uri=False, *, \\\n                      autocommit=sqlite3.LEGACY_TRANSACTION_CONTROL)\n\n   Open a connection to an SQLite database.\n\n   :param database:\n       The path to the database file to be opened.\n       You can pass ``\":memory:\"`` to create an `SQLite database existing only\n       in memory <https://sqlite.org/inmemorydb.html>`_, and open a connection\n       to it.\n   :type database: :term:`path-like object`"
+  },
+  {
+    "task": "r7-public-subprocess",
+    "rep": 2,
+    "truth": {
+      "disposition": "ANSWER",
+      "answer_object": {
+        "child_automatically_killed": false,
+        "exception": "TimeoutExpired"
+      },
+      "source_release": "v3.13.0",
+      "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7",
+      "source_unit": "subprocess",
+      "independence_unit": "document; docs clustered in project/topic families",
+      "source_evidence_ids": [
+        "r7_6133717bafb685e87f1d",
+        "r7_68ed4c61267aeba5933f"
+      ]
+    },
+    "answer": {
+      "disposition": "ANSWER",
+      "answer": "{\"child_automatically_killed\": false, \"exception\": \"subprocess.TimeoutExpired\"}",
+      "evidence_ids": [
+        "r7_6133717bafb685e87f1d"
+      ],
+      "reason": "First-party CPython v3.13.0 documentation (Doc/library/subprocess.rst) confirms that for Popen.communicate, if the process does not terminate within timeout, a TimeoutExpired exception is raised, and explicitly states \"The child process is not killed if the timeout expires,\" advising the application to kill the child itself. Release scope v3.13.0 matches the request."
+    },
+    "A_units": [
+      {
+        "id": "r7_6133717bafb685e87f1d",
+        "body": "   If the process does not terminate after *timeout* seconds, a\n   :exc:`TimeoutExpired` exception will be raised.  Catching this exception and\n   retrying communication will not lose any output.\n\n   The child process is not killed if the timeout expires, so in order to\n   cleanup properly a well-behaved application should kill the child process and\n   finish communication::\n\n      proc = subprocess.Popen(...)\n      try:\n          outs, errs = proc.communicate(timeout=15)\n      except TimeoutExpired:\n          proc.kill()\n          outs, errs = proc.communicate()\n\n   .. note::",
+        "fully_visible": true
+      },
+      {
+        "id": "r7_68ed4c61267aeba5933f",
+        "body": "   If *capture_output* is true, stdout and stderr will be captured.\n   When used, the internal :class:`Popen` object is automatically created with\n   *stdout* and *stderr* both set to :data:`~subprocess.PIPE`.\n   The *stdout* and *stderr* arguments may not be supplied at the same time as *capture_output*.\n   If you wish to capture and combine both streams into one,\n   set *stdout* to :data:`~subprocess.PIPE`\n   and *stderr* to :data:`~subprocess.STDOUT`,\n   instead of using *capture_output*.\n\n   A *timeout* may be specified in seconds, it is internally passed on to\n   :meth:`Popen.communicate`. If the timeout expires, the child process will be\n   killed and waited for. The :exc:`TimeoutExpired` exception will be\n   re-raised after the child process has terminated. The initial process\n   creation itself cannot be interrupted on many platform APIs so you are not\n   guaranteed to see a timeout exception until at least after however long\n   process creation takes.\n\n   The *input* argument is passed to :meth:`Popen.communicate` and thus to the\n   subprocess's stdin.  If used it must be a byte sequence, or a string if\n   *encoding* or *errors* is specified or *text* is true.  When\n   used, the internal :class:`Popen` object is automatically created with\n   *stdin* set to :data:`~subprocess.PIPE`,\n   and the *stdin* argument may not be used as well.\n\n   If *check* is true, and the process exits with a non-zero exit code, a\n   :exc:`CalledProcessError` exception will be raised. Attributes of that\n   exception hold the arguments, the exit code, and stdout and stderr if they\n   were captured.",
+        "fully_visible": false
+      }
+    ],
+    "visible_text": "memory_metadata_columns=[\"id\",\"created_at\",\"source\",\"conditions\",\"verification_state\",\"qualification\",\"effective_from\",\"effective_until\",\"believed_at\"]\n[\"r7_6133717bafb685e87f1d\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-subprocess-A\",\"receipt_sha256\":\"f0576b87ff819aefceaff21ccf80194fa31c5792d0e878eb7cd86bfa5b95b537\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/subprocess.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\n   If the process does not terminate after *timeout* seconds, a\n   :exc:`TimeoutExpired` exception will be raised.  Catching this exception and\n   retrying communication will not lose any output.\n\n   The child process is not killed if the timeout expires, so in order to\n   cleanup properly a well-behaved application should kill the child process and\n   finish communication::\n\n      proc = subprocess.Popen(...)\n      try:\n          outs, errs = proc.communicate(timeout=15)\n      except TimeoutExpired:\n          proc.kill()\n          outs, errs = proc.communicate()\n\n   .. note::\n\n[\"r7_68ed4c61267aeba5933f\",\"2026-10-13T05:38:42.227560+00:00\",{\"origin\":\"A-session:r7-public-subprocess-A\",\"receipt_sha256\":\"f0576b87ff819aefceaff21ccf80194fa31c5792d0e878eb7cd86bfa5b95b537\",\"reference\":\"https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/subprocess.rst\"},{\"release\":\"v3.13.0\",\"repository\":\"python/cpython\"},\"unverified\",\"ACCEPT\",null,null,null]\n   *stdout* and *stderr* both set to :data:`~subprocess.PIPE`.\n\n[…]\n   set *stdout* to :data:`~subprocess.PIPE`\n\n[…]\n   and *stderr* to :data:`~subprocess.STDOUT`,\n\n[…]\n   A *timeout* may be specified in seconds, it is internally passed on to\n\n[…]\n   :meth:`Popen.communicate`. If the timeout expires, the child process will be\n\n[…]\n   killed and waited for. The :exc:`TimeoutExpired` exception will be\n\n[…]\n   re-raised after the child process has terminated. The initial process\n\n[…]\n   guaranteed to see a timeout exception until at least after however long\n\n[…]\n   process creation takes.\n\n[…]\n   subprocess's stdin.  If used it must be a byte sequence, or a string if\n\n[…]\n   *stdin* set to :data:`~subprocess.PIPE`,\n\n[…]\n   If *check* is true, and the process exits with a non-zero exit code, a\n\n[…]\n   :exc:`CalledProcessError` exception will be raised. Attributes of that\n"
+  }
+]

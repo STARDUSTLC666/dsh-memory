@@ -1,0 +1,11 @@
+{
+  "new_tasks": 84,
+  "new_source_records": 115,
+  "unique_full_source_documents": 115,
+  "old_exact_question_overlaps": 0,
+  "old_exact_source_document_overlaps": 0,
+  "G_decision_precedes_first_holdout_run_file": true,
+  "G_module_freeze_precedes_first_holdout": true,
+  "family_structure_overlap_across_new_splits": true,
+  "not_claiming_cross_family_or_real_repository_generalization": true
+}

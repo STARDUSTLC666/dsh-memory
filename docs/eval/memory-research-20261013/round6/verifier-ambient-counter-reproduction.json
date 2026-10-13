@@ -1,0 +1,15 @@
+{
+  "controlled_false_positive_reproduced": false,
+  "before_python_count": 0,
+  "after_python_count": 0,
+  "native_guard_owned_children_reaped": [
+    true,
+    true,
+    true
+  ],
+  "our_three_ambient_children_cleaned": true,
+  "test_failed_names": [],
+  "production_source_or_assertions_modified": false,
+  "formal_scores_modified": false,
+  "raw_log_sha256": "99f7b152cf98924009d53635c2d1d7cdb6c691f79419b684f5063f11e4461ea8"
+}

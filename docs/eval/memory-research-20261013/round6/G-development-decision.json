@@ -1,0 +1,20 @@
+{
+  "phase": "Before untouched G holdout",
+  "development_successes": {
+    "B": 9,
+    "D": 10,
+    "G": 11
+  },
+  "trials_per_arm": 12,
+  "flagged_spec_error_tasks": 1,
+  "valid_development": {
+    "B": 9,
+    "D": 10,
+    "G": 11,
+    "tasks": 11
+  },
+  "G_uncached_change_vs_D": 0.052572650007634,
+  "decision": "Keep preselected750 budget and implementation for independent confirmation. No cost benefit established in development; do not retune on holdout. Not deployment approval.",
+  "module_sha256": "5b69ab5ecf536b1961b238f0acfe3b5902b39b1bbfdcd0184607307613a55baf",
+  "development_analysis_sha256": "30b5697a845a3a45a4077d57046c97a305da65390c1f72b4012edb4da54a7a50"
+}

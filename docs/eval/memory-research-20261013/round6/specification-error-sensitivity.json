@@ -1,0 +1,37 @@
+{
+  "primary_scores_unchanged": true,
+  "valid_only_sensitivity": {
+    "generalization": {
+      "A": {
+        "success": 44,
+        "trials": 92
+      },
+      "B": {
+        "success": 64,
+        "trials": 92
+      },
+      "D": {
+        "success": 81,
+        "trials": 92
+      },
+      "E": {
+        "success": 86,
+        "trials": 92
+      }
+    },
+    "development": {
+      "B": {
+        "success": 9,
+        "trials": 11
+      },
+      "D": {
+        "success": 10,
+        "trials": 11
+      },
+      "G": {
+        "success": 11,
+        "trials": 11
+      }
+    }
+  }
+}

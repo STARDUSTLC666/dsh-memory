@@ -1,0 +1,64 @@
+{
+  "sessions": 673,
+  "by_mode": {
+    "G-smoke": {
+      "completed_sessions": 3,
+      "tokens": 8082,
+      "uncached_input_plus_output": 5522,
+      "infrastructure_errors": 0
+    },
+    "development": {
+      "completed_sessions": 36,
+      "tokens": 95648,
+      "uncached_input_plus_output": 63520,
+      "infrastructure_errors": 0
+    },
+    "generalization": {
+      "completed_sessions": 376,
+      "tokens": 935383,
+      "uncached_input_plus_output": 599255,
+      "infrastructure_errors": 0
+    },
+    "holdout": {
+      "completed_sessions": 144,
+      "tokens": 396833,
+      "uncached_input_plus_output": 260769,
+      "infrastructure_errors": 0
+    },
+    "identity-aux": {
+      "completed_sessions": 10,
+      "tokens": 25876,
+      "uncached_input_plus_output": 16916,
+      "infrastructure_errors": 0
+    },
+    "oracle-v2": {
+      "completed_sessions": 96,
+      "tokens": 240803,
+      "uncached_input_plus_output": 156963,
+      "infrastructure_errors": 0
+    },
+    "smoke": {
+      "completed_sessions": 4,
+      "tokens": 9588,
+      "uncached_input_plus_output": 6644,
+      "infrastructure_errors": 0
+    },
+    "smoke-v2": {
+      "completed_sessions": 4,
+      "tokens": 9872,
+      "uncached_input_plus_output": 6672,
+      "infrastructure_errors": 0
+    }
+  },
+  "main_comparison_sessions": 556,
+  "flagged_specification_error_comparison_sessions": 11,
+  "total_usage": {
+    "inputTokens": 869069,
+    "outputTokens": 247192,
+    "cacheReadTokens": 605824,
+    "cacheWriteTokens": 0,
+    "totalTokens": 1722085
+  },
+  "currency_cost": null,
+  "historical_results_modified": false
+}

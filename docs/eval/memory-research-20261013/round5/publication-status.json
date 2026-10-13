@@ -1,0 +1,17 @@
+{
+  "pr": "https://github.com/FuRongJun-1999/dsh-memory/pull/162",
+  "head": "e683a4259d9264cb7438c34920fe1efa79e5105c",
+  "state": "OPEN, draft",
+  "checks": {
+    "python-tests": "SUCCESS",
+    "cogmap-check": "SUCCESS",
+    "publish-artifact-check": "SUCCESS",
+    "workspace-index-check": "SUCCESS"
+  },
+  "python_run": "https://github.com/FuRongJun-1999/dsh-memory/actions/runs/38265200425",
+  "verified_at_UTC": "2026-10-12T15:13:27Z",
+  "research_snapshot_tag_unchanged": "memory-rsi-stage-20261012 at f212e44ec32542879c82c709b6ba6d88bda0d9a8",
+  "bounty_issues": [58, 60],
+  "new_round5_results_published": false,
+  "production_plugin_updated": false
+}

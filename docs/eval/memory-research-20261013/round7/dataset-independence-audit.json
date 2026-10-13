@@ -1,0 +1,28 @@
+{
+  "new_source_units": 54,
+  "new_full_documents": 32,
+  "new_questions_distinct": 25,
+  "historical_sources_scanned": {
+    "round6": 115,
+    "round5": 12
+  },
+  "historical_questions_scanned": {
+    "round6": 12,
+    "round5": 30
+  },
+  "exact_source_unit_overlaps": {
+    "round6": 0,
+    "round5": 0
+  },
+  "exact_full_document_overlaps": {
+    "round6": 0,
+    "round5": 0
+  },
+  "exact_question_overlaps": {
+    "round6": 0,
+    "round5": 0
+  },
+  "family_overlap_with_prior": "Underlying A trace format reused intentionally; new Git/CPython source structures. Generic evidence mechanisms overlap. No claim of semantic independence.",
+  "new_split_scope": "4 development and 28 prospective documents, disjoint full document IDs; same two repositories/four topic families. Negative-transfer prompt repeats across source documents; eight negatives are not eight unrelated task designs.",
+  "model_training_contamination": "Public documentation may appear in provider training; not knowable from these experiments. Exact source commit/citation tasks require recorded provenance."
+}

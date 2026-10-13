@@ -1,0 +1,48 @@
+{
+  "groups": {
+    "original47task_diagnostic": {
+      "success": 87,
+      "trials": 94,
+      "false_refusals": 3,
+      "unsupported_answers": 0,
+      "uncached_input_plus_output": 153815,
+      "usage": {
+        "inputTokens": 121000,
+        "outputTokens": 32815,
+        "cacheReadTokens": 82176,
+        "totalTokens": 235991
+      }
+    },
+    "correct_owner_aux": {
+      "success": 2,
+      "trials": 2,
+      "false_refusals": 0,
+      "unsupported_answers": 0,
+      "uncached_input_plus_output": 3148,
+      "usage": {
+        "inputTokens": 2345,
+        "outputTokens": 803,
+        "cacheReadTokens": 1664,
+        "totalTokens": 4812
+      }
+    }
+  },
+  "paired_original_E_to_E2": {
+    "wins": 3,
+    "losses": 2,
+    "ties": 89
+  },
+  "valid46task_sensitivity": {
+    "success": 87,
+    "trials": 92
+  },
+  "metadata_projection_checks": {
+    "passed": 96,
+    "total": 96
+  },
+  "main_scores_unchanged": true,
+  "diagnostic_after_unblinding_not_independent_generalization": true,
+  "G_retuned": false,
+  "no_hidden_answers_in_E2_projection": true,
+  "infrastructure_errors": 0
+}

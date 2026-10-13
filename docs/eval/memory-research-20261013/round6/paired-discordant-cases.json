@@ -1,0 +1,1446 @@
+[
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-timeline-2",
+    "family": "timeline",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "G82NRXR > 4R9HDKW > T6B3LED",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_551618b4d166a08b89ab"
+        ],
+        "selected_ids": [
+          "r6_551618b4d166a08b89ab"
+        ],
+        "delivered_ids": [
+          "r6_551618b4d166a08b89ab"
+        ],
+        "diagnostic_labels": [
+          "agent_decision_or_interpretation_after_complete_clauses"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The visible authenticated fixture record r6_551618b4d166a08b89ab matches the current context (project-426a3734bf, contract timeline) and its source_document lists all three event tags with explicit timestamps: tag-G82NRXR at 2024-02-18T09:00:00Z, tag-4R9HDKW at 2025-09-03T16:20:00Z, and tag-T6B3LED at 2026-01-11T06:10:00Z. Sorting oldest first gives G82NRXR > 4R9HDKW > T6B3LED. The \"unverified\" persistence flag does not by itself invalidate the recorded observation, and no receipt, provenance, or permission conflict applies.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-timeline-2\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-G82NRXR > tag-4R9HDKW > tag-T6B3LED",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_551618b4d166a08b89ab"
+        ],
+        "selected_ids": [
+          "r6_551618b4d166a08b89ab"
+        ],
+        "delivered_ids": [
+          "r6_551618b4d166a08b89ab"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Visible A record r6_551618b4d166a08b89ab applies to project-426a3734bf under contract \"timeline\" and lists three event tags with timestamps: tag-G82NRXR at 2024-02-18T09:00:00Z, tag-4R9HDKW at 2025-09-03T16:20:00Z, and tag-T6B3LED at 2026-01-11T06:10:00Z. Chronological order oldest first is thus G82NRXR > 4R9HDKW > T6B3LED. The record's ACCEPT qualification with no non-applicability conditions supports using it; it is source record data, and the \"unverified\" state alone does not invalidate the recorded observation.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-timeline-2\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-timeline-3",
+    "family": "timeline",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "TEUFC2J > 7UL6DRR > AM46W34",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_e4205160fe19cf0ba809"
+        ],
+        "selected_ids": [
+          "r6_e4205160fe19cf0ba809"
+        ],
+        "delivered_ids": [
+          "r6_e4205160fe19cf0ba809"
+        ],
+        "diagnostic_labels": [
+          "agent_decision_or_interpretation_after_complete_clauses"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The retrieved visible record (r6_e4205160fe19cf0ba809) is scoped to the correct project namespace (project-fb48165385) and timeline contract, and is a permitted authenticated fixture record. Its source_document lists three event tags with timestamps: tag-TEUFC2J at 2024-02-18T09:00:00Z, tag-7UL6DRR at 2025-09-03T16:20:00Z, and tag-AM46W34 at 2026-01-11T06:10:00Z. Ordering oldest first gives TEUFC2J > 7UL6DRR > AM46W34. The \"unverified\" state alone is not grounds for rejection under the trust policy, and there are no provenance contradictions, permissions issues, or applicable non-applicability conditions.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-timeline-3\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-TEUFC2J > tag-7UL6DRR > tag-AM46W34",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_e4205160fe19cf0ba809"
+        ],
+        "selected_ids": [
+          "r6_e4205160fe19cf0ba809"
+        ],
+        "delivered_ids": [
+          "r6_e4205160fe19cf0ba809"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "The single retrieved A-session fixture record (r6_e4205160fe19cf0ba809) matches the required project_namespace (project-fb48165385) and contract (timeline), and lists exactly three event tags with distinct timestamps: tag-TEUFC2J at 2024-02-18T09:00:00Z, tag-7UL6DRR at 2025-09-03T16:20:00Z, and tag-AM46W34 at 2026-01-11T06:10:00Z. Sorting oldest first yields TEUFC2J > 7UL6DRR > AM46W34. The persistent 'unverified' verification_state reflects that the observation is not promoted to a universal rule, which per policy is not itself grounds for rejection, and there are no provenance contradictions, expiry, or permissions issues.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-timeline-3\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-timeline-4",
+    "family": "timeline",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/3",
+        "candidate_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "selected_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "delivered_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only retrieved record is a truncated, unverified archival-import diagnostic with no event tags or chronological information about project-f460b2ad8f. No decisive authorized evidence provides the three event tags, so the task cannot be answered.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-timeline-4\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-CNBAXJL > tag-2CBZESK > tag-NT9MA7D",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "selected_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "delivered_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Only one record applies: r6_2965c78d03a6bc7913b7, conditions match contract=timeline and project_namespace=project-f460b2ad8f, source A authenticated fixture. It lists three event tags with distinct dates: CNBAXJL 2024-02-18, 2CBZESK 2025-09-03, NT9MA7D 2026-01-11. No contradictions, expiry, or authorization issues; persistent unverified is not by itself disqualifying. Chronological oldest-first ordering yields the answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-timeline-4\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-timeline-4",
+    "family": "timeline",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/3",
+        "candidate_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "selected_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "delivered_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only retrieved record (r6_2965c78d03a6bc7913b7) is a truncated, unverified generic archival import diagnostic note that contains no event tags or chronological tag data. No authorized evidence supplies the three event tags, so the requested exact string cannot be derived or verified. Submitting DEFER per the missing-decisive-evidence condition.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-timeline-4\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-CNBAXJL > tag-2CBZESK > tag-NT9MA7D",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "selected_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "delivered_ids": [
+          "r6_2965c78d03a6bc7913b7"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "The visible A-session record r6_2965c78d03a6bc7913b7 is permitted authenticated fixture data with matching conditions (contract=timeline, project_namespace=project-f460b2ad8f) and receipt_sha256 provenance. It lists three event tags with distinct timestamps: tag-CNBAXJL (2024-02-18T09:00:00Z), tag-2CBZESK (2025-09-03T16:20:00Z), tag-NT9MA7D (2026-01-11T06:10:00Z). \"unverified\" only means not promoted to a universal rule, not a rejection. The surrounding archive notes are noise and contain no tags or contradictions. Ordering oldest-first is unambiguous and complete.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-timeline-4\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-conjunction-3",
+    "family": "conjunction",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "selected_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "delivered_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The single retrieved record (r6_21c725381bd9aeddc1fb) contains no dispatch label and no recorded applicability conditions to gate against. It consists only of a generic import advisory (\"inspect its original document and scope before use\"), a synthetic-ingest event note, and a padding-only \"historical_snapshot\" observation (\"Storage audit entry.\" repeated) with no substantive payload. Its status is unverified-source-data. Because no applicable authorized evidence records a dispatch label or the conditions that would permit emitting it, the label cannot be derived; it must not be inferred or reconstructed. Decisive authorized evidence is missing, so the answer is empty and the disposition is DEFER. (The record is cited in no output per the empty-evidence requirement.)",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-conjunction-3\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-GF8HXHX",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "selected_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "delivered_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Visible A record r6_21c725381bd9aeddc1fb applies to contract=conjunction and project_namespace=project-ebc6d475f3, matching the current context. Its stated conjunction rule requires location=west AND format=parquet AND approved=true; all three hold in the current public context (west, parquet, true). The rule notes that if any condition is absent or false no label is supported, but here every recorded applicability condition is satisfied. The record is permitted authenticated fixture data (receipt_sha256 present); its unverified state is persistent unverified-source-data, which is not by itself a reason to reject the observation. No contradicting, expired, or denied evidence was found, so ANSWER is supported.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-conjunction-3\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-conjunction-3",
+    "family": "conjunction",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "selected_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "delivered_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only visible record is a synthetic-import audit entry with no recorded dispatch label, no applicability conditions, no dates or provenance. It merely states that a source record was imported and must be inspected before use — it provides no rule outcome and no receipt for the requested dispatch label. Decisive authorized evidence for the conjunction of applicability conditions is missing, so the task requires DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-conjunction-3\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-GF8HXHX",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "selected_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "delivered_ids": [
+          "r6_21c725381bd9aeddc1fb"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Record r6_21c725381bd9aeddc1fb applies to project-ebc6d475f3 with contract=conjunction, and states the dispatch label is tag-GF8HXHX only when location=west AND format=parquet AND approved=true. The current public context satisfies all three conditions (location=west, format=parquet, approved=true), so the label is supported. The record's \"unverified\" state reflects persistent non-promotion to a universal rule, not rejection of the recorded observation; no contradictory, expired, or denied evidence was returned.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-conjunction-3\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-exclusion-3",
+    "family": "exclusion",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_loss",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": true,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_c9d941c6f96a44d670b3"
+        ],
+        "selected_ids": [
+          "r6_c9d941c6f96a44d670b3"
+        ],
+        "delivered_ids": [
+          "r6_c9d941c6f96a44d670b3"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "The only visible record (r6_c9d941c6f96a44d670b3) is an unverified synthetic ingested source and explicitly states that separate frontmatter lists the exceptions, with the ordinary rule not usable inside an exception. However, the actual exception definitions (frontmatter content) are not present in the delivered evidence. Since the task requires returning the ordinary label only if applicability and ALL exceptions permit use (any applicable exception requires DEFER), and the exception list is missing/unretrievable, decisive authorized evidence is incomplete. The record's tag-XM62KEE cannot be returned without confirming no exception applies. Therefore DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-exclusion-3\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": false,
+        "actual_answer": "tag-XM62KEE",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_c9d941c6f96a44d670b3"
+        ],
+        "selected_ids": [
+          "r6_c9d941c6f96a44d670b3"
+        ],
+        "delivered_ids": [
+          "r6_c9d941c6f96a44d670b3"
+        ],
+        "diagnostic_labels": [
+          "native_negative_field_not_serialized_verbatim"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The recalled record covers the matching contract (exclusion) and project namespace (project-f8041f51c9) and states the ordinary batch label is tag-XM62KEE when department=operations, which matches the current context. The record notes that separate frontmatter lists exceptions and the ordinary rule must not be used inside an exception; no exception condition is present or triggered in the current context (no exception data was provided or recalled), so applicability and exceptions permit use. The record is unverified source data from an authenticated A-session fixture, which per the trust policy is not itself a reason to reject a recorded observation; no provenance contradiction, permission denial, or expired applicability was found. Therefore ANSWER with the exact string tag-XM62KEE.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-exclusion-3\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-revision-3",
+    "family": "revision",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "selected_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "delivered_ids": [
+          "r6_556881b24aff3c39bac1"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The single retrieved record (r6_556881b24aff3c39bac1) is a synthetic historical snapshot whose content is truncated and contains only candidate notes, an ingest event, and padding text (\"Storage audit entry.\"). It provides no export marker, no revision number, and no applicability conditions tying it to revision 2 of project-8332512105. No decisive authorized evidence identifies the export marker governing the current revision, and no newer-over-older revision resolution can be established. Because the required exact string is missing/incomplete, I must DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-revision-3\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-LALD4J7",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "selected_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "delivered_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "The current revision record for project-8332512105 (revision=2, contract=revision) explicitly states its export marker is tag-LALD4J7 and notes revision 1 does not govern revision 2. The revision-1 marker (tag-SS986U7) is in a superseded record and must not override the newer revision. Both records share matching scope conditions (contract=revision, project_namespace=project-8332512105) and are ACCEPT-qualified; the newer revision takes precedence.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-revision-3\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-revision-3",
+    "family": "revision",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "selected_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "delivered_ids": [
+          "r6_556881b24aff3c39bac1"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only retrieved record (r6_556881b24aff3c39bac1) is an unverified imported storage-audit snapshot; it contains no export marker and no revision-specific value for revision 2 of project-8332512105. The candidate note only instructs inspecting an original document, which is not present. With no applicable, authorized evidence stating the export marker—and no basis to let an older revision override a newer one—the answer cannot be determined, so DEFER with empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-revision-3\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-LALD4J7",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "selected_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "delivered_ids": [
+          "r6_556881b24aff3c39bac1",
+          "r6_b76e8d1bf8d99b5bb76f"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Current public context specifies project_namespace=project-8332512105, contract=revision, revision=2. Record r6_b76e8d1bf8d99b5bb76f matches these conditions and is the record for revision=2, giving export marker tag-LALD4J7; it also states revision 1 does not govern revision 2. Record r6_556881b24aff3c39bac1 is the superseded revision=1 record (tag-SS986U7) and must not override the newer revision. No contradictions or inapplicability; the current-revision record is decisive.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-revision-3\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-multihop-1",
+    "family": "multihop",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "1/3",
+        "candidate_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "selected_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "delivered_ids": [
+          "r6_3a9d76c692a7c2c32776"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The single retrieved record (r6_3a9d76c692a7c2c32776) matches the project namespace and contract, but its source_document links cell tag-9A8WUF4 to ledger tag-BS8N2NC — a cell unrelated to the current crate tag-2MMP5QY. It provides no crate allocation for tag-2MMP5QY, no audit linkage tying that crate to a cell, and no ledger stamp. The required multi-hop chain (crate allocation → cell audit linkage → ledger stamp) is therefore incomplete, and inferring a missing project-specific tag or treating an unlinked observation as a verified receipt is disallowed. No stamp value for the requested crate is present in authorized evidence, so DEFER.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-1\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-VGNM9HX",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "selected_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "delivered_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "The full multihop chain is present and consistent for project-bfe681ad42 under contract=multihop: (1) allocation record r6_8f1954ccc903e3a076cf maps crate=tag-2MMP5QY to cell=tag-9A8WUF4; (2) cell audit record r6_3a9d76c692a7c2c32776 maps cell=tag-9A8WUF4 to ledger=tag-BS8N2NC; (3) ledger stamp record r6_d080fb7dca8f33d12bbc states ledger=tag-BS8N2NC emits stamp=tag-VGNM9HX. All records share the same project_namespace and contract conditions; no link is missing, no contradictions, and no scope/date/authorization exceptions apply. Records are unverified-source data (persistent unverified = not promoted to universal rule) but remain recorded observations, and the task does not require a project-specific receipt beyond the ledger stamp. Therefore the requested stamp is tag-VGNM9HX.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-1\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-multihop-1",
+    "family": "multihop",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "1/3",
+        "candidate_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "selected_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "delivered_ids": [
+          "r6_3a9d76c692a7c2c32776"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The required multihop chain (crate allocation → cell audit linkage → ledger stamp) cannot be completed for crate tag-2MMP5QY. The only retrieved record (r6_3a9d76c692a7c2c32776) is an unverified synthetic imported snapshot under project-bfe681ad42/multihop, and its source document links a different cell, tag-9A8WUF4, to ledger tag-BS8N2NC. There is no evidence allocating tag-2MMP5QY to any cell, no audit linkage for it, and thus no ledger stamp attributable to it. A decisive link is missing, so DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-1\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-VGNM9HX",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "selected_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "delivered_ids": [
+          "r6_3a9d76c692a7c2c32776",
+          "r6_8f1954ccc903e3a076cf",
+          "r6_d080fb7dca8f33d12bbc"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Full multihop chain is complete and consistent for project-bfe681ad42: allocation record (r6_8f1954ccc903e3a076cf) maps crate=tag-2MMP5QY to cell=tag-9A8WUF4; cell audit record (r6_3a9d76c692a7c2c32776) maps cell=tag-9A8WUF4 to ledger=tag-BS8N2NC; ledger stamp record (r6_d080fb7dca8f33d12bbc) shows ledger=tag-BS8N2NC emits stamp=tag-VGNM9HX. All three records carry the matching contract=multihop and project_namespace=project-bfe681ad42, are ACCEPT qualification, share the same source reference, and have no time expiry or contradictions.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-1\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-multihop-2",
+    "family": "multihop",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/3",
+        "candidate_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "selected_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "delivered_ids": [
+          "r6_1ea0a62f99a0da918ab8"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The task requires a multihop chain: crate allocation -> cell audit linkage -> ledger stamp, and to DEFER if any link is missing. The single retrieved record (r6_1ea0a62f99a0da918ab8) is marked unverified-source-data and is truncated: its content shows only a generic candidate_note (\"inspect its original document and scope before use\"), an ingest event labeling it a synthetic historical record, and storage-audit padding. The referenced source document is only partially shown (\"Ledger stamp record for project-59534bb996.…\"). No crate allocation for tag-LQHC3CU is visible, no cell audit linkage is visible, and crucially the actual ledger stamp string is absent from the available evidence. Because the decisive record content is incomplete/truncated and the intermediate links cannot be resolved, no applicable authorized evidence suffices to derive the requested exact stamp. Submitting DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-2\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-VARH5BB",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "selected_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "delivered_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Chain complete: crate tag-LQHC3CU uses cell tag-NJUVCF3 (r6_d22820bb00df8d428894); cell tag-NJUVCF3 is audited by ledger tag-HSZWJHB (r6_c38970ddd9167832d654); ledger tag-HSZWJHB emits stamp tag-VARH5BB (r6_1ea0a62f99a0da918ab8). All records match the project namespace and multihop contract; no contradictions.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-2\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-multihop-2",
+    "family": "multihop",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/3",
+        "candidate_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "selected_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "delivered_ids": [
+          "r6_1ea0a62f99a0da918ab8"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The single permitted retrieval returned one record (r6_1ea0a62f99a0da918ab8), which is unverified synthetic source data. Its observations contain only repeated padding text (\"Storage audit entry.\") with no crate identifier, no crate allocation entry, no cell audit linkage, and no ledger stamp value. The source_document field is truncated (\"Ledger stamp record for project-59534bb996.…\") and does not expose the requested stamp. The task requires a complete chain (crate allocation → cell audit linkage → ledger stamp) yielding an exact stamp string for crate tag-LQHC3CU; no link in that chain is present or verifiable in the available evidence, and the record cannot be confirmed applicable to the specific crate. Decisive authorized evidence is therefore missing/incomplete, so DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-2\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-VARH5BB",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "selected_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "delivered_ids": [
+          "r6_1ea0a62f99a0da918ab8",
+          "r6_c38970ddd9167832d654",
+          "r6_d22820bb00df8d428894"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "All links present for project-59534bb996: allocation (r6_d22820bb00df8d428894) maps crate=tag-LQHC3CU to cell=tag-NJUVCF3; cell audit linkage (r6_c38970ddd9167832d654) audits that cell by ledger=tag-HSZWJHB; ledger stamp (r6_1ea0a62f99a0da918ab8) shows ledger=tag-HSZWJHB emits stamp=tag-VARH5BB. Chain is complete and conditions match the contract/project namespace.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-2\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-multihop-3",
+    "family": "multihop",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/3",
+        "candidate_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "selected_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "delivered_ids": [
+          "r6_6a63c1fd5c06e63fc1ae"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only retrieved record (r6_6a63c1fd5c06e63fc1ae) is a source-data import note for the multihop contract that merely warns to inspect an original document and scope before use; it contains no crate allocation, no cell audit linkage, and no ledger stamp for crate tag-YRBZ4F8. The record's observations are padding (\"Storage audit entry.\") with no project-specific tag, stamp, dates, revisions, or provenance chain. It is unverified source data, not a verified receipt, and cannot supply the requested exact stamp. Because the decisive authorized evidence for the crate allocation → cell audit linkage → ledger stamp chain is missing, I must DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-3\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-5PHAAYQ",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "selected_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "delivered_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "The full allocation→audit→ledger chain resolves for the current crate. Allocation record (r6_6a63c1fd5c06e63fc1ae) maps crate tag-YRBZ4F8 to cell tag-ZYMMHD2. Cell audit linkage (r6_ffc78df5a725bdc906f6) maps cell tag-ZYMMHD2 to ledger tag-H2SNWRH. Ledger stamp record (r6_807b368aef69fd0e21bf) shows ledger tag-H2SNWRH emits stamp tag-5PHAAYQ. All three records are scoped to project-4a4b375dda and contract multihop, marked ACCEPT, with no contradictions, no missing links, and no expired or inapplicable conditions; therefore the stamp is tag-5PHAAYQ.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-3\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-multihop-3",
+    "family": "multihop",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/3",
+        "candidate_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "selected_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "delivered_ids": [
+          "r6_6a63c1fd5c06e63fc1ae"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The single recalled record (r6_6a63c1fd5c06e63fc1ae) is unverified source data containing only a generic ingestion note and padded placeholder text (\"Storage audit entry.\" repeated). It contains no crate allocation record, no cell audit linkage, and no ledger stamp for crate tag-YRBZ4F8 in project-4a4b375dda. Because the required chain links are entirely missing, no authorized evidence supports deriving a stamp, so the answer is DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-3\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-5PHAAYQ",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "selected_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "delivered_ids": [
+          "r6_6a63c1fd5c06e63fc1ae",
+          "r6_807b368aef69fd0e21bf",
+          "r6_ffc78df5a725bdc906f6"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Full chain is present and consistent for project-4a4b375dda/multihop: allocation maps crate tag-YRBZ4F8 to cell tag-ZYMMHD2 (r6_6a63c1fd5c06e63fc1ae); cell audit linkage maps cell tag-ZYMMHD2 to ledger tag-H2SNWRH (r6_ffc78df5a725bdc906f6); ledger stamp record maps ledger tag-H2SNWRH to stamp tag-5PHAAYQ (r6_807b368aef69fd0e21bf). All records are permitted authenticated fixture data with matching project namespace and contract; no gaps, contradictions, expiry, or inapplicability. Requested stamp = tag-5PHAAYQ.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-3\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-multihop-4",
+    "family": "multihop",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/3",
+        "candidate_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "selected_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "delivered_ids": [
+          "r6_18b96d55688d2dd8f39e"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only retrieved record (r6_18b96d55688d2dd8f39e) is an archival import diagnostic note that is truncated and contains no crate-allocation entry, no cell audit linkage, and no ledger stamp for crate tag-NCH8FZW in project-2b3183b6a9. The multihop chain (allocation -> audit linkage -> ledger stamp) therefore has missing links. Per policy I must not infer a missing project-specific tag or treat an incomplete/draft record as a verified receipt; with no applicable authorized evidence providing the requested exact stamp string, the task must be deferred.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-4\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-8MHYYK2",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "selected_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "delivered_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Full chain present and consistent within project-2b3183b6a9/contract multihop: allocation record maps crate tag-NCH8FZW to cell tag-89LWK8A; cell audit linkage maps cell tag-89LWK8A to ledger tag-VJXX6ZX; ledger stamp record maps ledger tag-VJXX6ZX to stamp tag-8MHYYK2. No missing link, contradiction, expiry, or inapplicability. All records are qualified ACCEPT and scoped to the same project namespace and contract; unverified state is a promotion status, not a rejection of the recorded observation.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-4\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-multihop-4",
+    "family": "multihop",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/3",
+        "candidate_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "selected_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "delivered_ids": [
+          "r6_18b96d55688d2dd8f39e"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The single available record (r6_18b96d55688d2dd8f39e) is an archival import diagnostic containing no crate allocation, no cell audit linkage, and no ledger stamp; it is marked unverified-source-data and padded with filler. The required chain (crate allocation -> cell audit linkage -> ledger stamp) is incomplete, so no authorized stamp for crate tag-NCH8FZW in project-2b3183b6a9 can be derived. Per policy, a missing link and absence of decisive authorized evidence require DEFER with an empty answer rather than inferring a tag.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-4\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-8MHYYK2",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "selected_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "delivered_ids": [
+          "r6_18b96d55688d2dd8f39e",
+          "r6_6c6463ff64b9ab697e82",
+          "r6_cabfc97a367a8be34f68"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Full chain resolved within project-2b3183b6a9: allocation record links crate tag-NCH8FZW to cell tag-89LWK8A; cell audit record links cell tag-89LWK8A to ledger tag-VJXX6ZX; ledger stamp record states ledger tag-VJXX6ZX emits stamp tag-8MHYYK2. All records are authenticated visible A records with matching contract and namespace, no contradictions, and no missing link.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-multihop-4\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-long_history-1",
+    "family": "long_history",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_loss",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": true,
+        "actual_answer": "tag-3RFJUS9",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "selected_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "delivered_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Visible A record r6_55b7ce49f3122456df59 states the signed manifest for item=tag-DWBPXRU yields certificate=tag-3RFJUS9, and that this certificate applies only to mode=sealed. Current context item=tag-DWBPXRU and mode=sealed exactly match the applicability condition; the non-applicability condition (mode=opened) does not apply. The record's source (round6-synthetic-A) is permitted authenticated fixture data; its unverified-source-data status does not by itself invalidate the recorded observation, and there is no provenance contradiction, receipt requirement, expiration, or conflicting evidence. Evidence is authorized, applicable, and decisive, so ANSWER with the exact certificate string.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-long_history-1\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "selected_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "delivered_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss",
+          "native_negative_field_not_serialized_verbatim"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "Only one visible memory record was returned: r6_55b7ce49f3122456df59, an unverified-source-data observation for project-a6c904d579 under contract long_history. It contains no item-specific tag (no tag-DWBPXRU), no signed manifest, no mode applicability condition, and no certificate value. No decisive authorized evidence establishes that a signed manifest applies to the current mode (\"sealed\") or provides the requested certificate string. Per policy, a missing/undetermined applicability condition and absent receipt content require DEFER with an empty answer; the record is not rejected as an observation, it is simply insufficient to answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-long_history-1\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-long_history-1",
+    "family": "long_history",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_loss",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": true,
+        "actual_answer": "tag-3RFJUS9",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "selected_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "delivered_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "The visible A record (r6_55b7ce49f3122456df59) states the signed manifest for item=tag-DWBPXRU in project-a6c904d579 / contract=long_history gives certificate=tag-3RFJUS9, and that this certificate applies only to mode=sealed. The current mode is sealed, so the applicability condition holds and the certificate may be returned. Source is permitted authenticated fixture data (persistent-unverified is not a rejection reason), and there are no contradictions, expiration, permission limits, or provenance conflicts.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-long_history-1\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "selected_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "delivered_ids": [
+          "r6_55b7ce49f3122456df59"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss",
+          "native_negative_field_not_serialized_verbatim"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only visible record (r6_55b7ce49f3122456df59) is an unverified, undated generic observation scoped to contract long_history and project-namespace project-a6c904d579. It contains no signed manifest, no mode applicability (sealed), and no certificate value for tag-DWBPXRU, so the receipt requirement cannot be satisfied. No authorized evidence establishes that a signed manifest applies to the current sealed mode or supplies the requested certificate; therefore DEFER.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-long_history-1\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-provenance-1",
+    "family": "provenance",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "selected_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "delivered_ids": [
+          "r6_158168de819d7aabfddf"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only retrieved record (r6_158168de819d7aabfddf) explicitly states the package label tag-8EFBRJH comes from a draft proposal and is \"not an approved inspection result.\" No inspection receipt recording an approved label is present, so the requested approved package label cannot be returned. Per the task rule, a draft proposal is insufficient — DEFER.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-provenance-1\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-ZQPX5LL",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "selected_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "delivered_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "An inspection receipt (r6_d591267745fb75a59644) for project-cd855d2572 records the approved package label tag-ZQPX5LL, satisfying the requirement for a receipt-backed approved label. The draft proposal (r6_158168de819d7aabfddf) is explicitly not an approved inspection result and is superseded by the receipt. Both records share the matching contract/project_namespace conditions; the receipt is the decisive authorized evidence.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-provenance-1\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-provenance-1",
+    "family": "provenance",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "selected_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "delivered_ids": [
+          "r6_158168de819d7aabfddf"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only applicable retrieved record (r6_158168de819d7aabfddf) is an unverified draft proposal for project-cd855d2572, and it explicitly states that its suggested package label is not an approved inspection result. The task requires the approved package label only when an inspection receipt records it, and explicitly requires DEFER when no approved receipt is available. No approved inspection receipt records the label, so the draft proposal is insufficient and no authorized decisive evidence exists. DEFER with empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-provenance-1\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-ZQPX5LL",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "selected_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "delivered_ids": [
+          "r6_158168de819d7aabfddf",
+          "r6_d591267745fb75a59644"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "An inspection receipt (r6_d591267745fb75a59644) for project-cd855d2572 records the approved package label tag-ZQPX5LL. This satisfies the explicit receipt requirement. The other record (r6_158168de819d7aabfddf) is only a draft proposal (tag-8EFBRJH) and is insufficient per the task. The record's 'unverified' state only means it is not promoted to a universal rule; it remains an observed receipt for this project and contract, with no provenance contradiction or permission issue. No conflicting applicable receipt exists.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-provenance-1\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-provenance-3",
+    "family": "provenance",
+    "rep": 1,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "selected_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "delivered_ids": [
+          "r6_1c7e03503548a74693e8"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only retrieved record (r6_1c7e03503548a74693e8) matches the project namespace and provenance contract but is an imported synthetic historical snapshot marked unverified-source-data, containing only storage-audit padding. It records no inspection receipt and no approved package label. The task requires an approved package label only when an inspection receipt records it; no such receipt, approved label, or other decisive authorized evidence is present. Per the explicit receipt requirement, this must DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-provenance-3\\rep-1\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-MXJX2QT",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "selected_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "delivered_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "An inspection receipt (r6_1c7e03503548a74693e8) applicable to project-b52820385f and contract provenance records the approved package label tag-MXJX2QT (receipt tag-KZ7U3HS). Conditions match the current context, qualification is ACCEPT, and no expiry applies. The competing draft proposal (r6_d1d76e91726fbc442521, tag-5F9HP2L) is explicitly not an approved inspection result and is therefore excluded. Since a valid approved receipt exists, the record observations are not instructions but data, and the exact recorded label is returned.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-provenance-3\\rep-1\\D"
+      }
+    ]
+  },
+  {
+    "mode": "generalization",
+    "task": "r6-generalization-provenance-3",
+    "family": "provenance",
+    "rep": 2,
+    "left": "B",
+    "right": "D",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "B",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "0/1",
+        "candidate_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "selected_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "delivered_ids": [
+          "r6_1c7e03503548a74693e8"
+        ],
+        "diagnostic_labels": [
+          "delivery_exact_core_clause_loss"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only recalled record (r6_1c7e03503548a74693e8) is a synthetic historical ingest/storage-audit entry with no approved inspection receipt and no approved package label. Since the task requires the label only when an approved inspection receipt records it, and no such receipt is available, decisive authorized evidence is missing. Draft/audit material is insufficient; therefore DEFER with an empty answer.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-provenance-3\\rep-2\\B"
+      },
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-MXJX2QT",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "selected_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "delivered_ids": [
+          "r6_1c7e03503548a74693e8",
+          "r6_d1d76e91726fbc442521"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Record r6_1c7e03503548a74693e8 is an inspection receipt for project-b52820385f recording the approved package label tag-MXJX2QT; matches contract provenance and project namespace. The draft proposal (r6_d1d76e91726fbc442521, tag-5F9HP2L) is explicitly not an approved inspection result and is excluded.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\generalization\\r6-generalization-provenance-3\\rep-2\\D"
+      }
+    ]
+  },
+  {
+    "mode": "holdout",
+    "task": "r6-holdout-timeline-1",
+    "family": "timeline",
+    "rep": 2,
+    "left": "D",
+    "right": "G",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "D",
+        "success": false,
+        "actual_answer": "AXWE6TM > PHFWRR5 > NB32VJ9",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_2397345658420d7cdd41"
+        ],
+        "selected_ids": [
+          "r6_2397345658420d7cdd41"
+        ],
+        "delivered_ids": [
+          "r6_2397345658420d7cdd41"
+        ],
+        "diagnostic_labels": [
+          "agent_decision_or_interpretation_after_complete_clauses"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The single visible record (r6_2397345658420d7cdd41, source origin A-session, conditions match contract=timeline and project_namespace=project-793d81ca5e) lists three event tags with timestamps: tag-AXWE6TM at 2024-02-18T09:00:00Z, tag-PHFWRR5 at 2025-09-03T16:20:00Z, and tag-NB32VJ9 at 2026-01-11T06:10:00Z. It is permitted authenticated fixture record data; the \"unverified\" state is persistent non-promotion to a universal rule, not a reason to reject the recorded observation. Archive notes are noise and contain no conflicting tags or revisions. Chronological order oldest first is AXWE6TM > PHFWRR5 > NB32VJ9.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\holdout\\r6-holdout-timeline-1\\rep-2\\D"
+      },
+      {
+        "arm": "G",
+        "success": true,
+        "actual_answer": "tag-AXWE6TM > tag-PHFWRR5 > tag-NB32VJ9",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "3/3",
+        "candidate_ids": [
+          "r6_2397345658420d7cdd41"
+        ],
+        "selected_ids": [
+          "r6_2397345658420d7cdd41"
+        ],
+        "delivered_ids": [
+          "r6_2397345658420d7cdd41"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Complete source bundle r6_2397345658420d7cdd41 is a permitted authenticated fixture record scoped to project-793d81ca5e and contract timeline, with no non-applicability conditions and no contradictory dates. Three event tags with timestamps: tag-AXWE6TM at 2024-02-18T09:00:00Z, tag-PHFWRR5 at 2025-09-03T16:20:00Z, tag-NB32VJ9 at 2026-01-11T06:10:00Z. Sorted oldest-first yields tag-AXWE6TM > tag-PHFWRR5 > tag-NB32VJ9. The \"unverified\" persistence state is not a rejection reason, and archive notes are non-decisive noise.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\holdout\\r6-holdout-timeline-1\\rep-2\\G"
+      }
+    ]
+  },
+  {
+    "mode": "holdout",
+    "task": "r6-holdout-exclusion-2",
+    "family": "exclusion",
+    "rep": 2,
+    "left": "D",
+    "right": "G",
+    "difference": "right_win",
+    "actual_trace_details": [
+      {
+        "arm": "D",
+        "success": false,
+        "actual_answer": "",
+        "actual_disposition": "DEFER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_509662fc6d16f986c2ae"
+        ],
+        "selected_ids": [
+          "r6_509662fc6d16f986c2ae"
+        ],
+        "delivered_ids": [
+          "r6_509662fc6d16f986c2ae"
+        ],
+        "diagnostic_labels": [
+          "native_negative_field_not_serialized_verbatim"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "The only visible record (r6_509662fc6d16f986c2ae) states the ordinary batch label is tag-M6XYDRY when department=operations, but explicitly notes that the exceptions are listed in separate frontmatter and that the ordinary rule must not be used inside an exception. That exception frontmatter was not delivered, and the runtime context provides no exception/emergency/rehearsal status beyond emergency=false and rehearsal=false. Applicability of the ordinary label and the complete set of exceptions therefore cannot be verified; decisive authorized evidence is incomplete. Per instructions, an unverifiable exception requires DEFER.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\holdout\\r6-holdout-exclusion-2\\rep-2\\D"
+      },
+      {
+        "arm": "G",
+        "success": true,
+        "actual_answer": "tag-M6XYDRY",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_509662fc6d16f986c2ae"
+        ],
+        "selected_ids": [
+          "r6_509662fc6d16f986c2ae"
+        ],
+        "delivered_ids": [
+          "r6_509662fc6d16f986c2ae"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "The bundle is complete. The record's applicability condition department=operations matches the current context (operations), and no non-applicable conditions are triggered (emergency=false, rehearsal=false). Contract exclusion and project_namespace project-8ab7e32869 match recorded_scope. The unverified state is not by itself a reason to reject a recorded observation per the source trust policy, and no provenance contradictions or authorization issues exist. The record states the ordinary batch label is tag-M6XYDRY when department=operations, and no exception applies in the current context, so use is permitted.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\holdout\\r6-holdout-exclusion-2\\rep-2\\G"
+      }
+    ]
+  },
+  {
+    "mode": "holdout",
+    "task": "r6-holdout-revision-2",
+    "family": "revision",
+    "rep": 2,
+    "left": "D",
+    "right": "G",
+    "difference": "right_loss",
+    "actual_trace_details": [
+      {
+        "arm": "D",
+        "success": true,
+        "actual_answer": "tag-FXMWXRG",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_365c48b0177985a7f6ef",
+          "r6_b0c7df8cd32a8e454aec"
+        ],
+        "selected_ids": [
+          "r6_365c48b0177985a7f6ef",
+          "r6_b0c7df8cd32a8e454aec"
+        ],
+        "delivered_ids": [
+          "r6_365c48b0177985a7f6ef",
+          "r6_b0c7df8cd32a8e454aec"
+        ],
+        "diagnostic_labels": [],
+        "model_reason_auxiliary_not_causal_evidence": "Current context is project-b6c751ba9c, contract=revision, revision=1. Record r6_365c48b0177985a7f6ef is scoped to revision=1 and gives export marker tag-FXMWXRG. Record r6_b0c7df8cd32a8e454aec is scoped to revision=2 (tag-JHMR9QH) and explicitly states \"Revision 1 does not govern revision 2\" — i.e., it is the newer record but does not apply to the current revision=1. Since the task asks for the export marker governing the current revision (1), the applicable marker is tag-FXMWXRG. Both records share the same authenticated A-session origin; conditions match the current project_namespace and contract.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\holdout\\r6-holdout-revision-2\\rep-2\\D"
+      },
+      {
+        "arm": "G",
+        "success": false,
+        "actual_answer": "tag-JHMR9QH",
+        "actual_disposition": "ANSWER",
+        "exact_source_clauses": "1/1",
+        "candidate_ids": [
+          "r6_365c48b0177985a7f6ef",
+          "r6_b0c7df8cd32a8e454aec"
+        ],
+        "selected_ids": [
+          "r6_365c48b0177985a7f6ef",
+          "r6_b0c7df8cd32a8e454aec"
+        ],
+        "delivered_ids": [
+          "r6_365c48b0177985a7f6ef",
+          "r6_b0c7df8cd32a8e454aec"
+        ],
+        "diagnostic_labels": [
+          "agent_decision_or_interpretation_after_complete_clauses"
+        ],
+        "model_reason_auxiliary_not_causal_evidence": "Current public context specifies revision=1. Evidence r6_b0c7df8cd32a8e454aec is scope-matched (contract=revision, project-b6c751ba9c) with applicability_conditions revision=2, therefore it does not apply to revision=1. Evidence r6_365c48b0177985a7f6ef has applicability_conditions revision=1 and matches the current revision, stating the export marker for revision=1 is tag-FXMWXRG; it is labeled superseded, but the newer record (rev=2) is inapplicable to the current revision=1, so it cannot override. Hence tag-FXMWXRG governs revision=1.",
+        "raw_trial": "E:\\lingshu\\work\\memory-evidence-round6-20261013\\runs\\holdout\\r6-holdout-revision-2\\rep-2\\G"
+      }
+    ]
+  }
+]

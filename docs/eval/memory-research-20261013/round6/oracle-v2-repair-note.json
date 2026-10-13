@@ -1,0 +1,11 @@
+{
+  "original_E_scores_unchanged": true,
+  "G_unchanged": true,
+  "truth_unchanged": true,
+  "source_unchanged": true,
+  "why": "Original E omitted A recorded_scope/header namespace and labeled native observation time_window as applicability. A spans alone were not a complete oracle package. Do not attribute all original E failures to Agent reasoning.",
+  "changes": "Add A trace.context; preserve native observation time separately with native-code semantics, keep real effective dates. No hidden expected answer read.",
+  "diagnostic_only_after_unblinding": true,
+  "same_context_and_execution_caps": true,
+  "planned_sessions": 96
+}

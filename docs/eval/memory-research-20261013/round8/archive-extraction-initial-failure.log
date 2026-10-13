@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "E:\lingshu\work\memory-delivery-round8-20261013\package_round8.py", line 58, in <module>
+    z.extractall(extracted)
+  File "C:\Users\29022\AppData\Local\Programs\Python\Python312\Lib\zipfile\__init__.py", line 1757, in extractall
+    self._extract_member(zipinfo, path, pwd)
+  File "C:\Users\29022\AppData\Local\Programs\Python\Python312\Lib\zipfile\__init__.py", line 1806, in _extract_member
+    os.makedirs(upperdirs)
+  File "<frozen os>", line 225, in makedirs
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\lingshu\\work\\memory-delivery-round8-20261013\\archive-replay-check\\research\\runs\\smoke\\r8-sqlite-8\\rep-1\\A\\dsh-home\\sessions\\--E-lingshu-work-memory-delivery-round8-20261013-runs-smoke-r8-sqlite-8-rep-1-A-empty-project--\\session-4f6b7a44-e0fa-420a-8b4b-09e8f37841f0'

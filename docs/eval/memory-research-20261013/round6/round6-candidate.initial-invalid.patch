@@ -1,0 +1,333 @@
+--- /dev/null
++++ b/md_cg/evidence_budget.py
+@@ -0,0 +1,219 @@
++"""Opt-in atomic evidence delivery; pure functions, no production hooks.
++
++Callers MUST supply nodes already authorized by MdCGSecure / the MCP server.
++This module does not read a graph, grant permissions, alter source content,
++rank candidates, or certify truth. Default-off delegates to the legacy helper.
++Enabled mode factors equal metadata, retains whole selected source documents,
++and reports INCOMPLETE instead of silently clipping facts or counterevidence.
++"""
++from __future__ import annotations
++
++import hashlib
++import json
++
++from md_cg.evidence_delivery import deliver
++from md_cg.experience_consolidation import context_verdict
++
++MAX_RECORDS = 128
++MAX_SOURCE_CHARS = 1_000_000
++_SECRET_KEYS = frozenset(('api_key', 'apikey', 'access_token', 'refresh_token',
++                         'password', 'private_key', 'secret_key', 'credential',
++                         'credentials', 'authorization', 'bearer_token'))
++
++
++def _json(value):
++    return json.dumps(value, ensure_ascii=False, sort_keys=True,
++                      separators=(',', ':'), allow_nan=False)
++
++
++def _hash(text):
++    return hashlib.sha256(text.encode('utf8')).hexdigest()
++
++
++def _has_credential_key(value):
++    if isinstance(value, dict):
++        return any(str(k).lower().replace('-', '_') in _SECRET_KEYS or
++                   _has_credential_key(v) for k, v in value.items())
++    if isinstance(value, (list, tuple)):
++        return any(_has_credential_key(v) for v in value)
++    return False
++
++
++def _project(node):
++    """Project the existing RSI source schema, or keep an ordinary node whole."""
++    body = node.get('content')
++    if not isinstance(body, str) or not isinstance(node.get('id'), str):
++        raise ValueError('invalid_authorized_node')
++    fm = node.get('frontmatter') or {}
++    trace = None
++    try:
++        candidate = json.loads(body)
++        if isinstance(candidate, dict) and 'source_document' in candidate:
++            if not isinstance(candidate['source_document'], str):
++                raise ValueError('invalid_source_document')
++            trace = candidate
++    except json.JSONDecodeError:
++        pass
++    source = trace['source_document'] if trace else body
++    cs = fm.get('condition_space') or {}
++    if not isinstance(cs, dict):
++        raise ValueError('invalid_condition_space')
++    # Native mdcg.add documents time_window as observation time, not expiry.
++    conditions = {k: v for k, v in cs.items() if k != 'time_window'}
++    metadata = {'applicability_conditions': conditions,
++                'non_applicable_conditions': fm.get('non_applicable_conditions') or [],
++                'verification_state': fm.get('verification_state', 'unverified')}
++    if cs.get('time_window') is not None:
++        metadata['observation_time_window'] = cs['time_window']
++    if fm.get('created_at') is not None:
++        metadata['memory_created_at'] = fm['created_at']
++    for key in ('effective_from', 'effective_until', 'believed_at', 'version',
++                'source_version', 'verification_basis'):
++        if fm.get(key) is not None:
++            metadata[key] = fm[key]
++    comment = (fm.get('state_attributes') or {}).get('comment')
++    if comment:
++        metadata['condition_comment'] = comment
++    if trace:
++        metadata.update(recorded_scope=trace.get('context'),
++                        source_recorded_at=trace.get('timestamp'),
++                        source_reference=trace.get('source'),
++                        source_origin=trace.get('task_id'),
++                        source_receipt_sha256=trace.get('raw_result_sha256'))
++    elif fm.get('source') is not None:
++        metadata['source'] = fm['source']
++    # Credentials never become diagnostic text. A credential-bearing necessary
++    # condition cannot be silently removed: refuse the entire fact bundle.
++    if _has_credential_key(metadata):
++        raise ValueError('credential_metadata_disallowed')
++    _json(metadata)
++    return {'id': node['id'], 'source': source, 'metadata': metadata,
++            'source_sha256': _hash(source), 'trace_sha256': _hash(body)}
++
++
++def _legacy(nodes, query, facts):
++    rows = []
++    for node in nodes:
++        fm = dict(node.get('frontmatter') or {})
++        content = node.get('content') or ''
++        try:
++            trace = json.loads(content)
++        except (json.JSONDecodeError, TypeError):
++            trace = None
++        qual = {'state': 'DEFER'}
++        if isinstance(trace, dict) and isinstance(trace.get('source_document'), str):
++            content = trace['source_document']
++            fm.update(created_at=trace.get('timestamp'),
++                      source={'origin': 'A-session:'+trace['task_id'],
++                              'receipt_sha256': trace['raw_result_sha256'],
++                              'reference': trace['source']},
++                      condition_space=trace.get('context'),
++                      verification_state='unverified')
++            qual = context_verdict(trace.get('context'), facts)
++        rows.append(({'id': node['id'], 'content': content, 'frontmatter': fm},
++                     0, {'state': qual.get('state')}, []))
++    rendered = deliver(rows, query, budget_tokens=750, max_item_tokens=450,
++                       mode='query_metadata_compact')
++    value = {'text': rendered['text'],
++             'delivered_ids': [r['id'] for r in rendered['records']],
++             'rejected_ids': [], 'evidence_status': 'unverified-source-data'}
++    return value, {'enabled': False, 'mode': 'legacy', 'records': rendered['records']}
++
++
++def deliver_evidence(nodes, query, *, facts=None, budget_tokens=750,
++                     token_counter=None, enabled=False):
++    """Return (tool value, body-free diagnostics), preserving candidate order.
++
++Enabled budgets count the COMPLETE serialized tool value via an injected model
++tokenizer. A zero/tiny budget that cannot encode the control envelope is an
++explicit error. COMPLETE_SOURCE_BUNDLE describes delivery, not truth or scope.
++No selected source or native condition is clipped to fit the budget.
++"""
++    nodes = list(nodes)
++    if not enabled:
++        return _legacy(nodes, query, facts)
++    if type(budget_tokens) is not int or budget_tokens < 0:
++        raise ValueError('invalid_evidence_budget')
++    if not callable(token_counter):
++        raise ValueError('enabled_delivery_requires_model_token_counter')
++
++    def count(value):
++        # Match the actual tool renderer's insertion-order JSON serialization.
++        n = token_counter(json.dumps(value, ensure_ascii=False,
++                                     separators=(',', ':'), allow_nan=False))
++        if type(n) is not int or n < 0:
++            raise ValueError('invalid_token_counter_result')
++        return n
++
++    empty = {'text': '', 'delivered_ids': [], 'rejected_ids': [],
++             'evidence_status': 'INCOMPLETE'}
++    if count(empty) > budget_tokens:
++        raise ValueError('budget_below_control_envelope_minimum')
++    diagnostics = {'enabled': True, 'mode': 'atomic-shared-metadata',
++                   'budget_tokens': budget_tokens,
++                   'token_measure': 'injected_complete_response_tokenizer',
++                   'records': [], 'duplicate_occurrences': 0,
++                   'ordinary_diagnostic_contains_body': False}
++
++    def incomplete(reason, required_tokens=None):
++        value = dict(empty)
++        value['text'] = 'DEFER: '+reason
++        if count(value) > budget_tokens:
++            value['text'] = ''
++        diagnostics.update(overflow=True, overflow_reason=reason,
++                           required_response_tokens=required_tokens,
++                           response_tokens=count(value), delivered_ids=[])
++        return value, diagnostics
++
++    if len(nodes) > MAX_RECORDS:
++        return incomplete('selected_record_resource_limit')
++    projected, seen = [], {}
++    try:
++        for node in nodes:
++            record = _project(node)
++            fingerprint = _hash(_json(record))
++            if record['id'] in seen:
++                if seen[record['id']] != fingerprint:
++                    return incomplete('same_id_source_version_conflict')
++                diagnostics['duplicate_occurrences'] += 1
++                continue
++            seen[record['id']] = fingerprint
++            projected.append(record)
++    except (ValueError, TypeError, AttributeError):
++        # Never include exception text: it could contain source/metadata values.
++        return incomplete('invalid_or_disallowed_source_metadata')
++    if sum(len(r['source']) for r in projected) > MAX_SOURCE_CHARS:
++        return incomplete('source_character_resource_limit')
++    common = {}
++    if len(projected) > 1:
++        first = projected[0]['metadata']
++        for key, value in first.items():
++            if all(key in r['metadata'] and _json(r['metadata'][key]) == _json(value)
++                   for r in projected[1:]):
++                common[key] = value
++    blocks = []
++    if projected:
++        blocks.append('Selected source records. observation_time_window records observation, not automatic expiry. Apply explicit effective dates and all conditions.')
++    if common:
++        blocks.append('Shared metadata: '+_json(common))
++    for record in projected:
++        remaining = {k: v for k, v in record['metadata'].items() if k not in common}
++        header = 'Evidence ID: '+record['id']
++        if remaining:
++            header += '\nMetadata: '+_json(remaining)
++        blocks.append(header+'\nSource document (complete):\n'+record['source'])
++    value = {'text': '\n\n'.join(blocks),
++             'delivered_ids': [r['id'] for r in projected],
++             'rejected_ids': [], 'evidence_status': 'COMPLETE_SOURCE_BUNDLE'}
++    required = count(value)
++    diagnostics['required_response_tokens'] = required
++    diagnostics['records'] = [{'id': r['id'], 'source_sha256': r['source_sha256'],
++                               'trace_sha256': r['trace_sha256'],
++                               'metadata_sha256': _hash(_json(r['metadata'])),
++                               'spans': [{'start': 0, 'end': len(r['source'])}],
++                               'truncated': False} for r in projected]
++    if required > budget_tokens:
++        return incomplete('complete_evidence_bundle_over_budget', required)
++    diagnostics.update(overflow=False, response_tokens=required,
++                       delivered_ids=value['delivered_ids'], shared_metadata_fields=list(common))
++    return value, diagnostics
+--- a/md_cg/test_evidence_delivery_compact.py
++++ b/md_cg/test_evidence_delivery_compact.py
+@@ -5,6 +5,7 @@
+ 
+ from .evidence_delivery import COMPACT_FIELDS, deliver
+ from .mdcos import est_tokens
++from .evidence_budget import deliver_evidence
+ 
+ 
+ class CompactTests(unittest.TestCase):
+@@ -50,5 +51,100 @@
+             self.assertEqual(result['tokens_used'], 0)
+ 
+ 
++class AtomicBudgetTests(unittest.TestCase):
++    def node(self, nid='one', text='Label Q. Never use when emergency=true.'):
++        return {'id': nid, 'content': text, 'frontmatter': {
++            'source': 'fixture-source', 'created_at': 100,
++            'condition_space': {'department': 'ops', 'time_window': [100, 200]},
++            'non_applicable_conditions': ['emergency=true'],
++            'effective_until': '2027-01-01', 'verification_state': 'unverified'}}
++
++    def render(self, nodes, budget=20000, **kw):
++        # Character count is intentionally a strict injected stand-in here;
++        # experiment validation additionally uses the pinned model tokenizer.
++        return deliver_evidence(nodes, 'Label', enabled=True,
++                                budget_tokens=budget, token_counter=len, **kw)
++
++    def test_default_off_uses_existing_legacy_projection(self):
++        node=self.node();v,d=deliver_evidence([node], 'Label')
++        old=deliver([(node,0,{'state':'DEFER'},[])], 'Label',budget_tokens=750,
++                    max_item_tokens=450,mode='query_metadata_compact')
++        self.assertEqual(v['text'],old['text']);self.assertFalse(d['enabled'])
++
++    def test_full_fact_negative_and_distinct_time_semantics(self):
++        n=self.node();v,d=self.render([n])
++        self.assertIn(n['content'],v['text'])
++        for part in ('emergency=true','observation_time_window','applicability_conditions','effective_until','fixture-source'):
++            self.assertIn(part,v['text'])
++        self.assertEqual(d['records'][0]['spans'],[{'start':0,'end':len(n['content'])}])
++        self.assertEqual(d['records'][0]['source_sha256'],hashlib.sha256(n['content'].encode()).hexdigest())
++        self.assertFalse(d['overflow'])
++
++    def test_overflow_exposes_no_partial_fact_or_counterevidence(self):
++        first=self.node('one','The allowed label is Q.')
++        second=self.node('two','Contradiction: the label is R. '+'background '*300)
++        v,d=self.render([first,second],budget=250)
++        self.assertEqual(v['evidence_status'],'INCOMPLETE');self.assertEqual(v['delivered_ids'],[])
++        self.assertNotIn('label is Q',v['text']);self.assertNotIn('label is R',v['text'])
++        self.assertTrue(d['overflow']);self.assertLessEqual(d['response_tokens'],250)
++
++    def test_exact_budget_boundary_counts_full_response(self):
++        v,d=self.render([self.node()]);needed=d['required_response_tokens']
++        exact,ed=self.render([self.node()],budget=needed)
++        short,sd=self.render([self.node()],budget=needed-1)
++        self.assertEqual(exact,v);self.assertFalse(ed['overflow'])
++        self.assertEqual(short['evidence_status'],'INCOMPLETE');self.assertTrue(sd['overflow'])
++
++    def test_equal_metadata_factored_without_merging_different_evidence(self):
++        nodes=[self.node('one','Q is proposed.'),self.node('two','R is confirmed.')]
++        v,d=self.render(nodes)
++        self.assertEqual(v['delivered_ids'],['one','two'])
++        self.assertEqual(v['text'].count('fixture-source'),1)
++        self.assertIn('Q is proposed.',v['text']);self.assertIn('R is confirmed.',v['text'])
++        self.assertIn('source',d['shared_metadata_fields'])
++
++    def test_duplicate_id_requires_same_source_and_metadata(self):
++        n=self.node();v,d=self.render([n,n])
++        self.assertEqual(v['delivered_ids'],['one']);self.assertEqual(d['duplicate_occurrences'],1)
++        v,d=self.render([n,self.node('one','A changed source version.')])
++        self.assertEqual(v['evidence_status'],'INCOMPLETE')
++        self.assertEqual(d['overflow_reason'],'same_id_source_version_conflict')
++
++    def test_non_decision_credentials_not_serialized_and_necessary_credential_fails_closed(self):
++        n=self.node();n['frontmatter']['access_token']='synthetic-hidden-value'
++        v,d=self.render([n]);self.assertNotIn('synthetic-hidden-value',json.dumps([v,d]))
++        n['frontmatter']['condition_space']['access_token']='synthetic-hidden-value'
++        v,d=self.render([n]);self.assertEqual(v['evidence_status'],'INCOMPLETE')
++        self.assertNotIn('synthetic-hidden-value',json.dumps([v,d]))
++
++    def test_diagnostics_contain_hashes_but_no_body_or_condition_values(self):
++        n=self.node(text='SYNTHETIC-SENSITIVE-BODY');v,d=self.render([n])
++        self.assertIn(n['content'],v['text'])
++        raw=json.dumps(d);self.assertNotIn(n['content'],raw);self.assertNotIn('department',raw)
++        self.assertFalse(d['ordinary_diagnostic_contains_body'])
++
++    def test_rsi_trace_projects_source_and_retains_native_negatives(self):
++        n=self.node();trace={'source_document':'Exact source fact.','context':{'project':'Q'},'task_id':'A','source':'A-record','timestamp':'2026-01-01','raw_result_sha256':'a'*64,'observations':['large discarded diagnostic '*100]}
++        n['content']=json.dumps(trace)
++        v,d=self.render([n]);self.assertIn('Exact source fact.',v['text'])
++        self.assertIn('emergency=true',v['text']);self.assertIn('a'*64,v['text'])
++        self.assertNotIn('large discarded diagnostic',v['text'])
++
++    def test_malformed_sources_and_counter_arguments_fail_explicitly(self):
++        n=self.node();n['content']=json.dumps({'source_document':['not text']})
++        v,d=self.render([n]);self.assertEqual(v['evidence_status'],'INCOMPLETE')
++        for budget in (-1,0,True,1.5):
++            with self.assertRaises(ValueError):self.render([self.node()],budget=budget)
++        with self.assertRaises(ValueError):deliver_evidence([self.node()],'x',enabled=True)
++        with self.assertRaises(ValueError):deliver_evidence([self.node()],'x',enabled=True,token_counter=lambda _: True)
++
++    def test_concurrent_calls_do_not_mutate_inputs_or_share_identity(self):
++        from concurrent.futures import ThreadPoolExecutor
++        n=self.node();before=json.dumps(n,sort_keys=True)
++        with ThreadPoolExecutor(max_workers=4) as pool:outputs=list(pool.map(lambda _:self.render([n])[0],range(16)))
++        self.assertTrue(all(o==outputs[0] for o in outputs))
++        self.assertEqual(json.dumps(n,sort_keys=True),before)
++
++
+ if __name__ == '__main__':
+     unittest.main(verbosity=2)

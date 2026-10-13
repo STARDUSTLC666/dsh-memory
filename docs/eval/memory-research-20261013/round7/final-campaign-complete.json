@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "final-workers-focused",
+      "command": [
+        "E:\\lingshu\\work\\r4-runtime-20261012\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "E:\\lingshu\\work\\memory-evidence-round7-20261013\\run_stability.py",
+        "focused-worker"
+      ],
+      "cwd": "E:\\lingshu\\work\\memory-evidence-round7-20261013",
+      "exit": 0,
+      "seconds": 389.3371607000008,
+      "log": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\logs\\final-workers-focused.log",
+      "log_sha256": "b3d85e413c6d938e84d967ae1344c3c78f29b983bb1f5cef5c2f536704767d16"
+    },
+    {
+      "name": "final-workers-full",
+      "command": [
+        "E:\\lingshu\\work\\r4-runtime-20261012\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "E:\\lingshu\\work\\memory-evidence-round7-20261013\\run_stability.py",
+        "verified-full",
+        "5",
+        "710197"
+      ],
+      "cwd": "E:\\lingshu\\work\\memory-evidence-round7-20261013",
+      "exit": 0,
+      "seconds": 673.3527367000061,
+      "log": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\logs\\final-workers-full.log",
+      "log_sha256": "a23fcec80add8c650b691033e6134c49628c1b53d80baafe3692877d1ae86d3a"
+    }
+  ],
+  "completed_at_utc": "2026-10-13T07:38:46.469721+00:00"
+}

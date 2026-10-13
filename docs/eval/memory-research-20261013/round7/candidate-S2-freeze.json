@@ -1,0 +1,13 @@
+{
+  "files": {
+    "E:\\lingshu\\work\\dsh-memory-round7-20261013\\md_cg\\evidence_preserving.py": "285853f9f623b1bb6c4329dac9240e5e47a75484566ab8d4b04518fa7adf67e2",
+    "E:\\lingshu\\work\\dsh-memory-round7-20261013\\md_cg\\mcp_server.py": "d32e3ab3bf4e5a3cee35a75e136425be1dfc839db3fd0d11c428bd690210f222",
+    "E:\\lingshu\\work\\dsh-memory-round7-20261013\\md_cg\\test_evidence_preserving.py": "18e2119db3863b421930883d6f6ecdb8a21d985c33edb6d941dd901e4036e164",
+    "E:\\lingshu\\work\\dsh-memory-round7-20261013\\md_cg\\test_issue91_verifier_timeout.py": "73df5364176995a7e9a51482d1b1a26ee6ebaef797a422ab0d8c1db6cbab1997",
+    "E:\\lingshu\\work\\dsh-memory-round7-20261013\\md_cg\\test_mode_parity.py": "87638c162d3272d6450a6e2191db76df95fba32a1680d93b6d2ad0633187b53f"
+  },
+  "change": "Source schema ambiguity minimal fix, after preserved S1 campaign; no G/parameter/scoring changes.",
+  "S1_study_not_rescored": true,
+  "test_change": "Verifier scope strengthened to exact launcher and real Windows venv executor process handles; algorithm unchanged. Latest focused 144/144 and full 329/329+3 unavailable private-corpus skips.",
+  "frozen_at_utc": "2026-10-13T07:40:34.132394+00:00"
+}

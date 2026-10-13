@@ -1,0 +1,119 @@
+{
+  "API_calls": 0,
+  "Memory_DB_reads": 0,
+  "candidate_cases_replayed": 12,
+  "all_scores_equal": true,
+  "original_scores_overwritten": false,
+  "scorer_and_worker_unchanged": true,
+  "environment_path_facade_changed_only": true,
+  "records": [
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 1,
+      "arm": "A",
+      "original_behavior_passed": false,
+      "replayed_behavior_passed": false,
+      "score_equal": true,
+      "candidate_source_sha256": "712f92ea045c31dbb7bf5b10000fed6e995c8d6c667845d112deb0ca6b9e965c"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 1,
+      "arm": "B",
+      "original_behavior_passed": false,
+      "replayed_behavior_passed": false,
+      "score_equal": true,
+      "candidate_source_sha256": "26d0dd49eef05ff0822b8c46b4b1b859fb00c75be2761b287243b2522bf2b5a8"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 1,
+      "arm": "C",
+      "original_behavior_passed": false,
+      "replayed_behavior_passed": false,
+      "score_equal": true,
+      "candidate_source_sha256": "712f92ea045c31dbb7bf5b10000fed6e995c8d6c667845d112deb0ca6b9e965c"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 1,
+      "arm": "D",
+      "original_behavior_passed": true,
+      "replayed_behavior_passed": true,
+      "score_equal": true,
+      "candidate_source_sha256": "c631e213b0ce81b6cc79704110c7e14e771bf7221b1db8071c783991063272ee"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 1,
+      "arm": "E",
+      "original_behavior_passed": true,
+      "replayed_behavior_passed": true,
+      "score_equal": true,
+      "candidate_source_sha256": "13167634a32898b632284208bd9feec84e4c2f4b2a204b88fbba586eb0d9cee1"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 1,
+      "arm": "F",
+      "original_behavior_passed": false,
+      "replayed_behavior_passed": false,
+      "score_equal": true,
+      "candidate_source_sha256": "712f92ea045c31dbb7bf5b10000fed6e995c8d6c667845d112deb0ca6b9e965c"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 2,
+      "arm": "B",
+      "original_behavior_passed": false,
+      "replayed_behavior_passed": false,
+      "score_equal": true,
+      "candidate_source_sha256": "712f92ea045c31dbb7bf5b10000fed6e995c8d6c667845d112deb0ca6b9e965c"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 2,
+      "arm": "C",
+      "original_behavior_passed": false,
+      "replayed_behavior_passed": false,
+      "score_equal": true,
+      "candidate_source_sha256": "177b312304bd984439cebbb5dacd91c6fcf741ec1d40ffa49d338ba4dcc4d812"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 2,
+      "arm": "D",
+      "original_behavior_passed": true,
+      "replayed_behavior_passed": true,
+      "score_equal": true,
+      "candidate_source_sha256": "5eaa4b13a0ca74b39c9c1785c1d19302d6270df60ba5a4c038530df35506f729"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 2,
+      "arm": "E",
+      "original_behavior_passed": true,
+      "replayed_behavior_passed": true,
+      "score_equal": true,
+      "candidate_source_sha256": "2e4b627aed99f14b28e81253b976ab71bd3052391fdf408b72645c3287abf4ae"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 2,
+      "arm": "F",
+      "original_behavior_passed": false,
+      "replayed_behavior_passed": false,
+      "score_equal": true,
+      "candidate_source_sha256": "25a75b58d8977d9b68087466966483e06242ca4d2357da80d9cb52f5db28d4a9"
+    },
+    {
+      "task": "holdout-v2-routing-registry-1",
+      "rep": 2,
+      "arm": "A",
+      "original_behavior_passed": false,
+      "replayed_behavior_passed": false,
+      "score_equal": true,
+      "candidate_source_sha256": "20e7087a39acdac2e2fce163c123ef1f61e63febe3da214ae2d97ed7d28a913a"
+    }
+  ]
+}

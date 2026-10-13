@@ -1,0 +1,83 @@
+{
+  "generalization": {
+    "comparison": "B to D",
+    "uncached_change": -0.04509089610343231,
+    "total_tokens_change": -0.08578247811845163,
+    "input_including_cache_change": -0.09863592345747174,
+    "output_tokens_change": -0.0046730264067468275,
+    "delivered_tool_response_tokens_change": -0.14697432214042017,
+    "model_request_change": -11,
+    "family_cluster_uncached_change_95": [
+      -0.06772959106318721,
+      -0.020380370979103057
+    ],
+    "not_a_cost_stability_guarantee": true,
+    "usage_by_arm": {
+      "A": {
+        "inputTokens": 95366,
+        "outputTokens": 27218,
+        "cacheReadTokens": 78976,
+        "cacheWriteTokens": 0,
+        "totalTokens": 201560
+      },
+      "B": {
+        "inputTokens": 131829,
+        "outputTokens": 36165,
+        "cacheReadTokens": 96384,
+        "cacheWriteTokens": 0,
+        "totalTokens": 264378
+      },
+      "D": {
+        "inputTokens": 124423,
+        "outputTokens": 35996,
+        "cacheReadTokens": 81280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 241699
+      },
+      "E": {
+        "inputTokens": 115153,
+        "outputTokens": 33105,
+        "cacheReadTokens": 79488,
+        "cacheWriteTokens": 0,
+        "totalTokens": 227746
+      }
+    }
+  },
+  "holdout": {
+    "comparison": "D to G",
+    "uncached_change": -0.036781799086650246,
+    "total_tokens_change": -0.0626588880732527,
+    "input_including_cache_change": -0.03460534151816386,
+    "output_tokens_change": -0.21371484953132713,
+    "delivered_tool_response_tokens_change": 0.10167948199109667,
+    "model_request_change": -4,
+    "family_cluster_uncached_change_95": [
+      -0.0810771486451699,
+      0.00524764150943402
+    ],
+    "not_a_cost_stability_guarantee": true,
+    "usage_by_arm": {
+      "B": {
+        "inputTokens": 72017,
+        "outputTokens": 22383,
+        "cacheReadTokens": 51712,
+        "cacheWriteTokens": 0,
+        "totalTokens": 146112
+      },
+      "D": {
+        "inputTokens": 64473,
+        "outputTokens": 20270,
+        "cacheReadTokens": 44672,
+        "cacheWriteTokens": 0,
+        "totalTokens": 129415
+      },
+      "G": {
+        "inputTokens": 65688,
+        "outputTokens": 15938,
+        "cacheReadTokens": 39680,
+        "cacheWriteTokens": 0,
+        "totalTokens": 121306
+      }
+    }
+  }
+}

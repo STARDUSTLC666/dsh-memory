@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "preserving-real-source",
+      "real_native_tool": "r7_mdcg_recall",
+      "actual_arguments": {
+        "query": "force locked worktree",
+        "budget_tokens": 1000,
+        "max_item_tokens": 450,
+        "k": 1,
+        "include_work": true,
+        "causal": false,
+        "temporal": false,
+        "preserve_evidence": true,
+        "evidence_budget_tokens": 1000
+      },
+      "result_status": "completed",
+      "visible_evidence_status": "COMPLETE_SOURCE_BUNDLE",
+      "response_sha256": "091a5a1f12b9c9f6537d3a5ade081bf1b05ae6ad7525d4080a3cd6f198bcfe07",
+      "payload_utf8_bytes": 2011,
+      "passed": true
+    },
+    {
+      "case": "budget-safe-defer",
+      "real_native_tool": "r7_mdcg_recall",
+      "actual_arguments": {
+        "query": "force locked worktree",
+        "budget_tokens": 1000,
+        "max_item_tokens": 450,
+        "k": 1,
+        "include_work": true,
+        "causal": false,
+        "temporal": false,
+        "preserve_evidence": true,
+        "evidence_budget_tokens": 40
+      },
+      "result_status": "completed",
+      "visible_evidence_status": "INCOMPLETE",
+      "response_sha256": "c4b33bd5cedeae9d335b214d980f437a76e274b8f6618dd8cb2b6266e922bad3",
+      "payload_utf8_bytes": 45,
+      "passed": true
+    },
+    {
+      "case": "default-off-legacy",
+      "real_native_tool": "r7_mdcg_recall",
+      "actual_arguments": {
+        "query": "force locked worktree",
+        "budget_tokens": 1000,
+        "max_item_tokens": 450,
+        "k": 1,
+        "include_work": true,
+        "causal": false,
+        "temporal": false,
+        "preserve_evidence": false,
+        "evidence_budget_tokens": 1000
+      },
+      "result_status": "completed",
+      "visible_evidence_status": null,
+      "response_sha256": "1f811dc3d3832c3482510fb6e898155b82079c3cc7e760cf37537225ba8f1b8e",
+      "payload_utf8_bytes": 3548,
+      "passed": true
+    }
+  ],
+  "path": "Actual isolated DSH profile -> locally compiled dsh-memory TypeScript plugin -> stdio MCP -> signed token principal -> authorized recall/get -> S2/legacy -> DSH tool_result -> submit",
+  "engineering_only": true,
+  "not_in_independent_success_rate": true,
+  "production_updated": false
+}

@@ -1,0 +1,11 @@
+{
+  "archive": "E:\\lingshu\\outputs\\memory-diagnosis-round5-complete-20261013\\memory-diagnosis-round5-complete-20261013.zip",
+  "bytes": 84639896,
+  "sha256": "557b5280ad9a7ff39b54daf1f4fc2fd4e05570511de0b6ef309b1fbb698961d4",
+  "archived_files": 30400,
+  "credential_scan_hits": 0,
+  "authority_keys_excluded": 12,
+  "production_data_included": false,
+  "historical_files_overwritten": false,
+  "public_upload_performed": false
+}

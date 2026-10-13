@@ -1,0 +1,738 @@
+{
+  "main_trials": 144,
+  "task_contexts": 24,
+  "task_families": 3,
+  "repeats_per_context": 2,
+  "arms": {
+    "A": {
+      "trials": 48,
+      "success": 12,
+      "rate": 0.25,
+      "answer_required_success": [
+        0,
+        36
+      ],
+      "defer_required_success": [
+        12,
+        12
+      ],
+      "success_by_repeat": {
+        "1": [
+          6,
+          24
+        ],
+        "2": [
+          6,
+          24
+        ]
+      },
+      "same_task_repetition_outcomes": {
+        "stable_failure": 18,
+        "stable_success": 6
+      },
+      "uncached_input_tokens": 84728,
+      "output_tokens": 14116,
+      "cache_read_tokens": 82944,
+      "cache_write_tokens": 0,
+      "total_tokens": 181788,
+      "uncached_input_plus_output": 98844,
+      "model_requests": 105,
+      "native_calls": 0,
+      "p50_ms": 8070.0,
+      "p95_ms": 9375.9,
+      "delivered_characters": 3024,
+      "delivered_utf8_bytes": 3024,
+      "delivered_tokenizer_proxy_tokens": 912,
+      "native_p50_ms": 0.0,
+      "native_p95_ms": 0.0,
+      "assembly_p50_ms": null,
+      "assembly_p95_ms": null,
+      "evidence_status": {
+        "no_memory": 48
+      },
+      "whole_sources_visible": 0,
+      "expected_sources": 60,
+      "caller_incomplete_violations": 0,
+      "expired_or_conflict_answers": 0,
+      "integration_valid": 48,
+      "provider_errors": 0,
+      "timeouts": 0,
+      "reflection_events": 0,
+      "actual_API_fee": null
+    },
+    "B": {
+      "trials": 48,
+      "success": 27,
+      "rate": 0.5625,
+      "answer_required_success": [
+        21,
+        36
+      ],
+      "defer_required_success": [
+        6,
+        12
+      ],
+      "success_by_repeat": {
+        "1": [
+          14,
+          24
+        ],
+        "2": [
+          13,
+          24
+        ]
+      },
+      "same_task_repetition_outcomes": {
+        "stable_success": 11,
+        "mixed": 5,
+        "stable_failure": 8
+      },
+      "uncached_input_tokens": 122361,
+      "output_tokens": 27760,
+      "cache_read_tokens": 75904,
+      "cache_write_tokens": 0,
+      "total_tokens": 226025,
+      "uncached_input_plus_output": 150121,
+      "model_requests": 97,
+      "native_calls": 48,
+      "p50_ms": 9223.0,
+      "p95_ms": 11364.8,
+      "delivered_characters": 140293,
+      "delivered_utf8_bytes": 145537,
+      "delivered_tokenizer_proxy_tokens": 44143,
+      "native_p50_ms": 12.335899999999583,
+      "native_p95_ms": 16.14962999999989,
+      "assembly_p50_ms": null,
+      "assembly_p95_ms": null,
+      "evidence_status": {
+        "native_original": 48
+      },
+      "whole_sources_visible": 42,
+      "expected_sources": 60,
+      "caller_incomplete_violations": 0,
+      "expired_or_conflict_answers": 6,
+      "integration_valid": 48,
+      "provider_errors": 0,
+      "timeouts": 0,
+      "reflection_events": 0,
+      "actual_API_fee": null
+    },
+    "D1": {
+      "trials": 48,
+      "success": 40,
+      "rate": 0.8333333333333334,
+      "answer_required_success": [
+        29,
+        36
+      ],
+      "defer_required_success": [
+        11,
+        12
+      ],
+      "success_by_repeat": {
+        "1": [
+          20,
+          24
+        ],
+        "2": [
+          20,
+          24
+        ]
+      },
+      "same_task_repetition_outcomes": {
+        "stable_success": 18,
+        "mixed": 4,
+        "stable_failure": 2
+      },
+      "uncached_input_tokens": 103671,
+      "output_tokens": 23882,
+      "cache_read_tokens": 76288,
+      "cache_write_tokens": 0,
+      "total_tokens": 203841,
+      "uncached_input_plus_output": 127553,
+      "model_requests": 98,
+      "native_calls": 48,
+      "p50_ms": 8718.0,
+      "p95_ms": 10575.1,
+      "delivered_characters": 83106,
+      "delivered_utf8_bytes": 83130,
+      "delivered_tokenizer_proxy_tokens": 24686,
+      "native_p50_ms": 14.786200000000008,
+      "native_p95_ms": 20.85862999999999,
+      "assembly_p50_ms": 1.4291000115917996,
+      "assembly_p95_ms": 2.9072449964587577,
+      "evidence_status": {
+        "COMPLETE_SELECTED_SOURCES": 42,
+        "INCOMPLETE": 6
+      },
+      "whole_sources_visible": 54,
+      "expected_sources": 60,
+      "caller_incomplete_violations": 1,
+      "expired_or_conflict_answers": 1,
+      "integration_valid": 48,
+      "provider_errors": 0,
+      "timeouts": 0,
+      "reflection_events": 0,
+      "actual_API_fee": null
+    }
+  },
+  "families": {
+    "sqlite": {
+      "arms": {
+        "A": {
+          "trials": 16,
+          "success": 4,
+          "rate": 0.25,
+          "answer_required_success": [
+            0,
+            12
+          ],
+          "defer_required_success": [
+            4,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              2,
+              8
+            ],
+            "2": [
+              2,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_failure": 6,
+            "stable_success": 2
+          },
+          "uncached_input_tokens": 25949,
+          "output_tokens": 4866,
+          "cache_read_tokens": 23680,
+          "cache_write_tokens": 0,
+          "total_tokens": 54495,
+          "uncached_input_plus_output": 30815,
+          "model_requests": 33,
+          "native_calls": 0,
+          "p50_ms": 8133.0,
+          "p95_ms": 8903.0,
+          "delivered_characters": 1008,
+          "delivered_utf8_bytes": 1008,
+          "delivered_tokenizer_proxy_tokens": 304,
+          "native_p50_ms": 0.0,
+          "native_p95_ms": 0.0,
+          "assembly_p50_ms": null,
+          "assembly_p95_ms": null,
+          "evidence_status": {
+            "no_memory": 16
+          },
+          "whole_sources_visible": 0,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 0,
+          "expired_or_conflict_answers": 0,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        },
+        "B": {
+          "trials": 16,
+          "success": 9,
+          "rate": 0.5625,
+          "answer_required_success": [
+            7,
+            12
+          ],
+          "defer_required_success": [
+            2,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              5,
+              8
+            ],
+            "2": [
+              4,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_success": 4,
+            "mixed": 1,
+            "stable_failure": 3
+          },
+          "uncached_input_tokens": 39892,
+          "output_tokens": 8182,
+          "cache_read_tokens": 25216,
+          "cache_write_tokens": 0,
+          "total_tokens": 73290,
+          "uncached_input_plus_output": 48074,
+          "model_requests": 33,
+          "native_calls": 16,
+          "p50_ms": 9029.0,
+          "p95_ms": 10421.5,
+          "delivered_characters": 45923,
+          "delivered_utf8_bytes": 47671,
+          "delivered_tokenizer_proxy_tokens": 14468,
+          "native_p50_ms": 12.073100000000068,
+          "native_p95_ms": 16.422199999999748,
+          "assembly_p50_ms": null,
+          "assembly_p95_ms": null,
+          "evidence_status": {
+            "native_original": 16
+          },
+          "whole_sources_visible": 14,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 0,
+          "expired_or_conflict_answers": 2,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        },
+        "D1": {
+          "trials": 16,
+          "success": 14,
+          "rate": 0.875,
+          "answer_required_success": [
+            10,
+            12
+          ],
+          "defer_required_success": [
+            4,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              7,
+              8
+            ],
+            "2": [
+              7,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_success": 7,
+            "stable_failure": 1
+          },
+          "uncached_input_tokens": 33355,
+          "output_tokens": 5881,
+          "cache_read_tokens": 24320,
+          "cache_write_tokens": 0,
+          "total_tokens": 63556,
+          "uncached_input_plus_output": 39236,
+          "model_requests": 33,
+          "native_calls": 16,
+          "p50_ms": 8058.5,
+          "p95_ms": 8878.25,
+          "delivered_characters": 26218,
+          "delivered_utf8_bytes": 26226,
+          "delivered_tokenizer_proxy_tokens": 7886,
+          "native_p50_ms": 14.095299999999952,
+          "native_p95_ms": 20.472949999999855,
+          "assembly_p50_ms": 1.3550500007113442,
+          "assembly_p95_ms": 2.8666249927482568,
+          "evidence_status": {
+            "COMPLETE_SELECTED_SOURCES": 14,
+            "INCOMPLETE": 2
+          },
+          "whole_sources_visible": 18,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 0,
+          "expired_or_conflict_answers": 0,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        }
+      },
+      "paired": {
+        "0": 11,
+        "1": 5
+      }
+    },
+    "http": {
+      "arms": {
+        "A": {
+          "trials": 16,
+          "success": 4,
+          "rate": 0.25,
+          "answer_required_success": [
+            0,
+            12
+          ],
+          "defer_required_success": [
+            4,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              2,
+              8
+            ],
+            "2": [
+              2,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_failure": 6,
+            "stable_success": 2
+          },
+          "uncached_input_tokens": 31263,
+          "output_tokens": 4767,
+          "cache_read_tokens": 33152,
+          "cache_write_tokens": 0,
+          "total_tokens": 69182,
+          "uncached_input_plus_output": 36030,
+          "model_requests": 36,
+          "native_calls": 0,
+          "p50_ms": 8143.5,
+          "p95_ms": 9573.75,
+          "delivered_characters": 1008,
+          "delivered_utf8_bytes": 1008,
+          "delivered_tokenizer_proxy_tokens": 304,
+          "native_p50_ms": 0.0,
+          "native_p95_ms": 0.0,
+          "assembly_p50_ms": null,
+          "assembly_p95_ms": null,
+          "evidence_status": {
+            "no_memory": 16
+          },
+          "whole_sources_visible": 0,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 0,
+          "expired_or_conflict_answers": 0,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        },
+        "B": {
+          "trials": 16,
+          "success": 10,
+          "rate": 0.625,
+          "answer_required_success": [
+            8,
+            12
+          ],
+          "defer_required_success": [
+            2,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              5,
+              8
+            ],
+            "2": [
+              5,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_success": 4,
+            "mixed": 2,
+            "stable_failure": 2
+          },
+          "uncached_input_tokens": 43064,
+          "output_tokens": 12045,
+          "cache_read_tokens": 28160,
+          "cache_write_tokens": 0,
+          "total_tokens": 83269,
+          "uncached_input_plus_output": 55109,
+          "model_requests": 32,
+          "native_calls": 16,
+          "p50_ms": 9906.5,
+          "p95_ms": 11490.75,
+          "delivered_characters": 46794,
+          "delivered_utf8_bytes": 48542,
+          "delivered_tokenizer_proxy_tokens": 14688,
+          "native_p50_ms": 12.702000000000226,
+          "native_p95_ms": 15.972474999999804,
+          "assembly_p50_ms": null,
+          "assembly_p95_ms": null,
+          "evidence_status": {
+            "native_original": 16
+          },
+          "whole_sources_visible": 14,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 0,
+          "expired_or_conflict_answers": 2,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        },
+        "D1": {
+          "trials": 16,
+          "success": 11,
+          "rate": 0.6875,
+          "answer_required_success": [
+            8,
+            12
+          ],
+          "defer_required_success": [
+            3,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              6,
+              8
+            ],
+            "2": [
+              5,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_success": 4,
+            "mixed": 3,
+            "stable_failure": 1
+          },
+          "uncached_input_tokens": 37210,
+          "output_tokens": 9615,
+          "cache_read_tokens": 27648,
+          "cache_write_tokens": 0,
+          "total_tokens": 74473,
+          "uncached_input_plus_output": 46825,
+          "model_requests": 32,
+          "native_calls": 16,
+          "p50_ms": 9457.0,
+          "p95_ms": 10868.75,
+          "delivered_characters": 28600,
+          "delivered_utf8_bytes": 28608,
+          "delivered_tokenizer_proxy_tokens": 8382,
+          "native_p50_ms": 15.82694999999967,
+          "native_p95_ms": 20.885274999999638,
+          "assembly_p50_ms": 1.5150500112213194,
+          "assembly_p95_ms": 3.2511749959667213,
+          "evidence_status": {
+            "COMPLETE_SELECTED_SOURCES": 14,
+            "INCOMPLETE": 2
+          },
+          "whole_sources_visible": 18,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 0,
+          "expired_or_conflict_answers": 1,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        }
+      },
+      "paired": {
+        "0": 9,
+        "1": 4,
+        "-1": 3
+      }
+    },
+    "jsonschema": {
+      "arms": {
+        "A": {
+          "trials": 16,
+          "success": 4,
+          "rate": 0.25,
+          "answer_required_success": [
+            0,
+            12
+          ],
+          "defer_required_success": [
+            4,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              2,
+              8
+            ],
+            "2": [
+              2,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_failure": 6,
+            "stable_success": 2
+          },
+          "uncached_input_tokens": 27516,
+          "output_tokens": 4483,
+          "cache_read_tokens": 26112,
+          "cache_write_tokens": 0,
+          "total_tokens": 58111,
+          "uncached_input_plus_output": 31999,
+          "model_requests": 36,
+          "native_calls": 0,
+          "p50_ms": 7954.5,
+          "p95_ms": 9229.5,
+          "delivered_characters": 1008,
+          "delivered_utf8_bytes": 1008,
+          "delivered_tokenizer_proxy_tokens": 304,
+          "native_p50_ms": 0.0,
+          "native_p95_ms": 0.0,
+          "assembly_p50_ms": null,
+          "assembly_p95_ms": null,
+          "evidence_status": {
+            "no_memory": 16
+          },
+          "whole_sources_visible": 0,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 0,
+          "expired_or_conflict_answers": 0,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        },
+        "B": {
+          "trials": 16,
+          "success": 8,
+          "rate": 0.5,
+          "answer_required_success": [
+            6,
+            12
+          ],
+          "defer_required_success": [
+            2,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              4,
+              8
+            ],
+            "2": [
+              4,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_success": 3,
+            "mixed": 2,
+            "stable_failure": 3
+          },
+          "uncached_input_tokens": 39405,
+          "output_tokens": 7533,
+          "cache_read_tokens": 22528,
+          "cache_write_tokens": 0,
+          "total_tokens": 69466,
+          "uncached_input_plus_output": 46938,
+          "model_requests": 32,
+          "native_calls": 16,
+          "p50_ms": 8890.0,
+          "p95_ms": 9831.5,
+          "delivered_characters": 47576,
+          "delivered_utf8_bytes": 49324,
+          "delivered_tokenizer_proxy_tokens": 14987,
+          "native_p50_ms": 12.42094999999972,
+          "native_p95_ms": 15.244149999999536,
+          "assembly_p50_ms": null,
+          "assembly_p95_ms": null,
+          "evidence_status": {
+            "native_original": 16
+          },
+          "whole_sources_visible": 14,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 0,
+          "expired_or_conflict_answers": 2,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        },
+        "D1": {
+          "trials": 16,
+          "success": 15,
+          "rate": 0.9375,
+          "answer_required_success": [
+            11,
+            12
+          ],
+          "defer_required_success": [
+            4,
+            4
+          ],
+          "success_by_repeat": {
+            "1": [
+              7,
+              8
+            ],
+            "2": [
+              8,
+              8
+            ]
+          },
+          "same_task_repetition_outcomes": {
+            "stable_success": 7,
+            "mixed": 1
+          },
+          "uncached_input_tokens": 33106,
+          "output_tokens": 8386,
+          "cache_read_tokens": 24320,
+          "cache_write_tokens": 0,
+          "total_tokens": 65812,
+          "uncached_input_plus_output": 41492,
+          "model_requests": 33,
+          "native_calls": 16,
+          "p50_ms": 8801.0,
+          "p95_ms": 10530.5,
+          "delivered_characters": 28288,
+          "delivered_utf8_bytes": 28296,
+          "delivered_tokenizer_proxy_tokens": 8418,
+          "native_p50_ms": 14.626099999999951,
+          "native_p95_ms": 17.81007499999987,
+          "assembly_p50_ms": 1.4565500023309141,
+          "assembly_p95_ms": 2.718424999329727,
+          "evidence_status": {
+            "COMPLETE_SELECTED_SOURCES": 14,
+            "INCOMPLETE": 2
+          },
+          "whole_sources_visible": 18,
+          "expected_sources": 20,
+          "caller_incomplete_violations": 1,
+          "expired_or_conflict_answers": 0,
+          "integration_valid": 16,
+          "provider_errors": 0,
+          "timeouts": 0,
+          "reflection_events": 0,
+          "actual_API_fee": null
+        }
+      },
+      "paired": {
+        "0": 9,
+        "1": 7
+      }
+    }
+  },
+  "paired_trial_counts": {
+    "0": 29,
+    "1": 16,
+    "-1": 3
+  },
+  "task_mean_pair_counts": {
+    "tie": 10,
+    "win": 11,
+    "loss": 3
+  },
+  "task_cluster_bootstrap_descriptive_95_range": [
+    0.08333333333333333,
+    0.4583333333333333
+  ],
+  "uncertainty": "Resample the 24 task contexts, not 48 calls. Three shared families and shared scenario templates still limit independence; this descriptive interval does not establish broad generalization or statistical significance.",
+  "uncached_change_D1_B": -0.1503320654671898,
+  "primary_score_safety_boundary": "Original scores never changed. Report explicit INCOMPLETE adoption violations separately, including successful answers that violate caller rules.",
+  "research_base": "e683a4259d9264cb7438c34920fe1efa79e5105c",
+  "latest_review_base": "97e220edff6235dbe60b67f31bc7e7f018998116",
+  "API_currency_cost_unavailable": true,
+  "payload_tokenizer": "Frozen V4.1 tokenizer proxy; API usage has separate authoritative cached/uncached fields, not actual flash tokenizer inferred from characters."
+}

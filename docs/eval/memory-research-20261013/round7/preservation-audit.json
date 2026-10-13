@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "historical_frozen_files_verified": 7,
+  "new_dataset_frozen_files_verified": 316,
+  "round6_archive_sha256": "6bd6da0a3866dc9384cd14e14dbd615079887ebf8bc8ced2733e00050ce7676d",
+  "round6_archive_members": 17063,
+  "round6_manifest_entries_verified": 17062,
+  "round6_crc_failure": null,
+  "round6_member_hash_mismatches": [],
+  "G_working_file_unchanged": true,
+  "production_or_old_result_writes": false
+}

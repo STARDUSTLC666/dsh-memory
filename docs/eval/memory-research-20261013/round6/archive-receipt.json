@@ -1,0 +1,12 @@
+{
+  "archive": "E:\\lingshu\\outputs\\memory-evidence-round6-complete-20261013\\memory-evidence-round6-complete-20261013.zip",
+  "bytes": 22013834,
+  "sha256": "6bd6da0a3866dc9384cd14e14dbd615079887ebf8bc8ced2733e00050ce7676d",
+  "archived_files": 17063,
+  "real_provider_key_scan_hits": 0,
+  "synthetic_graph_keys_only": true,
+  "production_data_included": false,
+  "public_upload_performed": false,
+  "historical_records_overwritten": false,
+  "excluded": "temporary regression runtime/build trees, DSH home/session caches; actual model stdout/tool receipts/prompts/config hashes and synthetic source graph snapshots retained"
+}

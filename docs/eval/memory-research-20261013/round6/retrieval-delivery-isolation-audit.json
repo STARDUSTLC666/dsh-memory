@@ -1,0 +1,10 @@
+{
+  "generalization": {
+    "paired_task_repeats": 94,
+    "candidate_order_selection_or_query_mismatches": []
+  },
+  "holdout": {
+    "paired_task_repeats": 48,
+    "candidate_order_selection_or_query_mismatches": []
+  }
+}

@@ -1,0 +1,197 @@
+diff --git a/md_cg/test_issue91_verifier_timeout.py b/md_cg/test_issue91_verifier_timeout.py
+index 0eae313..111a6df 100644
+--- a/md_cg/test_issue91_verifier_timeout.py
++++ b/md_cg/test_issue91_verifier_timeout.py
+@@ -16,7 +16,7 @@ r"""守卫 · #91（根因③）whitebox verifier 的被校验代码必须在**
+   T1a 模块级死循环载荷 ⇒ `verify()` 在给定时限内返回**失败**（不挂死）
+   T1b 函数级死循环载荷（样例调用）⇒ 同上
+   T2  **正对照**：合法载荷照常通过（L2 报「N 组样例全部通过」）
+-  T3  连续超时载荷 ⇒ 子进程个个被**回收**（reaped）、存活 python 进程数不增长；
++  T3  连续超时载荷 ⇒ 子进程个个被**回收**（reaped）、受控执行器存活数为零；
+       其后的全链路调用仍正常（不泄漏、不卡住后续调用）
+   T4  防回退：`_SAFE_BUILTIN_NAMES` 不含 `__import__`/`open`/`eval`；
+       `_STDLIB_OK` 不含 `os`/`sys`/`socket`/`threading`
+@@ -166,39 +166,88 @@ out["t2"] = {"sec": dt, "err": err, "ok": (r.ok if r else None),
+ 
+ 
+ # ---------- T3：连续超时后不泄漏、后续调用仍正常 ----------
+-def live_python():
+-    """存活 python 进程数（探针不可用返回 None＝该子项跳过，如实标注）。"""
+-    try:
+-        if os.name == "nt":
+-            p = subprocess.run(["tasklist", "/FI", "IMAGENAME eq python.exe",
+-                                "/FO", "CSV", "/NH"],
+-                               stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+-                               check=False)
+-            txt = p.stdout.decode("utf-8", "replace")
+-            return sum(1 for ln in txt.splitlines() if "python.exe" in ln.lower())
+-        n = 0
+-        for d in os.listdir("/proc"):
+-            if not d.isdigit():
+-                continue
+-            try:
+-                with open("/proc/%s/cmdline" % d, "rb") as f:
+-                    if b"python" in f.read():
+-                        n += 1
+-            except Exception:
+-                pass
+-        return n
+-    except Exception:
+-        return None
+-
++# Observe the actual Popen handles, independently of verifier's reported
++# `reaped` boolean. Global tasklist/proc counts include concurrent tests and
++# cannot distinguish an executor leak from an unrelated process starting.
++owned = []
++native_popen = V.subprocess.Popen
++native_runner = V._EXEC_RUNNER_SRC
++executor_handles = []
++if os.name == "nt":
++    import ctypes
++    from ctypes import wintypes
++    kernel = ctypes.WinDLL("kernel32", use_last_error=True)
++    kernel.OpenProcess.argtypes = [wintypes.DWORD, wintypes.BOOL, wintypes.DWORD]
++    kernel.OpenProcess.restype = wintypes.HANDLE
++    kernel.WaitForSingleObject.argtypes = [wintypes.HANDLE, wintypes.DWORD]
++    kernel.WaitForSingleObject.restype = wintypes.DWORD
++    kernel.TerminateProcess.argtypes = [wintypes.HANDLE, wintypes.UINT]
++    kernel.CloseHandle.argtypes = [wintypes.HANDLE]
++
++def observe_executor(pid, launcher):
++    if os.name == "nt":
++        # A stable process handle, opened before timeout, cannot target a reused
++        # PID. Includes the real interpreter behind the Windows venv launcher.
++        handle = kernel.OpenProcess(0x100001, False, pid)  # synchronize + terminate
++        if not handle:
++            raise OSError("Cannot observe owned executor")
++        return (pid, handle, launcher)
++    if pid != launcher.pid:
++        raise RuntimeError("Unexpected interpreter redirector on POSIX")
++    return (pid, None, launcher)
++
++def tracked_popen(*args, **kwargs):
++    p = native_popen(*args, **kwargs)
++    owned.append(p)
++    deadline = time.monotonic() + TO
++    while time.monotonic() < deadline:
++        try:
++            with open(marker, encoding="utf-8") as f:
++                executor_pid = int(f.read())
++            break
++        except (FileNotFoundError, ValueError):
++            time.sleep(0.005)
++    else:
++        raise RuntimeError("Owned executor PID handshake timed out")
++    executor_handles.append(observe_executor(executor_pid, p))
++    return p
+ 
+-before = live_python()
++before = 0  # no owned verifier executors started yet
+ reaped, kinds, secs = [], [], []
+-for i in range(3):
+-    res = V._run_guarded(LOOP_FN, [(1, 1)], "f", "samples", TO)
+-    kinds.append(res.get("exec"))
+-    reaped.append(res.get("reaped"))
+-    secs.append(res.get("timeout"))
+-after = live_python()
++V.subprocess.Popen = tracked_popen
++try:
++    for i in range(3):
++        marker = os.path.join(tempfile.mkdtemp(prefix="p91_executor_"), "pid")
++        handshake = ("import os\nwith open(%r, 'w', encoding='utf-8') as _marker:\n"
++                     "    _marker.write(str(os.getpid()))\n" % marker)
++        V._EXEC_RUNNER_SRC = handshake + native_runner
++        res = V._run_guarded(LOOP_FN, [(1, 1)], "f", "samples", TO)
++        kinds.append(res.get("exec"))
++        reaped.append(res.get("reaped"))
++        secs.append(res.get("timeout"))
++finally:
++    V.subprocess.Popen = native_popen
++    V._EXEC_RUNNER_SRC = native_runner
++after = sum(p.poll() is None for p in owned)
++owned_snapshot = [{'pid': p.pid, 'returncode': p.poll()} for p in owned]
++executor_snapshot = []
++for pid, handle, launcher in executor_handles:
++    state = kernel.WaitForSingleObject(handle, 1000) if os.name == "nt" else None
++    if os.name == "nt" and state not in (0, 258):
++        raise OSError("Owned executor wait failed")
++    exited = state == 0 if os.name == "nt" else launcher.poll() is not None
++    executor_snapshot.append({'pid': pid, 'launcher_pid': launcher.pid, 'exited': exited})
++    if os.name == "nt":
++        if not exited:
++            kernel.TerminateProcess(handle, 1)  # only the pre-opened test executor
++            kernel.WaitForSingleObject(handle, 5000)
++        kernel.CloseHandle(handle)
++# Collect the failure BEFORE cleanup: a leaked child must still make T3b red.
++# Kill only children created by this test; never enumerate/terminate outsiders.
++for p in owned:
++    if p.poll() is None:
++        p.kill()
++    p.wait(timeout=5)
+ v, _c = verifier()
+ r, err, dt = timed(lambda: v.verify(V.VerifyRequest(
+     task="unit", code=LOOP_FN, unit_id="t3_full", cases=[(1, 1)])))
+@@ -208,7 +257,9 @@ v, _c = verifier()
+ r, err, dt = timed(lambda: v.verify(V.VerifyRequest(
+     task="unit", code=GOOD, unit_id="t3_ok", cases=[(1, 2)])))
+ out["t3"] = {"kinds": kinds, "reaped": reaped, "timeout": secs[0],
+-             "before": before, "after": after, "full_ok": full_ok,
++             "before": before, "after": after, "owned": owned_snapshot,
++             "executors": executor_snapshot,
++             "full_ok": full_ok,
+              "full_l2_ok": full_l2, "full_sec": full_dt,
+              "ok_after": (r.ok if r else None), "err": err}
+ 
+@@ -293,14 +344,17 @@ def _run_child(src_path: str):
+     if not m:
+         return {"hang": False, "sec": time.time() - t0, "out": txt,
+                 "stderr": err[-500:]}
+-    return {"hang": False, "sec": time.time() - t0, "data": json.loads(m.group(1))}
++    return {"hang": False, "sec": time.time() - t0, "data": json.loads(m.group(1)),
++            "out": txt, "stderr": err, "outer_pid": p.pid,
++            "returncode": p.returncode}
+ 
+ 
+ def _proc_ok(t3):
+-    if t3["before"] is None or t3["after"] is None:
+-        print("       （进程计数探针不可用 ⇒ T3b 跳过，如实标注）")
+-        return True
+-    return (t3["after"] - t3["before"]) <= 1      # 允许 1 台外部抖动
++    owned = t3.get("owned", [])
++    return (len(owned) == 3 and t3.get("before") == 0 and t3.get("after") == 0
++            and all(p.get("returncode") is not None for p in owned)
++            and len(t3.get("executors", [])) == 3
++            and all(p.get("exited") is True for p in t3["executors"]))
+ 
+ 
+ def _hang_reds():
+@@ -338,7 +392,8 @@ def judge(data, sec):
+           all(k == "timeout" for k in t3["kinds"]),
+           "kinds=%r reaped=%r" % (t3["kinds"], t3["reaped"]))
+     check("T3b 连续超时后存活进程数不增长", _proc_ok(t3),
+-          "before=%r after=%r" % (t3["before"], t3["after"]))
++          "owned=%r executors=%r before=%r after=%r" % (
++              t3.get("owned"), t3.get("executors"), t3["before"], t3["after"]))
+     check("T3c 连续超时后后续调用仍正常（全链路 L2 有界判负 + 正常载荷通过）",
+           t3["err"] == "" and t3["full_l2_ok"] is False
+           and t3["ok_after"] is True and t3["full_sec"] < budget,
+diff --git a/md_cg/test_mode_parity.py b/md_cg/test_mode_parity.py
+index ae76991..232b7fc 100644
+--- a/md_cg/test_mode_parity.py
++++ b/md_cg/test_mode_parity.py
+@@ -413,6 +413,15 @@ VOL = ("t", "created_at", "last_access", "time_window", "last_merge_at",
+ AGG = re.compile(r"【聚合 [^】]*】")
+ PID = re.compile(r"prop_[0-9a-f]{8,}")   # pid 含时钟+随机熵（身份面，掩码）
+ TS0 = 1700000000.0          # 固定观测时刻（E 分数类确定性的锚）
++# The full_B merge label enters the content-addressed tombstone of full_D.
++# Masking the displayed aggregation date in strip() does not stabilize that
++# digest. Inject the same observation stamp for all three source-tree probes;
++# retain the exact tombstone equality and the exact two-item mutation assertion.
++_aggregate_line = forgetting.aggregate_line
++def aggregate_at_observation(body, content, stamp=None):
++    return _aggregate_line(body, content, stamp=stamp or
++                           time.strftime("%m-%d %H:%M", time.localtime(TS0)))
++forgetting.aggregate_line = aggregate_at_observation
+ BODY = ("# 功能名：部署面端口约定\n"
+         "# 生效条件：载体/位置：prod 集群；时间：2026-09-30 起；方法：部署清单核对；约束：无\n"
+         "# 子功能：登记各服务监听端口\n"

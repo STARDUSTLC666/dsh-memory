@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "mode": "read-only saved-evidence replay; no API or Memory writes",
+  "frozen_files_verified": 336,
+  "main_sessions": 280,
+  "smoke_sessions": 5,
+  "native_engineering_sessions": 3,
+  "total_DSH_sessions": 288,
+  "strict_regrades_equal": 285,
+  "native_tool_timeline_equal": 3,
+  "main_success": {
+    "A": 20,
+    "B": 35,
+    "D": 46,
+    "G": 33,
+    "S": 31
+  },
+  "all_selected_orders_equal": 56,
+  "submitted_visible_ID_references": 216,
+  "main_submission_argument_rejections_by_arm": {
+    "G": 4,
+    "A": 2,
+    "S": 1
+  },
+  "main_repeated_recall_rejections_by_arm": {
+    "D": 6,
+    "G": 1,
+    "B": 6
+  },
+  "main_missing_final_submissions_by_arm": {
+    "D": 1
+  },
+  "latest_parallel_logs_verified": 329,
+  "unavailable_private_corpus_tests": 3,
+  "does_not_reproduce_model_sampling": true
+}

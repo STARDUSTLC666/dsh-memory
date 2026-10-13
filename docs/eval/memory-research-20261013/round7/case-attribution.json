@@ -1,0 +1,695 @@
+{
+  "cases": [
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-concurrent-futures",
+      "family": "python_concurrency",
+      "rep": 2,
+      "delta": -1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-concurrent-futures\\rep-2\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-concurrent-futures\\rep-2\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": true,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"affects_process_pool\": true, \"affects_thread_pool\": false, \"source_commit\": \"60403a5409ff2c3f3b07dd2ca91a7a3e096839c7\"}",
+        "evidence_ids": [
+          "r7_eb8e190918210bf4c892"
+        ],
+        "reason": "Pinned first-party CPython v3.13.0 documentation for concurrent.futures (source https://raw.githubusercontent.com/python/cpython/60403a5409ff2c3f3b07dd2ca91a7a3e096839c7/Doc/library/concurrent.futures.rst) records that Executor.map's chunksize parameter is only used with ProcessPoolExecutor; for ThreadPoolExecutor it has no effect. The exact full commit ID in the source URI is 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7. The record is a permitted authenticated upstream documentation observation matching the requested release scope v3.13.0."
+      },
+      "right_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_eb8e190918210bf4c892",
+          "r7_8ee1be68e62b6e7a35b5"
+        ],
+        "reason": "Retrieved evidence is limited to the Executor.map signature and general module context from Doc/library/concurrent.futures.rst at commit 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7 (release v3.13.0). It confirms chunksize is an Executor.map parameter but does not include the decisive documentation text distinguishing chunksize semantics for ProcessPoolExecutor.map versus ThreadPoolExecutor.map. With the retrieval budget exhausted, the requested affects_process_pool/affects_thread_pool values cannot be grounded in authorized evidence, so DEFER with empty answer."
+      },
+      "expected": {
+        "affects_process_pool": true,
+        "affects_thread_pool": false,
+        "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7"
+      },
+      "attribution": "A_evidence_unit_insufficient",
+      "external_basis": "Full upstream document includes map chunksize semantics; selected A paragraphs include signature/module context but omit the decisive pool distinction. B correct does not prove its visible evidence grounded both facts. D refusal is not proof of false authentication or incorrect source delivery.",
+      "decisive_clause_presence_proxy": {
+        "B": {},
+        "D": {}
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-configparser",
+      "family": "python_persistence",
+      "rep": 2,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-configparser\\rep-2\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-configparser\\rep-2\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": false,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [],
+        "reason": "The single recalled record (r7_4fcb29cc5eee0772f3ee) is a truncated, unverified documentation snippet (module header, dictionaries note) and does not contain the requested details on duplicate section/option handling (strict_default) or the default option-name transformation (option_transform). No decisive authorized evidence about these keys is available in memory, so the answer cannot be confirmed."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"strict_default\": true, \"option_transform\": \"lowercase\"}",
+        "evidence_ids": [
+          "r7_f8ef015c82e876a89423",
+          "r7_4fcb29cc5eee0772f3ee"
+        ],
+        "reason": "r7_f8ef015c82e876a89423 shows the ConfigParser constructor signature for release v3.13.0 with strict=True as the default, so duplicate sections/options are rejected by default. r7_4fcb29cc5eee0772f3ee documents that option keys are \"optionxform\"'ed and \"This means lowercased keys by default\", establishing the default option-name transformation as lowercasing. Both records are scoped to release v3.13.0 / python/cpython, matching the request."
+      },
+      "expected": {
+        "strict_default": true,
+        "option_transform": "lowercase"
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "strict=True": false,
+          "lowercased keys by default": false
+        },
+        "D": {
+          "strict=True": true,
+          "lowercased keys by default": true
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-git-bundle",
+      "family": "git_object_history",
+      "rep": 2,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-bundle\\rep-2\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-bundle\\rep-2\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": true,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"key\": \"verify\"}",
+        "evidence_ids": [
+          "r7_066ee708da0a8bf6b6b1"
+        ],
+        "reason": "git-bundle(1) synopsis documents 'git bundle verify [-q | --quiet] <file>', which checks that a bundle is valid and that its prerequisites are available in the current repository. Release scope matches v2.51.0."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"subcommand\":\"verify\"}",
+        "evidence_ids": [
+          "r7_066ee708da0a8bf6b6b1"
+        ],
+        "reason": "The pinned first-party upstream documentation (git-bundle.adoc at release v2.51.0, repository git/git) lists the subcommands and shows 'git bundle verify [-q | --quiet] <file>'. The verify subcommand is documented as validating that a bundle is usable/valid for the current repository, including checking prerequisites. Release scope matches the request (v2.51.0). Single authenticated source, no conflicts."
+      },
+      "expected": {
+        "subcommand": "verify"
+      },
+      "attribution": "output_contract_or_qualified_name",
+      "external_basis": "Actual submitted arguments differ in JSON key/option prefix/qualified exception spelling. Do not count this as recovered factual evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {},
+        "D": {}
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-git-clean",
+      "family": "git_worktree",
+      "rep": 1,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-clean\\rep-1\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-clean\\rep-1\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": true,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_7ec14f6b4401e7684d4d"
+        ],
+        "reason": "The only retrieved evidence (r7_7ec14f6b4401e7684d4d) is a truncated git-clean(1) documentation observation from v2.51.0. It shows the -f/--force option text is cut off mid-sentence (\"If the Git configuration variable cl...\") and never states how many -f occurrences are required to remove untracked nested Git repositories, nor whether dry-run (-n) requires force. The decisive text under --force is missing, so the requested keys cannot be answered from authorized evidence."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"nested_repo_force_count\": 2, \"dry_run_requires_force\": false}",
+        "evidence_ids": [
+          "r7_7ec14f6b4401e7684d4d",
+          "r7_9404e6c1748449dd9519"
+        ],
+        "reason": "Evidence r7_7ec14f6b4401e7684d4d (git-clean.adoc, git/git v2.51.0) states under -f/--force that \"Git will refuse to modify untracked nested git repositories (directories with a .git subdirectory) unless a second -f is given\" — so two -f occurrences are needed. Evidence r7_9404e6c1748449dd9519 documents -n/--dry-run: \"Don't actually remove anything, just show what would be done. Configuration variable clean.requireForce is ignored, as nothing will be deleted anyway\" — so dry-run does not require force. Release scope matches the request (v2.51.0), records are marked unverified but are authenticated upstream documentation observations under the trust policy, and no conflicting evidence was returned."
+      },
+      "expected": {
+        "nested_repo_force_count": 2,
+        "dry_run_requires_force": false
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "unless a second -f is given": false,
+          "clean.requireForce is ignored": false
+        },
+        "D": {
+          "unless a second -f is given": true,
+          "clean.requireForce is ignored": false
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-git-clean",
+      "family": "git_worktree",
+      "rep": 2,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-clean\\rep-2\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-clean\\rep-2\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": true,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_7ec14f6b4401e7684d4d"
+        ],
+        "reason": "The only retrieved record (r7_7ec14f6b4401e7684d4d) is a git-clean(1) documentation observation scoped to git/git v2.51.0, but it is truncated at the `-f::`/`--force::` entry and does not contain the decisive text: neither the required number of `-f` occurrences to remove an untracked nested Git repository nor the statement about whether `-n` (dry-run) requires force. The observable excerpt only hints that nested git directories are \"mentioned under `--force`\" without stating the rule. No other evidence is available (retrieval budget exhausted). Decisive facts for nested_repo_force_count and dry_run_requires_force are missing/incomplete, so no answer can be substantiated from authorized evidence."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"nested_repo_force_count\": 2, \"dry_run_requires_force\": false}",
+        "evidence_ids": [
+          "r7_7ec14f6b4401e7684d4d",
+          "r7_9404e6c1748449dd9519"
+        ],
+        "reason": "Pinned upstream git-clean.adoc documentation scoped to repository git/git, release v2.51.0 states: \"Git will refuse to modify untracked nested git repositories (directories with a .git subdirectory) unless a second -f is given\" — so two -f occurrences are needed (nested_repo_force_count = 2). For -n/--dry-run, \"Configuration variable clean.requireForce is ignored, as nothing will be deleted anyway,\" meaning force is not required (dry_run_requires_force = false). Source is authenticated first-party pinned upstream documentation matching the requested release scope; verification_state \"unverified\" does not invalidate the observation. No conflicts or exceptions apply."
+      },
+      "expected": {
+        "nested_repo_force_count": 2,
+        "dry_run_requires_force": false
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "unless a second -f is given": false,
+          "clean.requireForce is ignored": false
+        },
+        "D": {
+          "unless a second -f is given": true,
+          "clean.requireForce is ignored": false
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-git-gc",
+      "family": "git_object_history",
+      "rep": 2,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-gc\\rep-2\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-gc\\rep-2\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": true,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_cf4544ffe344d0f1c4a2"
+        ],
+        "reason": "The single authorized memory record (r7_cf4544ffe344d0f1c4a2) is a git-gc(1) documentation observation from git/git at commit c44beea485f0f2feaf460e2ac87fdd5608d63cf0 under release scope v2.51.0, but its delivered content is truncated before the `--prune=<date>` / `gc.pruneExpire` / prune-weeks default is stated. The requested `prune_weeks` numeric threshold is therefore not present in the visible evidence, and the retrieval budget is exhausted so no further source can be consulted. Missing decisive recorded evidence → DEFER with empty answer."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"prune_weeks\": 2, \"source_commit\": \"c44beea485f0f2feaf460e2ac87fdd5608d63cf0\"}",
+        "evidence_ids": [
+          "r7_cf4544ffe344d0f1c4a2",
+          "r7_53994514635946a16b67"
+        ],
+        "reason": "The git-gc.adoc documentation (release v2.51.0, repository git/git) states the default for --prune is \"2 weeks ago\", overridable by gc.pruneExpire, giving prune_weeks = 2. The source_commit is the full commit hash bound to the document in the recorded reference URL: c44beea485f0f2feaf460e2ac87fdd5608d63cf0."
+      },
+      "expected": {
+        "prune_weeks": 2,
+        "source_commit": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0"
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "default is 2 weeks ago": false
+        },
+        "D": {
+          "default is 2 weeks ago": true
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-git-pack-refs",
+      "family": "git_object_history",
+      "rep": 1,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-pack-refs\\rep-1\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-pack-refs\\rep-1\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": true,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_4c69f4c03b8531ac462a"
+        ],
+        "reason": "The retrieved git-pack-refs(1) v2.51.0 documentation excerpt is truncated and does not contain the --all/--no-prune option description that specifies whether hidden refs (e.g. refs/hidden or hidden refs) and broken/dangling refs are included. The candidate note text is cut off before any statement about hidden or broken references. No other evidence addresses the specific keys includes_hidden_refs and includes_broken_refs. Since the decisive documented behavior is missing from the permitted evidence, the disposition is DEFER with an empty answer."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"includes_hidden_refs\": false, \"includes_broken_refs\": false}",
+        "evidence_ids": [
+          "r7_93cb6a389e1982ee8cfd"
+        ],
+        "reason": "Pinned first-party git/git v2.51.0 documentation for git-pack-refs (r7_93cb6a389e1982ee8cfd, hash-bound raw GitHub source) states --all \"causes all refs to be packed as well, with the exception of hidden refs, broken refs, and symbolic refs.\" Thus --all excludes both hidden refs and broken refs. Release scope v2.51.0 matches the request."
+      },
+      "expected": {
+        "includes_hidden_refs": false,
+        "includes_broken_refs": false
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "of hidden refs, broken refs, and symbolic refs": false
+        },
+        "D": {
+          "of hidden refs, broken refs, and symbolic refs": true
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-git-pack-refs",
+      "family": "git_object_history",
+      "rep": 2,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-pack-refs\\rep-2\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-pack-refs\\rep-2\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": true,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_4c69f4c03b8531ac462a"
+        ],
+        "reason": "The only retrieved record is a truncated git-pack-refs(1) documentation observation for v2.51.0 that is cut off before the OPTIONS section describing --all. It does not state whether --all includes hidden references or broken references. No decisive authorized evidence covers the requested keys, so DEFER with an empty answer."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"includes_hidden_refs\": false, \"includes_broken_refs\": false}",
+        "evidence_ids": [
+          "r7_93cb6a389e1982ee8cfd"
+        ],
+        "reason": "Pinned first-party upstream documentation (git-pack-refs.adoc at commit c44beea485f0f2feaf460e2ac87fdd5608d63cf0, release v2.51.0 matching the requested scope) describes --all as packing all refs \"with the exception of hidden refs, broken refs, and symbolic refs.\" Thus --all does not include hidden refs or broken refs; both booleans are false."
+      },
+      "expected": {
+        "includes_hidden_refs": false,
+        "includes_broken_refs": false
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "of hidden refs, broken refs, and symbolic refs": false
+        },
+        "D": {
+          "of hidden refs, broken refs, and symbolic refs": true
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-git-reflog",
+      "family": "git_object_history",
+      "rep": 1,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-reflog\\rep-1\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-reflog\\rep-1\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": false,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_6d94aec01d529ae85832"
+        ],
+        "reason": "The only recalled record (r7_6d94aec01d529ae85832) is a git-reflog(1) observation scoped to v2.51.0, but its delivered content is truncated. It shows only the `--expire=<time>` text referencing `gc.reflogExpire` defaulting to 90 days; the `--expire-unreachable` section that would establish unreachable_days is cut off mid-sentence. No explicit `source_commit` field is visible in the memory response — a commit-like hash appears only embedded within the source URL, which is not a delivered recorded field and cannot be treated as the requested recorded source_commit. The record is also flagged unverified-source-data. Since the requested keys require an exact recorded source_commit and a verifiable unreachable value, decisive authorized evidence is incomplete/missing, so I defer with an empty answer."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"reachable_days\": 90, \"unreachable_days\": 30, \"source_commit\": \"c44beea485f0f2feaf460e2ac87fdd5608d63cf0\"}",
+        "evidence_ids": [
+          "r7_6d94aec01d529ae85832"
+        ],
+        "reason": "The pinned first-party upstream document (git-reflog.adoc, git/git at commit c44beea485f0f2feaf460e2ac87fdd5608d63cf0, release scope v2.51.0 matching the request) states gc.reflogExpire defaults to 90 days and gc.reflogExpireUnreachable defaults to 30 days. The source_commit is taken from the hash-bound reference in the same record. No conflicting evidence; the \"unverified\" tag reflects no promotion to a runtime-verified rule and does not invalidate the authenticated source observation."
+      },
+      "expected": {
+        "reachable_days": 90,
+        "unreachable_days": 30,
+        "source_commit": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0"
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "90 days": true,
+          "30 days": false
+        },
+        "D": {
+          "90 days": true,
+          "30 days": true
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-git-reset",
+      "family": "git_worktree",
+      "rep": 1,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-reset\\rep-1\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-git-reset\\rep-1\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": true,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"unchanged_index_mode\": \"soft\", \"default_mode\": \"mixed\"}",
+        "evidence_ids": [
+          "r7_063421618498a13631e0"
+        ],
+        "reason": "The authenticated pinned first-party git-reset(1) documentation (v2.51.0, repository git/git) confirms the reset mode semantics: the SYNOPSIS lists [--soft | --mixed | --hard | --merge | --keep], and the mode comparison table shows --soft moves only HEAD while leaving the index and working tree untouched; --mixed is documented in git-reset as the default action when no mode flag is given. Release scope matches v2.51.0. The unverified status is a promotion label only and does not invalidate this authenticated source observation."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"unchanged_index_mode\": \"--soft\", \"default_mode\": \"--mixed\"}",
+        "evidence_ids": [
+          "r7_063421618498a13631e0"
+        ],
+        "reason": "The recalled hash-bound upstream document (git-reset.adoc, git/git c44beea, release v2.51.0) shows reset modes: --soft applies to the HEAD only, leaving the index and working tree unchanged; --mixed resets the index but not the working tree. Git's documented default reset mode is --mixed. The public key request maps unchanged_index_mode -> --soft and default_mode -> --mixed."
+      },
+      "expected": {
+        "unchanged_index_mode": "--soft",
+        "default_mode": "--mixed"
+      },
+      "attribution": "output_contract_or_qualified_name",
+      "external_basis": "Actual submitted arguments differ in JSON key/option prefix/qualified exception spelling. Do not count this as recovered factual evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {},
+        "D": {}
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-shelve",
+      "family": "python_persistence",
+      "rep": 1,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-shelve\\rep-1\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-shelve\\rep-1\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": false,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_3a01838e5378faff7965"
+        ],
+        "reason": "The single recalled record is a partial/truncated excerpt of the shelve documentation. It shows the open() signature with writeback=False and a source URL naming commit 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7, but the excerpt does not contain the text establishing concurrent read/write behavior (the documented restriction on concurrent access). Because the requested key concurrent_read_write_supported has no decisive authorized evidence in the delivered data, and the record is flagged unverified-source-data with only a partial observation, the evidence is incomplete for the full three-key answer. Submitting DEFER."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"default_writeback\": false, \"concurrent_read_write_supported\": false, \"source_commit\": \"60403a5409ff2c3f3b07dd2ca91a7a3e096839c7\"}",
+        "evidence_ids": [
+          "r7_3a01838e5378faff7965",
+          "r7_3eeaa91e4ddf4fc471fc"
+        ],
+        "reason": "The recalled first-party CPython v3.13.0 shelve documentation (receipt-bound raw.githubusercontent.com reference) shows the API signature `open(filename, flag='c', protocol=None, writeback=False)` and `Shelf(dict, protocol=None, writeback=False, keyencoding='utf-8')`, so the default writeback value is False. The same document states the shelve module does not support concurrent read/write access to shelved objects, so concurrent_read_write_supported is false. The source URL pins commit 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7, which is the recorded document's full commit ID. Release scope matches v3.13.0 and the records are consistent with no conflicts."
+      },
+      "expected": {
+        "default_writeback": false,
+        "concurrent_read_write_supported": false,
+        "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7"
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "writeback=False": true,
+          "concurrent": false
+        },
+        "D": {
+          "writeback=False": true,
+          "concurrent": true
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-shelve",
+      "family": "python_persistence",
+      "rep": 2,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-shelve\\rep-2\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-shelve\\rep-2\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": false,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_3a01838e5378faff7965"
+        ],
+        "reason": "The single retrieved record is an authenticated first-party shelve documentation observation for python/cpython v3.13.0 (matching release scope), and its source URL binds the exact commit ID 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7. The visible content confirms the signature `open(filename, flag='c', protocol=None, writeback=False)`, supporting a default writeback value of False. However, the record content and source document are truncated; the requested key concurrent_read_write_supported has no visible supporting text in the delivered evidence, and the one-retrieval budget is exhausted so it cannot be confirmed. Because the requested schema requires both keys plus the exact full source_commit as recorded document evidence and one key lacks decisive visible authorized evidence, the record is incomplete for a complete ANSWER."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"default_writeback\": false, \"concurrent_read_write_supported\": false, \"source_commit\": \"60403a5409ff2c3f3b07dd2ca91a7a3e096839c7\"}",
+        "evidence_ids": [
+          "r7_3a01838e5378faff7965",
+          "r7_3eeaa91e4ddf4fc471fc"
+        ],
+        "reason": "Pinned first-party CPython v3.13.0 shelve documentation (Doc/library/shelve.rst at commit 60403a5409ff2c3f3b07dd2ca91a7a3e096839c7) matches the requested release scope. It shows `shelve.open(filename, flag='c', protocol=None, writeback=False)` and `Shelf(dict, protocol=None, writeback=False, ...)`, so the default writeback is False. It also explicitly states the shelve module does not support concurrent read/write access to shelved objects (multiple simultaneous reads are safe), so concurrent_read_write_supported is false. The exact full commit ID appears in the recorded source reference."
+      },
+      "expected": {
+        "default_writeback": false,
+        "concurrent_read_write_supported": false,
+        "source_commit": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7"
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "writeback=False": true,
+          "concurrent": false
+        },
+        "D": {
+          "writeback=False": true,
+          "concurrent": true
+        }
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-subprocess",
+      "family": "python_concurrency",
+      "rep": 1,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-subprocess\\rep-1\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-subprocess\\rep-1\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": false,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"child_automatically_killed\": false, \"exception\": \"subprocess.TimeoutExpired\"}",
+        "evidence_ids": [
+          "r7_6133717bafb685e87f1d"
+        ],
+        "reason": "The pinned CPython v3.13.0 subprocess documentation states that if the process does not terminate after the timeout, a TimeoutExpired exception is raised, and explicitly that \"The child process is not killed if the timeout expires.\" Scope matches the requested release, so child_automatically_killed is false and the exception is subprocess.TimeoutExpired."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"child_automatically_killed\": false, \"exception\": \"TimeoutExpired\"}",
+        "evidence_ids": [
+          "r7_6133717bafb685e87f1d"
+        ],
+        "reason": "Pinned first-party upstream CPython v3.13.0 documentation (r7_6133717bafb685e87f1d) matching the requested release states that if the process does not terminate after timeout seconds, a TimeoutExpired exception is raised, and explicitly that \"The child process is not killed if the timeout expires,\" advising applications to call proc.kill() themselves. Evidence is release-scoped to v3.13.0 python/cpython, current and applicable. The second record's kill-and-wait behavior pertains to subprocess.run(), not Popen.communicate, so it does not alter the answer for the requested API."
+      },
+      "expected": {
+        "child_automatically_killed": false,
+        "exception": "TimeoutExpired"
+      },
+      "attribution": "output_contract_or_qualified_name",
+      "external_basis": "Actual submitted arguments differ in JSON key/option prefix/qualified exception spelling. Do not count this as recovered factual evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {},
+        "D": {}
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-subprocess",
+      "family": "python_concurrency",
+      "rep": 2,
+      "delta": -1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-subprocess\\rep-2\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-subprocess\\rep-2\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": false,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"child_automatically_killed\": false, \"exception\": \"TimeoutExpired\"}",
+        "evidence_ids": [
+          "r7_6133717bafb685e87f1d"
+        ],
+        "reason": "Pinned first-party CPython v3.13.0 subprocess documentation (scoped to v3.13.0) states that if the process does not terminate after timeout seconds, a TimeoutExpired exception is raised, and explicitly \"The child process is not killed if the timeout expires.\""
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"child_automatically_killed\": false, \"exception\": \"subprocess.TimeoutExpired\"}",
+        "evidence_ids": [
+          "r7_6133717bafb685e87f1d"
+        ],
+        "reason": "First-party CPython v3.13.0 documentation (Doc/library/subprocess.rst) confirms that for Popen.communicate, if the process does not terminate within timeout, a TimeoutExpired exception is raised, and explicitly states \"The child process is not killed if the timeout expires,\" advising the application to kill the child itself. Release scope v3.13.0 matches the request."
+      },
+      "expected": {
+        "child_automatically_killed": false,
+        "exception": "TimeoutExpired"
+      },
+      "attribution": "output_contract_or_qualified_name",
+      "external_basis": "Actual submitted arguments differ in JSON key/option prefix/qualified exception spelling. Do not count this as recovered factual evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {},
+        "D": {}
+      }
+    },
+    {
+      "pair": "B_to_D",
+      "task": "r7-public-zipfile",
+      "family": "python_persistence",
+      "rep": 1,
+      "delta": 1,
+      "left_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-zipfile\\rep-1\\B\\result.json",
+      "right_raw": "E:\\lingshu\\work\\memory-evidence-round7-20261013\\runs\\prospective\\r7-public-zipfile\\rep-1\\D\\result.json",
+      "left_source_complete_proxy": false,
+      "right_source_complete_proxy": false,
+      "left_status": "unverified-source-data",
+      "right_status": "unverified-source-data",
+      "left_answer": {
+        "disposition": "DEFER",
+        "answer": "",
+        "evidence_ids": [
+          "r7_25845e498ca8852fa9b1",
+          "r7_0faac4779a2aaa8d0f75"
+        ],
+        "reason": "No applicable evidence for the requested behavior. The two records are truncated excerpts of the zipfile docs at v3.13.0 and contain no statement of a compression constant requiring zlib or the exception raised when zlib is unavailable (e.g., ZIP_DEFLATED / RuntimeError). Publicly derivable knowledge alone is insufficient here because the requested keys ask for recorded upstream specifics and the supplied records are incomplete and unverified. Submitting DEFER with empty answer."
+      },
+      "right_answer": {
+        "disposition": "ANSWER",
+        "answer": "{\"compression_constant\": \"ZIP_DEFLATED\", \"missing_module_exception\": \"RuntimeError\"}",
+        "evidence_ids": [
+          "r7_0faac4779a2aaa8d0f75",
+          "r7_25845e498ca8852fa9b1"
+        ],
+        "reason": "Pinned first-party CPython v3.13.0 zipfile documentation states ZIP_DEFLATED \"requires the zlib module\" (r7_0faac4779a2aaa8d0f75), and that if the required module for ZIP_DEFLATED/ZIP_BZIP2/ZIP_LZMA is not available, RuntimeError is raised (r7_25845e498ca8852fa9b1). Release scope matches the v3.13.0 request."
+      },
+      "expected": {
+        "compression_constant": "ZIP_DEFLATED",
+        "missing_module_exception": "RuntimeError"
+      },
+      "attribution": "delivery_loss_supported",
+      "external_basis": "Same candidate/selected order; compare actual B/D visible payload against upstream source clauses. Model reason alone is not causal evidence.",
+      "decisive_clause_presence_proxy": {
+        "B": {
+          "ZIP_DEFLATED": false,
+          "zlib": false,
+          "RuntimeError": false
+        },
+        "D": {
+          "ZIP_DEFLATED": true,
+          "zlib": true,
+          "RuntimeError": true
+        }
+      }
+    }
+  ],
+  "source_sufficiency_audit": {
+    "task": "r7-public-concurrent-futures",
+    "full_document_mentions_chunksize_no_effect": true,
+    "selected_A_units_mention_chunksize_no_effect": false,
+    "raw_scores_unchanged": true,
+    "boundary": "Source-ledger sufficiency issue, not an incomplete current question. Public prior knowledge is allowed but cannot establish memory-grounded recovery. Exact source-unit completeness is only a proxy."
+  },
+  "exclusion_sensitivity_only": {
+    "A": {
+      "success": 20,
+      "trials": 54
+    },
+    "B": {
+      "success": 34,
+      "trials": 54
+    },
+    "D": {
+      "success": 46,
+      "trials": 54
+    },
+    "S": {
+      "success": 31,
+      "trials": 54
+    },
+    "G": {
+      "success": 33,
+      "trials": 54
+    }
+  },
+  "not_primary_scores": true,
+  "paired_wins_by_label": {
+    "A_evidence_unit_insufficient": 0,
+    "delivery_loss_supported": 10,
+    "output_contract_or_qualified_name": 3
+  },
+  "paired_losses_by_label": {
+    "A_evidence_unit_insufficient": 1,
+    "delivery_loss_supported": 0,
+    "output_contract_or_qualified_name": 1
+  }
+}

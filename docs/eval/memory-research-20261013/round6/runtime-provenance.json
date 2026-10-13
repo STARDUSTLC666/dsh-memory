@@ -1,0 +1,44 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "node": "v24.16.0",
+  "DSH_commit": "407e65c8864fe1888435347656387d892a5621f9",
+  "model": "deepseek-official/deepseek-flash",
+  "temperature": "provider default, same configuration; request-configs.json retained",
+  "model_seed": "unsupported in current DSH DeepSeek Messages serializer",
+  "dataset_seeds": {
+    "generalization": 610131,
+    "development": 610137,
+    "holdout": 610149
+  },
+  "tokenizer_provenance": {
+    "recipe_revision": "8cadfede7063c896b944e7bae05daa3549ae97ea",
+    "files": {
+      "v41/tokenizer.json": {
+        "url": "https://raw.githubusercontent.com/deepseek-ai/deepseek-recipe/8cadfede7063c896b944e7bae05daa3549ae97ea/static/tokenizers/v41/tokenizer.json",
+        "sha256": "81f64d1248a68ce3663e07ab3ee48b851e5df0e32d27cb98e4c9a268151e8d99",
+        "bytes": 6367247
+      },
+      "v41/README.md": {
+        "url": "https://raw.githubusercontent.com/deepseek-ai/deepseek-recipe/8cadfede7063c896b944e7bae05daa3549ae97ea/static/tokenizers/v41/README.md",
+        "sha256": "711070ffbe350a07e30e81a40aed8ce0e37f444142aa42e25cab704fb06be269",
+        "bytes": 1158
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/deepseek-ai/deepseek-recipe/8cadfede7063c896b944e7bae05daa3549ae97ea/static/tokenizers/LICENSE",
+        "sha256": "f2c6c602815669d292889e5be8c802f2ed950653b77999b1584e8e6aed25d040",
+        "bytes": 1084
+      }
+    },
+    "runtime_version": "0.22.1",
+    "text_probe_count": 4,
+    "scope": "Pinned official V4.1 text tokenizer; API usage remains billing truth. No model weights."
+  },
+  "runtime_lib_sha256": {
+    "apps/cli/lib/bin.js": "935e95d05f4dc70a8a013eea59da80028946b5c139e45c6351dcaf2810ca00a1",
+    "packages/core/tools/lib/index.js": "4b05e79a8e62146203674e10ab402bd06c09efb1879823af07a463359c34b53e"
+  },
+  "unrelated_DSH_untracked_files": "?? tmp-origin-index.html\n?? tmp-wb-index.html",
+  "underlying_provider_weights_revision_pinned": false,
+  "API_usage_is_billing_token_truth": true
+}

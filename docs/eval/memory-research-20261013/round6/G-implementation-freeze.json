@@ -1,0 +1,13 @@
+{
+  "budget_tokens": 750,
+  "budget_unit": "complete tool response, pinned model tokenizer",
+  "enabled_only_in_new_G_experiment_bridge": true,
+  "default_enabled": false,
+  "module": "E:\\lingshu\\work\\dsh-memory-round6-20261013\\md_cg\\evidence_budget.py",
+  "module_sha256": "5b69ab5ecf536b1961b238f0acfe3b5902b39b1bbfdcd0184607307613a55baf",
+  "regression_test_sha256": "77b7fc0e42af80c7798818c5bb672db8c8ef19af93e7c99cc36fc7f843fa8d9c",
+  "P1_analysis_sha256": "7767d67afe26240ce40dc76f3c245d3c6f5f296bcf92385a6c31595b84e33fca",
+  "development_offline_decision_sha256": "489eb8bbf3055c07e3315273c63aa76d98a891332d9e8f22d0fdec3d063260ca",
+  "before_any_G_API_call": true,
+  "holdout_untouched": true
+}
