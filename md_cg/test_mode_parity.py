@@ -413,6 +413,15 @@ VOL = ("t", "created_at", "last_access", "time_window", "last_merge_at",
 AGG = re.compile(r"【聚合 [^】]*】")
 PID = re.compile(r"prop_[0-9a-f]{8,}")   # pid 含时钟+随机熵（身份面，掩码）
 TS0 = 1700000000.0          # 固定观测时刻（E 分数类确定性的锚）
+# The full_B merge label enters the content-addressed tombstone of full_D.
+# Masking the displayed aggregation date in strip() does not stabilize that
+# digest. Inject the same observation stamp for all three source-tree probes;
+# retain the exact tombstone equality and the exact two-item mutation assertion.
+_aggregate_line = forgetting.aggregate_line
+def aggregate_at_observation(body, content, stamp=None):
+    return _aggregate_line(body, content, stamp=stamp or
+                           time.strftime("%m-%d %H:%M", time.localtime(TS0)))
+forgetting.aggregate_line = aggregate_at_observation
 BODY = ("# 功能名：部署面端口约定\n"
         "# 生效条件：载体/位置：prod 集群；时间：2026-09-30 起；方法：部署清单核对；约束：无\n"
         "# 子功能：登记各服务监听端口\n"

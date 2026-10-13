@@ -217,6 +217,8 @@ TOOLS = [
                        "可用 causal=false / temporal=false 单独关。",
         "inputSchema": _s("", query=_p("string", "描述当前任务的查询", True),
                           budget_tokens=_p("integer", "token 预算（默认 1200）"),
+                          delivery_mode=_p("string", "original（默认旧路径）或 evidence_preserving（D1 证据交付；截断明确 INCOMPLETE）"),
+                          evidence_budget_tokens=_p("integer", "D1 完整响应的项目估算预算；默认沿用 budget_tokens"),
                           max_item_tokens=_p("integer", "单条上限（默认 250）；超限条目截断纳入。"
                                                         "传 0 关闭截断、回到「超大一律跳过」的旧行为"),
                           k=_p("integer", "候选上限"), context=_p("object", "当前情境条件空间"),
@@ -3701,6 +3703,15 @@ def _dispatch(cg, name, args):
         return out
 
     if name == "mdcg_recall":
+        delivery_mode = a.get("delivery_mode", "original")
+        if delivery_mode not in ("original", "evidence_preserving"):
+            raise ValueError("unknown delivery_mode")
+        evidence_budget = a.get("evidence_budget_tokens")
+        if delivery_mode == "evidence_preserving":
+            if evidence_budget is None:
+                evidence_budget = a.get("budget_tokens") if a.get("budget_tokens") is not None else 1200
+            if type(evidence_budget) is not int or evidence_budget < 0:
+                raise ValueError("evidence_budget_tokens must be a nonnegative integer")
         use_bm25 = bool(a.get("bm25"))
         use_fuzzy = bool(a.get("fuzzy"))
         use_semantic = bool(a.get("semantic"))
@@ -3741,7 +3752,7 @@ def _dispatch(cg, name, args):
         # 默认单条上限从 mdcos 取（该模块只在 main() 里惰性导入，模块级没有名字，
         # 直接引用 mdcos.DEFAULT_MAX_ITEM_TOKENS 会 NameError —— 故此处按需导入）。
         from .mdcos import DEFAULT_MAX_ITEM_TOKENS as _DEFAULT_MAX_ITEM
-        return cg.recall(a.get("query", ""),
+        recalled = cg.recall(a.get("query", ""),
                          # `is not None`：显式 0 不再被吞成默认 1200（2026-09-24 修复）
                          budget_tokens=int(a["budget_tokens"])
                          if a.get("budget_tokens") is not None else 1200,
@@ -3757,6 +3768,11 @@ def _dispatch(cg, name, args):
                          query_expand=_make_query_expand(a.get("expand")),
                          session=a.get("session"),
                          validity=a.get("validity"))
+        if delivery_mode == "original":
+            return recalled
+        from .evidence_delivery import preserving_recall
+        return preserving_recall(cg, recalled, a.get("query", ""),
+                                 budget_tokens=evidence_budget)
 
     if name == "mdcg_search":
         from . import refindex
